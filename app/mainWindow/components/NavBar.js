@@ -97,7 +97,7 @@ class NavBar extends Component<Props, State> {
           className={
             navBarCount > 0
               ? `headerbar ${fillColor}`
-              : `headerbar-slidedown ${fillColor}`
+              : `headerbar fadein ${fillColor}`
           }
         >
           {loginCounter.isLoggedIn && (

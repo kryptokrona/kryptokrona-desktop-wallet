@@ -54,10 +54,10 @@ class BottomBar extends Component<Props, State> {
           darkMode
             ? navBarCount > 0
               ? 'footerbar has-background-black noselect'
-              : 'footerbar-slideup has-background-black noselect'
+              : 'footerbar fadein has-background-black noselect'
             : navBarCount > 0
             ? 'footerbar has-background-light noselect'
-            : 'footerbar-slideup has-background-light noselect'
+            : 'footerbar fadein has-background-light noselect'
         }
       >
         <ReactTooltip
