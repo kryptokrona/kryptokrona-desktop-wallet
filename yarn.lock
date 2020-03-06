@@ -8286,6 +8286,19 @@ known-css-properties@^0.11.0:
   resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.11.0.tgz#0da784f115ea77c76b81536d7052e90ee6c86a8a"
   integrity sha512-bEZlJzXo5V/ApNNa5z375mJC6Nrz4vG43UgcSCrg2OHC+yuB6j0iDSrY7RQ/+PRofFB03wNIIt9iXIVLr4wc7w==
 
+kryptokrona-wallet-backend-js@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/kryptokrona-wallet-backend-js/-/kryptokrona-wallet-backend-js-0.3.0.tgz#1c532bc177cdc5e0014077adc6b4dfcb4e5e1bcf"
+  integrity sha512-TLExnnXiIPIcvAlkgbSJcD9NvVCprQ39gs7QfGnAM7+ytqCEf/vplpyuOHFhnnAncec3xvSGJf1o0SwIli7lKA==
+  dependencies:
+    lodash "^4.17.15"
+    object-sizeof "^1.5.2"
+    pbkdf2 "^3.0.17"
+    request "^2.88.0"
+    request-promise-native "^1.0.8"
+    turtlecoin-utils "1.0.20"
+    typescript "^3.7.2"
+
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-3.0.0.tgz#9742df0e10e3cf46e5c0381c2de90d3a7a2d7555"
