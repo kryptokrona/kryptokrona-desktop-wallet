@@ -17,7 +17,7 @@
     "package-ci": "yarn postinstall && yarn build && electron-builder --publish always",
     "package-linux": "yarn build && electron-builder build --linux",
     "package-win": "yarn build && electron-builder build --win --x64",
-    "postinstall": "electron-builder install-app-deps package.json && yarn build-dll && node download-config.js",
+    "postinstall": "electron-builder install-app-deps package.json && yarn build-dll && node /download-config.js",
     "preinstall": "node ./internals/scripts/CheckYarn.js",
     "prestart": "yarn build",
     "prettier": "node ./node_modules/prettier/bin-prettier.js '**/*.{js,jsx,json,md}' --ignore-path .gitignore --single-quote --write",
