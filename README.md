@@ -10,7 +10,7 @@
 
 <img src="https://cdn.discordapp.com/attachments/564804596153843718/685679634842648662/Screenshot_2020-03-07_at_03.45.46.png">
 <p>
-  This is a Desktop wallet for Kryptokrona that uses <a href="http://electron.atom.io/">Electron</a>, <a href="https://facebook.github.io/react/">React</a>, <a href="https://github.com/kryptokrona/kryptokrona-wallet-backend-js">Kryptokrona-Wallet-Backend-JS</a>, <a href="https://github.com/reactjs/redux">Redux</a>, <a href="https://github.com/reactjs/react-router">React Router</a>, <a href="http://webpack.github.io/docs/">Webpack</a> and <a href="https://github.com/gaearon/react-hot-loader">React Hot Loader</a>.
+  This is a desktop wallet for Kryptokrona that uses <a href="http://electron.atom.io/">Electron</a>, <a href="https://facebook.github.io/react/">React</a>, <a href="https://github.com/kryptokrona/kryptokrona-wallet-backend-js">Kryptokrona-Wallet-Backend-JS</a>, <a href="https://github.com/reactjs/redux">Redux</a>, <a href="https://github.com/reactjs/react-router">React Router</a>, <a href="http://webpack.github.io/docs/">Webpack</a> and <a href="https://github.com/gaearon/react-hot-loader">React Hot Loader</a>.
 </p>
 
 <p>
