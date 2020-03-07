@@ -1,9 +1,4 @@
-# Proton Wallet
-
-![Download Count](https://img.shields.io/github/downloads/turtlecoin/turtle-wallet-proton/total.svg)
-![Open Issue Count](https://img.shields.io/github/issues/turtlecoin/turtle-wallet-proton)
-![License](https://img.shields.io/github/license/turtlecoin/turtle-wallet-proton)
-![Version](https://img.shields.io/github/v/release/turtlecoin/turtle-wallet-proton)
+# Kryptokrona Desktop Wallet
 
 ### Master Build Status
 
@@ -13,9 +8,9 @@
 
 ![Development Build Status](https://github.com/turtlecoin/turtle-wallet-proton/workflows/Build%20Proton/badge.svg?branch=development)
 
-<img src="https://raw.githubusercontent.com/turtlecoin/turtle-wallet-proton/development/screenshots/screenshot.png">
+<img src="https://cdn.discordapp.com/attachments/564804596153843718/685679634842648662/Screenshot_2020-03-07_at_03.45.46.png">
 <p>
-  Proton Wallet is a TurtleCoin wallet that uses <a href="http://electron.atom.io/">Electron</a>, <a href="https://facebook.github.io/react/">React</a>, <a href="https://github.com/turtlecoin/turtlecoin-wallet-backend-js">Turtlecoin-Wallet-Backend-JS</a>, <a href="https://github.com/reactjs/redux">Redux</a>, <a href="https://github.com/reactjs/react-router">React Router</a>, <a href="http://webpack.github.io/docs/">Webpack</a> and <a href="https://github.com/gaearon/react-hot-loader">React Hot Loader</a>.
+  Proton Wallet is a TurtleCoin wallet that uses <a href="http://electron.atom.io/">Electron</a>, <a href="https://facebook.github.io/react/">React</a>, <a href="https://github.com/kryptokrona/kryptokrona-wallet-backend-js">Kryptokrona-Wallet-Backend-JS</a>, <a href="https://github.com/reactjs/redux">Redux</a>, <a href="https://github.com/reactjs/react-router">React Router</a>, <a href="http://webpack.github.io/docs/">Webpack</a> and <a href="https://github.com/gaearon/react-hot-loader">React Hot Loader</a>.
 </p>
 
 <p>
@@ -45,13 +40,13 @@ Tip: If you already have a different version of node.js installed besides 10.x, 
 First, clone the repo via git:
 
 ```bash
-git clone https://github.com/turtlecoin/turtle-wallet-proton.git
+git clone https://github.com/kryptokrona/kryptokrona-desktop-wallet.git
 ```
 
 And then install the dependencies with yarn.
 
 ```bash
-$ cd turtle-wallet-proton
+$ cd kryptokrona-desktop-wallet
 $ yarn
 ```
 
