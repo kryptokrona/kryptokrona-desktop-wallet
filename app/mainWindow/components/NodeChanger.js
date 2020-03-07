@@ -171,7 +171,7 @@ export default class NodeChanger extends Component<Props, State> {
           </div>
           {nodeChangeInProgress === true && (
             <div className="control">
-              <button className="button is-success is-loading">
+              <button className="button is-dark is-loading">
                 <span className="icon is-small">
                   <i className="fa fa-network-wired" />
                 </span>
@@ -181,7 +181,7 @@ export default class NodeChanger extends Component<Props, State> {
           )}
           {nodeChangeInProgress === false && (
             <div className="control">
-              <button className="button is-success" onClick={this.changeNode}>
+              <button className="button is-dark" onClick={this.changeNode}>
                 <span className="icon is-small">
                   <i className="fa fa-network-wired" />
                 </span>

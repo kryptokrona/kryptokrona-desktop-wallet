@@ -184,7 +184,7 @@ class NavBar extends Component<Props, State> {
                     <div className="navbar-item">
                       <Link className="buttons" to={routes.LOGIN}>
                         <span
-                          className="button icon is-large is-danger"
+                          className="button icon is-large is-dark"
                           onClick={this.logOut}
                           onKeyPress={this.logOut}
                           role="button"

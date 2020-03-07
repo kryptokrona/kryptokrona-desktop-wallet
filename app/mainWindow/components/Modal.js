@@ -127,7 +127,7 @@ export default class Modal extends Component<Props, State> {
             <div className="buttons is-right">
               {confirmLabel && (
                 <button
-                  className="button is-success is-large"
+                  className="button is-dark is-large"
                   onClick={() => this.confirmModal()}
                   onKeyPress={() => this.confirmModal()}
                   type="submit"
@@ -140,7 +140,7 @@ export default class Modal extends Component<Props, State> {
               )}
               {extraLabel && (
                 <button
-                  className="button is-warning is-large"
+                  className="button is-dark is-large"
                   onClick={this.extraAction}
                   onKeyPress={this.extraAction}
                   type="button"

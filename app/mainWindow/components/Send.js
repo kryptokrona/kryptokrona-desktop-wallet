@@ -555,7 +555,7 @@ export default class Send extends Component<Props, State> {
                   {il8n.send_to_address}
                   <div className="control">
                     <input
-                      className="input is-large"
+                      className="input is-medium"
                       type="text"
                       placeholder={il8n.send_to_address_input_placeholder}
                       value={sendToAddress}
@@ -570,7 +570,7 @@ export default class Send extends Component<Props, State> {
                   <label className={`label ${textColor}`} htmlFor="amount">
                     {il8n.amount_to_send}
                     <input
-                      className="input is-large"
+                      className="input is-medium"
                       type="text"
                       placeholder={
                         sendAll
@@ -609,7 +609,7 @@ export default class Send extends Component<Props, State> {
                   {il8n.payment_id}
                   <div className="control">
                     <input
-                      className="input is-large"
+                      className="input is-medium"
                       type="text"
                       placeholder={il8n.payment_id_input_placeholder}
                       value={paymentID}
@@ -631,7 +631,7 @@ export default class Send extends Component<Props, State> {
               </div>
               <div className="buttons">
                 {!transactionInProgress && (
-                  <button type="submit" className="button is-success is-large">
+                  <button type="submit" className="button is-dark is-medium">
                     <span className="icon is-small">
                       <i className="fa fa-paper-plane" />
                     </span>
@@ -641,7 +641,7 @@ export default class Send extends Component<Props, State> {
                 {transactionInProgress && (
                   <button
                     type="submit"
-                    className="button is-success is-large is-loading is-disabled"
+                    className="button is-dark is-medium is-loading is-disabled"
                     disabled
                   >
                     <span className="icon is-small">
@@ -653,7 +653,7 @@ export default class Send extends Component<Props, State> {
 
                 <button
                   type="reset"
-                  className={`button is-large ${elementBaseColor}`}
+                  className={`button is-medium is-dark ${elementBaseColor}`}
                   onClick={this.resetForm}
                 >
                   <span className="icon is-small">
@@ -664,7 +664,7 @@ export default class Send extends Component<Props, State> {
                 {isDev && (
                   <div>
                     <a
-                      className="button is-warning is-large"
+                      className="button is-dark is-medium"
                       onClick={this.createTestTransaction}
                       onKeyPress={this.createTestTransaction}
                       role="button"

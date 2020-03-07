@@ -75,7 +75,7 @@ export default class SyncStatus extends Component<Props, State> {
           </span>
           {syncPercentage < 100 && networkBlockHeight !== 0 && (
             <span
-              className={`tag is-warning ${size} sync-status`}
+              className={`tag is-dark ${size} sync-status`}
               data-tip={syncTooltip}
             >
               {syncPercentage}%
@@ -89,7 +89,7 @@ export default class SyncStatus extends Component<Props, State> {
           )}
           {syncPercentage === 100 && networkBlockHeight !== 0 && (
             <span
-              className={`tag is-success ${size} sync-status`}
+              className={`tag is-dark ${size} sync-status`}
               data-tip={syncTooltip}
             >
               {syncPercentage}%

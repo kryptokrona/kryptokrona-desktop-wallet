@@ -114,8 +114,8 @@ export default class Login extends Component<Props, State> {
                             ref={input => input && input.focus()}
                             className={
                               wrongPassword
-                                ? 'input is-large is-danger'
-                                : 'input is-large'
+                                ? 'input is-medium is-danger'
+                                : 'input is-medium'
                             }
                             type="password"
                             placeholder={il8n.password_input_placeholder}
@@ -145,7 +145,7 @@ export default class Login extends Component<Props, State> {
                         <div className="buttons is-right">
                           <button
                             type="submit"
-                            className="button is-success is-large"
+                            className="button is-dark is-medium"
                           >
                             {session.wallet ? il8n.unlock : il8n.login}
                           </button>

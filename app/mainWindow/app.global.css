@@ -598,22 +598,22 @@
 }
 
 .table-darkmode {
-  background-color: #363636;
+  background-color: #111;
   color: #fff;
 }
 .table-darkmode.is-striped tbody tr:not(.is-selected):nth-child(even) {
-  background-color: #242424;
+  background-color: #111;
 }
 .table-darkmode.is-hoverable tbody tr:not(.is-selected):hover {
-  background-color: #232323;
+  background-color: #111;
 }
 .table-darkmode.is-hoverable.is-striped tbody tr:not(.is-selected):hover {
-  background-color: #474747;
+  background-color: #111;
 }
 .table-darkmode.is-hoverable.is-striped
   tbody
   tr:not(.is-selected):not(.no-hover):hover:nth-child(even) {
-  background-color: #353535;
+  background-color: #111;
 }
 
 .headerbar {
@@ -664,7 +664,7 @@
 }
 
 .darklink {
-  color: hsl(141, 71%, 48%);
+  color: hsl(0, 0%, 66%);
 }
 
 .darklink:hover {

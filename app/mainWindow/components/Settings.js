@@ -343,7 +343,7 @@ export default class Settings extends Component<Props, State> {
                     <TimeoutSelector darkMode={darkMode} />
                     <br />
                     <button
-                      className="button is-warning"
+                      className="button is-dark"
                       onClick={this.handlePasswordChange}
                     >
                       <span className="icon is-small">
@@ -354,7 +354,7 @@ export default class Settings extends Component<Props, State> {
                     <br />
                     <br />
                     <button
-                      className="button is-danger"
+                      className="button is-dark"
                       onClick={this.handleBackup}
                     >
                       <span className="icon is-small">
@@ -402,7 +402,7 @@ export default class Settings extends Component<Props, State> {
                       <TimeoutSelector darkMode={darkMode} />
                       <br />
                       <button
-                        className="button is-warning"
+                        className="button is-dark"
                         onClick={this.handlePasswordChange}
                       >
                         <span className="icon is-small">
@@ -413,7 +413,7 @@ export default class Settings extends Component<Props, State> {
                       <br />
                       <br />
                       <button
-                        className="button is-danger"
+                        className="button is-dark"
                         onClick={this.handleBackup}
                       >
                         <span className="icon is-small">

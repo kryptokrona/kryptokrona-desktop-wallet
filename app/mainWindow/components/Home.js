@@ -430,14 +430,14 @@ export default class Home extends Component<Props, State> {
                   <div className="buttons">
                     <button
                       type="submit"
-                      className="button is-warning"
+                      className="button is-dark"
                       onClick={this.handleLoadMore}
                     >
                       {il8n.load_more}
                     </button>
                     <button
                       type="submit"
-                      className="button is-danger"
+                      className="button is-dark"
                       onClick={this.resetDefault}
                     >
                       {il8n.reset}

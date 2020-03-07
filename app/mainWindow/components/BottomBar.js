@@ -68,9 +68,9 @@ class BottomBar extends Component<Props, State> {
         />
         {loginCounter.isLoggedIn && (
           <div className="field is-grouped is-grouped-multiline is-grouped-right">
-            <NodeFee size="is-large" darkMode={darkMode} />
-            <SyncStatus size="is-large" darkMode={darkMode} />
-            <Balance size="is-large" darkMode={darkMode} />
+            <NodeFee size="is-medium" darkMode={darkMode} />
+            <SyncStatus size="is-medium" darkMode={darkMode} />
+            <Balance size="is-medium" darkMode={darkMode} />
           </div>
         )}
       </div>

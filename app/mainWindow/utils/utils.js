@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 export function uiType(darkMode: boolean) {
   const backgroundColor = darkMode
-    ? 'has-background-dark'
+    ? 'has-background-black'
     : 'has-background-white';
 
   const fillColor = darkMode ? 'has-background-black' : 'has-background-light';

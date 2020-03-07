@@ -46,7 +46,7 @@ export default class NotificationsToggle extends Component<Props, State> {
         {notifications === false && (
           <span className={textColor}>
             <a
-              className="button is-danger"
+              className="button is-black"
               onClick={this.toggle}
               onKeyPress={this.toggle}
               role="button"

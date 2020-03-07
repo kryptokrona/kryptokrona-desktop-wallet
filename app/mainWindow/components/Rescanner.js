@@ -139,7 +139,7 @@ export default class Rescanner extends Component<Props, State> {
           </div>
           <div className="control">
             <button
-              className={`button is-danger ${
+              className={`button is-dark ${
                 rescanInProgress ? 'is-loading' : ''
               }`}
               onClick={this.confirmRescan}

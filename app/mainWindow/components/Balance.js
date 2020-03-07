@@ -149,8 +149,8 @@ export default class Balance extends Component<Props, State> {
             <span
               className={
                 lockedBalance > 0
-                  ? `tag is-warning ${size}`
-                  : `tag is-info ${size}`
+                  ? `tag is-dark ${size}`
+                  : `tag is-dark ${size}`
               }
               data-tip={balanceTooltip}
             >
@@ -168,8 +168,8 @@ export default class Balance extends Component<Props, State> {
             <span
               className={
                 lockedBalance > 0
-                  ? `tag is-warning ${size}`
-                  : `tag is-info ${size}`
+                  ? `tag is-dark ${size}`
+                  : `tag is-dark ${size}`
               }
               data-tip={balanceTooltip}
             >
@@ -204,8 +204,8 @@ export default class Balance extends Component<Props, State> {
             <span
               className={
                 lockedBalance > 0
-                  ? `tag is-warning ${size}`
-                  : `tag is-info ${size}`
+                  ? `tag is-dark ${size}`
+                  : `tag is-dark ${size}`
               }
               data-tip={balanceTooltip}
             >

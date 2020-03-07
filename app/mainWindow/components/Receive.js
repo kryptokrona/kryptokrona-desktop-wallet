@@ -156,7 +156,7 @@ export default class Receive extends Component<Props, State> {
                     >
                       {il8n.receiving_address}
                       <textarea
-                        className="textarea is-family-monospace is-large no-resize"
+                        className="textarea is-family-monospace is-medium no-resize"
                         rows="6"
                         value={sessionAddress}
                         readOnly
@@ -169,7 +169,7 @@ export default class Receive extends Component<Props, State> {
                         // eslint-disable-next-line no-return-assign
                         ref={ref => (this.ref = ref)}
                         type="button"
-                        className="button is-success is-large"
+                        className="button is-dark is-medium"
                         onClick={() => {
                           copyToClipboard(sessionAddress);
                           this.handleCopiedTip();
@@ -185,7 +185,7 @@ export default class Receive extends Component<Props, State> {
                       </button>
                       <button
                         type="button"
-                        className="button is-warning is-large"
+                        className="button is-dark is-medium"
                         onClick={() => this.generateIntegratedAddress()}
                       >
                         <span className="icon is-small">
@@ -195,7 +195,7 @@ export default class Receive extends Component<Props, State> {
                       </button>
                       <button
                         type="button"
-                        className={`button is-large ${elementBaseColor}`}
+                        className={`button is-medium is-dark ${elementBaseColor}`}
                         onClick={this.resetForm}
                       >
                         <span className="icon is-small">
@@ -222,7 +222,7 @@ export default class Receive extends Component<Props, State> {
                           />
                         </div>
                         <div className="control">
-                          <button type="submit" className="button is-success">
+                          <button type="submit" className="button is-dark">
                             <span className="icon is-small">
                               <i className="fa fa-flask" />
                             </span>
@@ -248,7 +248,7 @@ export default class Receive extends Component<Props, State> {
                           />
                         </div>
                         <div className="control">
-                          <button type="submit" className="button is-success">
+                          <button type="submit" className="button is-dark">
                             <span className="icon is-small">
                               <i className="fa fa-flask" />
                             </span>
