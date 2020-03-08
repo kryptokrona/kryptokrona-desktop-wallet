@@ -247,12 +247,12 @@ export default class Send extends Component<Props, State> {
             <p className={`subtitle ${textColor}`}>
               <b>Total Amount: (includes fees)</b>
               <br />
-              {atomicToHuman(amount + nodeFee + fee, true)} TRTL
+              {atomicToHuman(amount + nodeFee + fee, true)} XKR
             </p>
             <p className={`subtitle ${textColor}`}>
               <b>Fee:</b>
               <br />
-              {atomicToHuman(nodeFee + fee, true)} TRTL
+              {atomicToHuman(nodeFee + fee, true)} XKR
               {nodeFee > 0 &&
                 ` (including a node fee of ${atomicToHuman(
                   nodeFee,
