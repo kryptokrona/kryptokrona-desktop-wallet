@@ -1,13 +1,5 @@
 # Kryptokrona Desktop Wallet
 
-### Master Build Status
-
-![Master Build Status](https://github.com/turtlecoin/turtle-wallet-proton/workflows/Build%20Proton/badge.svg?branch=master)
-
-### Development Build Status
-
-![Development Build Status](https://github.com/turtlecoin/turtle-wallet-proton/workflows/Build%20Proton/badge.svg?branch=development)
-
 <img src="https://cdn.discordapp.com/attachments/566202487019798529/686006405261688930/Screenshot_2020-03-08_at_00.12.19.png">
 <p>
   This is a desktop wallet for Kryptokrona that uses <a href="http://electron.atom.io/">Electron</a>, <a href="https://facebook.github.io/react/">React</a>, <a href="https://github.com/kryptokrona/kryptokrona-wallet-backend-js">Kryptokrona-Wallet-Backend-JS</a>, <a href="https://github.com/reactjs/redux">Redux</a>, <a href="https://github.com/reactjs/react-router">React Router</a>, <a href="http://webpack.github.io/docs/">Webpack</a> and <a href="https://github.com/gaearon/react-hot-loader">React Hot Loader</a>.
@@ -16,10 +8,6 @@
 <p>
   All of the code is released under the GPLv3 license. The icons in the ./resources and ./app/images folders, however, are not released under this license, rather they are maintained to be intellectual property of ExtraHash, and may not be used to represent the brand or identity of any other piece of software or group. See the included license file in ./resources/LICENSE and ./app/images/LICENSE for more details.
 </p>
-
-## Installing
-
-**Check out the full tutorial on how to install and use Proton at the [official TurtleCoin docs page](https://docs.turtlecoin.lol/guides/wallets/using-proton-wallet)!**
 
 ## Development Setup (All Platforms)
 
@@ -71,6 +59,14 @@ To package apps for the local platform:
 ```bash
 $ yarn package
 ```
+
+### Master Build Status
+
+![Master Build Status](https://github.com/turtlecoin/turtle-wallet-proton/workflows/Build%20Proton/badge.svg?branch=master)
+
+### Development Build Status
+
+![Development Build Status](https://github.com/turtlecoin/turtle-wallet-proton/workflows/Build%20Proton/badge.svg?branch=development)
 
 ## License
 
