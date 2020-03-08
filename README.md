@@ -60,6 +60,11 @@ To package apps for the local platform:
 $ yarn package
 ```
 
+## License
+
+© [ExtraHash](https://github.com/ExtraHash)
+See included License file for more details.
+
 ### Master Build Status
 
 ![Master Build Status](https://github.com/turtlecoin/turtle-wallet-proton/workflows/Build%20Proton/badge.svg?branch=master)
@@ -67,8 +72,3 @@ $ yarn package
 ### Development Build Status
 
 ![Development Build Status](https://github.com/turtlecoin/turtle-wallet-proton/workflows/Build%20Proton/badge.svg?branch=development)
-
-## License
-
-© [ExtraHash](https://github.com/ExtraHash)
-See included License file for more details.
