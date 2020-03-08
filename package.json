@@ -243,7 +243,7 @@
     "history": "^4.9.0",
     "jdenticon": "^2.2.0",
     "kryptokrona-utils": "^1.0.0",
-    "kryptokrona-wallet-backend-js": "^0.3.0",
+    "kryptokrona-wallet-backend-js": "^1.3.1",
     "qrcode.react": "^0.9.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
