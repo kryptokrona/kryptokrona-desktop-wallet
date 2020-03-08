@@ -1,5 +1,5 @@
 {
-  "name": "Kryptokrona-desktop-wallet",
+  "name": "kryptokrona-desktop-wallet",
   "productName": "Proton",
   "version": "2.0.2",
   "description": "Kryptokrona wallet based on React, React Router, Webpack, and React Hot Loader",
