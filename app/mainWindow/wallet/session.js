@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 import request from 'request-promise';
 import log from 'electron-log';
-import { DaemonConnection } from 'turtlecoin-wallet-backend';
+import { DaemonConnection } from 'kryptokrona-wallet-backend-js';
 import { config, eventEmitter } from '../index';
 import { roundToNearestHundredth } from '../utils/utils';
 
@@ -33,8 +33,8 @@ export default class WalletSession {
   daemonConnectionInfo: DaemonConnection = {
     daemonType: 1,
     daemonTypeDetermined: true,
-    host: 'blockapi.turtlepay.io',
-    port: 443,
+    host: 'pool.kryptokrona.se',
+    port: 11898,
     ssl: true,
     sslDetermined: true
   };
