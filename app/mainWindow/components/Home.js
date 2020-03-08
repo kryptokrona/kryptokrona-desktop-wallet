@@ -413,8 +413,7 @@ export default class Home extends Component<Props, State> {
               <div className="elem-to-center">
                 <div className={`box ${fillColor}`}>
                   <p className={`${textColor} title has-text-centered`}>
-                    <i className="fas fa-robot" />
-                    &nbsp;&nbsp;Welcome to Proton!
+                    &nbsp;&nbsp;Welcome to Kryptokrona Wallet!
                   </p>
                   <br />
                   <p className={`${textColor} subtitle has-text-centered`}>

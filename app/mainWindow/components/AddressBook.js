@@ -398,7 +398,6 @@ class AddressBook extends Component<Props, State> {
               <div className="elem-to-center">
                 <div className={`box ${fillColor}`}>
                   <p className={`${textColor} title has-text-centered`}>
-                    <i className="fas fa-robot" />
                     &nbsp;&nbsp;Welcome to your Address Book!
                   </p>
                   <br />
