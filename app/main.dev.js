@@ -220,7 +220,7 @@ app.on('ready', async () => {
   await installExtensions();
 
   mainWindow = new BrowserWindow({
-    title: `Proton v${version}`,
+    title: `Kryptokrona Wallet v${version}`,
     useContentSize: true,
     show: false,
     width: 1250,
