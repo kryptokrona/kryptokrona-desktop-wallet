@@ -1,6 +1,6 @@
 {
   "name": "kryptokrona-desktop-wallet",
-  "productName": "Proton",
+  "productName": "Kryptokrona Wallet",
   "version": "0.0.1",
   "description": "Kryptokrona wallet based on React, React Router, Webpack, and React Hot Loader",
   "scripts": {
@@ -47,7 +47,7 @@
   "main": "./app/main.prod.js",
   "build": {
     "productName": "Kryptokrona-desktop-wallet",
-    "appId": "wallet.proton.extra",
+    "appId": "wallet.kryptokrona.extra",
     "files": [
       "app/dist/",
       "app/mainWindow/app.html",
