@@ -51,7 +51,7 @@ export default class DarkModeToggle extends Component<Props, State> {
         {darkMode === true && (
           <span className={textColor}>
             <a
-              className="button is-black"
+              className="button is-dark"
               onClick={this.darkModeOff}
               onKeyPress={this.darkModeOff}
               role="button"

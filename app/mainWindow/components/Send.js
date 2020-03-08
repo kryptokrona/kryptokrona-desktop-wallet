@@ -54,7 +54,7 @@ const customStyles = {
     ...base,
     height: 54,
     minHeight: 54,
-    fontSize: '1.5rem'
+    fontSize: '1rem'
   }),
   placeholder: base => ({
     ...base,

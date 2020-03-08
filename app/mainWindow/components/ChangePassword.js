@@ -81,7 +81,7 @@ export default class ChangePassword extends Component<Props, State> {
                 {il8n.change_passwd_enter_current_passwd}
                 <div className="control">
                   <input
-                    className="input is-large"
+                    className="input is-medium"
                     type="password"
                     placeholder={
                       il8n.change_passwd_enter_current_passwd_input_placeholder
@@ -99,7 +99,7 @@ export default class ChangePassword extends Component<Props, State> {
                 {il8n.change_passwd_enter_new_passwd}
                 <div className="control">
                   <input
-                    className="input is-large"
+                    className="input is-medium"
                     type="password"
                     placeholder={
                       il8n.change_passwd_enter_new_passwd_input_placeholder
@@ -117,7 +117,7 @@ export default class ChangePassword extends Component<Props, State> {
                 {il8n.change_passwd_confirm_new_passwd}
                 <div className="control">
                   <input
-                    className="input is-large"
+                    className="input is-medium"
                     type="password"
                     placeholder={
                       il8n.change_passwd_confirm_new_passwd_input_placeholder
@@ -133,7 +133,7 @@ export default class ChangePassword extends Component<Props, State> {
             <div className="buttons is-right">
               <button
                 type="submit"
-                className="button is-success is-large"
+                className="button is-dark is-large"
                 onClick={this.changePassword}
               >
                 {il8n.change}

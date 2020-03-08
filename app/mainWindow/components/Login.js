@@ -157,10 +157,10 @@ export default class Login extends Component<Props, State> {
                 {loginInProgress && (
                   <center>
                     <ReactLoading
-                      type="spinningBubbles"
+                      type="cylon"
                       color={darkMode ? '#F5F5F5' : '#0A0A0A'}
-                      height={170}
-                      width={170}
+                      height={160}
+                      width={160}
                     />
                   </center>
                 )}

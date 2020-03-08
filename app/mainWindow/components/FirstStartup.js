@@ -87,21 +87,21 @@ export default class FirstStartup extends Component<Props, State> {
                 {il8n.welcome_to_proton}
               </h1>
               <button
-                className={`button is-large is-fullwidth ${buttonColor}`}
+                className={`button is-medium is-fullwidth ${buttonColor}`}
                 onClick={this.openExisting}
               >
                 {il8n.open_existing_wallet}
               </button>
               <br />
               <button
-                className={`button is-large is-fullwidth ${buttonColor}`}
+                className={`button is-medium is-fullwidth ${buttonColor}`}
                 onClick={this.createNew}
               >
                 {il8n.create_new_wallet}
               </button>
               <br />
               <button
-                className={`button is-large is-fullwidth ${buttonColor}`}
+                className={`button is-medium is-fullwidth ${buttonColor}`}
                 onClick={this.importFromKeysOrSeed}
               >
                 {il8n.import_keys_seed}
