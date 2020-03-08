@@ -322,7 +322,7 @@ export default class Settings extends Component<Props, State> {
                         );
                       }}
                     >
-                      <span className="icon is-small">
+                      <span className="icon is-small is-dark">
                         <i className="fa fa-terminal" />
                       </span>
                       &nbsp;&nbsp; Show Console

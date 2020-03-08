@@ -68,7 +68,7 @@ export default class ScanCoinbaseToggle extends Component<Props, State> {
         {scanCoinbaseTransactions === true && (
           <span className={textColor}>
             <a
-              className="button is-success"
+              className="button is-dark"
               onClick={this.toggleScanCoinbase}
               onKeyPress={this.toggleScanCoinbase}
               role="button"

@@ -434,7 +434,7 @@ export default class Import extends Component<Props, State> {
                 {showPassword === true && (
                   <span className={textColor}>
                     <a
-                      className="button is-success"
+                      className="button is-dark"
                       onClick={this.toggleShowPassword}
                       onKeyPress={this.toggleShowPassword}
                       role="button"
@@ -465,7 +465,7 @@ export default class Import extends Component<Props, State> {
                 </span>
                 &nbsp;&nbsp;
                 <span
-                  className="button is-success is-large"
+                  className="button is-dark is-large"
                   onClick={this.nextPage}
                   onKeyPress={this.nextPage}
                   role="button"

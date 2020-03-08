@@ -112,7 +112,7 @@ export default class TimeoutSelector extends Component<Props, State> {
               />
             </div>
             <div className="control">
-              <button className="button is-success" disabled={!timeoutEnabled}>
+              <button className="button is-dark" disabled={!timeoutEnabled}>
                 <span className="icon is-small">
                   <i className="fa fa-save" />
                 </span>
@@ -125,7 +125,7 @@ export default class TimeoutSelector extends Component<Props, State> {
         {timeoutEnabled && (
           <span className={textColor}>
             <a
-              className="button is-success"
+              className="button is-dark"
               onClick={this.disableTimeout}
               onKeyPress={this.disableTimeout}
               role="button"
