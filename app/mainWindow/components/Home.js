@@ -111,7 +111,7 @@ export default class Home extends Component<Props, State> {
     const hash = event.target.value;
 
     remote.shell.openExternal(
-      `https://explorer.turtlecoin.lol/?search=${encodeURIComponent(hash)}`
+      `http://explorer.kryptokrona.se/?hash=${encodeURIComponent(hash)}`
     );
   };
 
@@ -377,7 +377,7 @@ export default class Home extends Component<Props, State> {
                                     {tx[1]} <br />
                                     {tx[5] !== '' ? tx[5] : 'none'}
                                     <br />
-                                    {atomicToHuman(tx[7], true)} TRTL
+                                    {atomicToHuman(tx[7], true)} XKR
                                     <br />
                                     <p
                                       className={
@@ -386,7 +386,7 @@ export default class Home extends Component<Props, State> {
                                           : ''
                                       }
                                     >
-                                      {atomicToHuman(tx[2], true)} TRTL
+                                      {atomicToHuman(tx[2], true)} XKR
                                     </p>
                                     <br />
                                     <br />
