@@ -46,7 +46,7 @@
   },
   "main": "./app/main.prod.js",
   "build": {
-    "productName": "Kryptokrona-desktop-wallet",
+    "productName": "Kryptokrona-wallet",
     "appId": "wallet.kryptokrona.extra",
     "files": [
       "app/dist/",
