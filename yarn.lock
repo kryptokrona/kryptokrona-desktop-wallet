@@ -4939,9 +4939,9 @@ electron-chromedriver@~3.0.0:
     electron-download "^4.1.0"
     extract-zip "^1.6.5"
 
-"electron-context-menu@https://github.com/ExtraHash/electron-context-menu":
+"electron-context-menu@git+https://github.com/ExtraHash/electron-context-menu.git":
   version "0.15.0"
-  resolved "https://github.com/ExtraHash/electron-context-menu#5877d2470a2549d0a2656150ffbe73b2a720cb4f"
+  resolved "git+https://github.com/ExtraHash/electron-context-menu.git#5877d2470a2549d0a2656150ffbe73b2a720cb4f"
   dependencies:
     cli-truncate "^2.0.0"
     electron-dl "^1.2.0"
@@ -8299,10 +8299,23 @@ kryptokrona-utils@^1.0.0:
   optionalDependencies:
     turtlecoin-crypto "^3.1.3"
 
-kryptokrona-wallet-backend-js@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/kryptokrona-wallet-backend-js/-/kryptokrona-wallet-backend-js-1.3.1.tgz#e4d26398c43eb48ed5c68726ff7cf9f56c5b5534"
-  integrity sha512-+/CQ6XVEMXpnEz8HsAli7gPCVTAatDb5SbuxFubActfeYkgre4U6gvo8tQKel3cXldhYXu8pAIqnmcsMb0koPQ==
+kryptokrona-utils@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/kryptokrona-utils/-/kryptokrona-utils-2.0.0.tgz#477a4cd42e4a9b2e5c401ec7b387d7e2669d3ebb"
+  integrity sha512-tAyMx2RJpJxJHRh9RxwZEREWablf66NYc1bkpvp8cwnhxkVJ7QYaAe+yFU/jg4XePMyicSLQfLhjl5SuVk+spQ==
+  dependencies:
+    crc "^3.8.0"
+    get-random-values "^1.2.0"
+    numeral "^2.0.6"
+    secure-random-string "^1.1.0"
+    varint "^5.0.0"
+  optionalDependencies:
+    turtlecoin-crypto "^3.1.3"
+
+kryptokrona-wallet-backend-js@^6.3.1:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/kryptokrona-wallet-backend-js/-/kryptokrona-wallet-backend-js-6.3.1.tgz#1c1acfb6ce2cde72c05ba36e70a0d491715ab6cc"
+  integrity sha512-JzxSm82KmzLNwBZfgulw3XG4jo2i1SrrecjQzR7Q9Wne16M+yKNksW9QlYEUUFYWTD9BC6H01hNDPHoTuYnoBA==
   dependencies:
     kryptokrona-utils "^1.0.0"
     lodash "^4.17.15"
@@ -8310,7 +8323,6 @@ kryptokrona-wallet-backend-js@^1.3.1:
     pbkdf2 "^3.0.17"
     request "^2.88.0"
     request-promise-native "^1.0.8"
-    turtlecoin-utils "1.0.20"
     typescript "^3.7.2"
 
 last-call-webpack-plugin@^3.0.0:
