@@ -8286,10 +8286,10 @@ known-css-properties@^0.11.0:
   resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.11.0.tgz#0da784f115ea77c76b81536d7052e90ee6c86a8a"
   integrity sha512-bEZlJzXo5V/ApNNa5z375mJC6Nrz4vG43UgcSCrg2OHC+yuB6j0iDSrY7RQ/+PRofFB03wNIIt9iXIVLr4wc7w==
 
-kryptokrona-utils@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/kryptokrona-utils/-/kryptokrona-utils-1.0.0.tgz#f6f87acdeadcd4910bc6d2f73e2a7f91a89d4340"
-  integrity sha512-pF0xxr00WpGqwdYnjZlONhY/ltm2+5ReJq9s28fEy8IZ6JyX47kszF7kQ6JxVDFn5VB7/aHYyeIW+Nb6Gvaguw==
+kryptokrona-utils@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/kryptokrona-utils/-/kryptokrona-utils-1.1.0.tgz#4526d0286ec2f7baaa18714a7fba5b0f27ccc859"
+  integrity sha512-DUNR3r7juVXTtQhXyQxeIj8B4ZX3uy3KrvEnm4fu0KiqHjPMDdYejurTGZhIT5IyVnTMFC7qZTY2uvp6ocP7Zw==
   dependencies:
     crc "^3.8.0"
     get-random-values "^1.2.0"
@@ -8299,30 +8299,18 @@ kryptokrona-utils@^1.0.0:
   optionalDependencies:
     turtlecoin-crypto "^3.1.3"
 
-kryptokrona-utils@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/kryptokrona-utils/-/kryptokrona-utils-2.0.0.tgz#477a4cd42e4a9b2e5c401ec7b387d7e2669d3ebb"
-  integrity sha512-tAyMx2RJpJxJHRh9RxwZEREWablf66NYc1bkpvp8cwnhxkVJ7QYaAe+yFU/jg4XePMyicSLQfLhjl5SuVk+spQ==
+kryptokrona-wallet-backend-js@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/kryptokrona-wallet-backend-js/-/kryptokrona-wallet-backend-js-1.7.0.tgz#26fbc2a80d49a85ded420e5474f82509a825ae9e"
+  integrity sha512-KLEMjx/wr8I9qMfdRB/WUkRtbgBpm3CTl8We2+jsPti8L3MAP87XKDqeW41x6KALNnaRHJE9MOcirZ/DLg1a7w==
   dependencies:
-    crc "^3.8.0"
-    get-random-values "^1.2.0"
-    numeral "^2.0.6"
-    secure-random-string "^1.1.0"
-    varint "^5.0.0"
-  optionalDependencies:
-    turtlecoin-crypto "^3.1.3"
-
-kryptokrona-wallet-backend-js@^6.3.1:
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/kryptokrona-wallet-backend-js/-/kryptokrona-wallet-backend-js-6.3.1.tgz#1c1acfb6ce2cde72c05ba36e70a0d491715ab6cc"
-  integrity sha512-JzxSm82KmzLNwBZfgulw3XG4jo2i1SrrecjQzR7Q9Wne16M+yKNksW9QlYEUUFYWTD9BC6H01hNDPHoTuYnoBA==
-  dependencies:
-    kryptokrona-utils "^1.0.0"
+    kryptokrona-utils "^1.1.0"
     lodash "^4.17.15"
     object-sizeof "^1.5.2"
     pbkdf2 "^3.0.17"
     request "^2.88.0"
     request-promise-native "^1.0.8"
+    turtlecoin-utils "1.0.20"
     typescript "^3.7.2"
 
 last-call-webpack-plugin@^3.0.0:
@@ -13404,6 +13392,19 @@ turtlecoin-crypto@^3.1.3:
     bindings "^1.5.0"
     nan "^2.14.0"
     prebuild-install "^5.3.3"
+
+turtlecoin-utils@1.0.20:
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/turtlecoin-utils/-/turtlecoin-utils-1.0.20.tgz#9a00251009ffaf4939d6e1bc69aec2e0a25a9fd6"
+  integrity sha512-PcTPaNIPNY8yOKvnsMeQ2TZnRmftwFryjC/AW7dWx/qJCCiIOM1p5klPdNmvqk2E9CShPhOT7w7ZjBwz+tLStg==
+  dependencies:
+    crc "^3.8.0"
+    get-random-values "^1.2.0"
+    numeral "^2.0.6"
+    secure-random-string "^1.1.0"
+    varint "^5.0.0"
+  optionalDependencies:
+    turtlecoin-crypto "^3.1.3"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
