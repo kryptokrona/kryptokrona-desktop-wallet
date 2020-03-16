@@ -130,7 +130,7 @@ export default class Import extends Component<Props, State> {
 
     if (currentPageNumber === 1) {
       const [restoredWallet, error] = WalletBackend.importWalletFromSeed(
-        new Daemon('blockapi.turtlepay.io', 443),
+        new Daemon('pool.kryptokrona.se', 11898),
         scanHeight === '' ? 0 : Number(scanHeight),
         mnemonicSeed
       );
@@ -164,7 +164,7 @@ export default class Import extends Component<Props, State> {
         defaultPath: remote.app.getPath('documents'),
         filters: [
           {
-            name: 'TurtleCoin Wallet File (v0)',
+            name: 'Kryptokrona Wallet File (v0)',
             extensions: ['wallet']
           }
         ]

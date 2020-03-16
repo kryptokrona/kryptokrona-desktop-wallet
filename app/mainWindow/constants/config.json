@@ -5,7 +5,7 @@
   "autoSelectDaemon": true,
   "minimizeToTray": false,
   "logLevel": "DISABLED",
-  "daemonHost": "seed.kryptokrona.se",
+  "daemonHost": "pool.kryptokrona.se",
   "daemonPort": 11898,
   "darkMode": true,
   "displayCurrency": "XKR",

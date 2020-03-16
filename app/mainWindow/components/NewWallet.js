@@ -32,7 +32,7 @@ export default class NewWallet extends Component<Props, State> {
     this.state = {
       darkMode: config.darkMode,
       newWallet: WalletBackend.createWallet(
-        new Daemon('blockapi.turtlepay.io', 443)
+        new Daemon('pool.kryptokrona.se', 11898)
       ),
       activePage: 'generate',
       password: '',
@@ -135,7 +135,7 @@ export default class NewWallet extends Component<Props, State> {
     if (currentPageNumber === 4) {
       // import the seed so we can confirm it works
       const [confirmWallet, err] = WalletBackend.importWalletFromSeed(
-        new Daemon('blockapi.turtlepay.io', 443),
+        new Daemon('pool.kryptokrona.se', 11898),
         100000,
         confirmSeed
       );
@@ -166,7 +166,7 @@ export default class NewWallet extends Component<Props, State> {
             defaultPath: remote.app.getPath('documents'),
             filters: [
               {
-                name: 'TurtleCoin Wallet File (v0)',
+                name: 'Kryptokrona Wallet File (v0)',
                 extensions: ['wallet']
               }
             ]
@@ -541,7 +541,7 @@ export default class NewWallet extends Component<Props, State> {
             <center>
               <div className="buttons bottombuttons">
                 <span
-                  className="button is-warning is-large"
+                  className="button is-dark is-large"
                   onClick={this.prevPage}
                   onKeyPress={this.prevPage}
                   role="button"

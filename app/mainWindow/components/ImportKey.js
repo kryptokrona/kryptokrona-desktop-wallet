@@ -133,7 +133,7 @@ export default class ImportKey extends Component<Props, State> {
 
     if (currentPageNumber === 1) {
       const [restoredWallet, error] = WalletBackend.importWalletFromKeys(
-        new Daemon('blockapi.turtlepay.io', 443),
+        new Daemon('pool.kryptokrona.se', 11898),
         scanHeight === '' ? 0 : Number(scanHeight),
         privateViewKey,
         privateSpendKey
@@ -168,7 +168,7 @@ export default class ImportKey extends Component<Props, State> {
         defaultPath: remote.app.getPath('documents'),
         filters: [
           {
-            name: 'TurtleCoin Wallet File (v0)',
+            name: 'Kryptokrona Wallet File (v0)',
             extensions: ['wallet']
           }
         ]
@@ -473,7 +473,7 @@ export default class ImportKey extends Component<Props, State> {
             <center>
               <div className="buttons bottombuttons">
                 <span
-                  className="button is-warning is-large"
+                  className="button is-dark is-large"
                   onClick={this.prevPage}
                   onKeyPress={this.prevPage}
                   role="button"
