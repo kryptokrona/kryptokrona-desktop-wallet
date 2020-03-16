@@ -1,5 +1,5 @@
 {
-  "walletFile": "",
+  "walletFile": "XKRwallet",
   "enableAutoOptimization": true,
   "scanCoinbaseTransactions": false,
   "autoSelectDaemon": true,
@@ -16,5 +16,6 @@
   "autoLockInterval": 15,
   "autoLockEnabled": true,
   "useLocalDaemon": false,
-  "daemonLogPath": ""
+  "daemonLogPath": "",
+  "fixedFee": true
 }

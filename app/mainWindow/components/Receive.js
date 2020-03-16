@@ -265,13 +265,14 @@ export default class Receive extends Component<Props, State> {
                   <p className={`has-text-weight-bold ${textColor}`}>
                     {il8n.qr_code}
                   </p>
-                  <div className="box has-background-light">
+                  <div className="box">
                     <center>
                       <span>
                         <QRCode
                           value={sessionAddress}
                           renderAs="svg"
-                          bgColor="#f5f5f5"
+                          color={darkMode ? '#F5F5F5' : '#0A0A0A'}
+                          bgColor="#7c7c7c"
                           size={200}
                         />
                       </span>

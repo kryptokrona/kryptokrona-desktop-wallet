@@ -32,11 +32,11 @@ export default class Balance extends Component<Props, State> {
     this.state = {
       unlockedBalance: session.getUnlockedBalance(),
       lockedBalance: session.getLockedBalance(),
-      fiatPrice: session.fiatPrice,
+      // fiatPrice: session.fiatPrice,
       displayCurrency: config.displayCurrency,
-      fiatSymbol: config.fiatSymbol,
-      symbolLocation: config.symbolLocation,
-      fiatDecimals: config.fiatDecimals
+      // fiatSymbol: config.fiatSymbol,
+      // symbolLocation: config.symbolLocation,
+      // fiatDecimals: config.fiatDecimalsyarn
     };
     this.updateFiatPrice = this.updateFiatPrice.bind(this);
     this.switchCurrency = this.switchCurrency.bind(this);

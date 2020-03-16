@@ -247,22 +247,9 @@ export default class Settings extends Component<Props, State> {
                         <p className={textColor}>Wallet</p>
                       </a>
                     </li>
-                    <li
-                      className={
-                        activeTab === 'display' ? `${menuActiveColor}` : ''
-                      }
-                    >
-                      <a
-                        onClick={() => this.setActiveTab('display')}
-                        onKeyPress={() => this.setActiveTab('display')}
-                        role="button"
-                        tabIndex={0}
-                        onMouseDown={event => event.preventDefault()}
-                        className={darkMode ? 'menu-link-dark' : ''}
-                      >
-                        <p className={textColor}>Display</p>
-                      </a>
-                    </li>
+
+
+
                     <li
                       className={
                         activeTab === 'security' ? `${menuActiveColor}` : ''

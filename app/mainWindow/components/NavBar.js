@@ -162,7 +162,7 @@ class NavBar extends Component<Props, State> {
                       <div className="field has-addons">
                         <div className="control is-expanded">
                           <input
-                            className="input is-medium"
+                            className="input is-medium is-black"
                             type="text"
                             placeholder="Search for anything..."
                             value={query}
@@ -171,7 +171,7 @@ class NavBar extends Component<Props, State> {
                         </div>
                         <div className="control">
                           <button
-                            className={`button ${settingsCogColor} is-medium`}
+                            className={`button is-dark is-medium`}
                             type="submit"
                           >
                             <i className="fas fa-search" />
@@ -198,7 +198,7 @@ class NavBar extends Component<Props, State> {
                   <div className="navbar-item">
                     <Link className="buttons" to={routes.SETTINGS}>
                       <span
-                        className={`button icon is-large ${settingsCogColor}`}
+                        className={`button icon is-large is-dark`}
                       >
                         <i className="fa fa-cog" />
                       </span>

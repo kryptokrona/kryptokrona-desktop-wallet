@@ -52,6 +52,7 @@ type State = {
 const customStyles = {
   control: base => ({
     ...base,
+    background: 'hsl(0, 0%, 6%)',
     height: 54,
     minHeight: 54,
     fontSize: '1rem'
@@ -586,7 +587,7 @@ export default class Send extends Component<Props, State> {
                       id="amount"
                       disabled={sendAll}
                     />
-                    <label className="checkbox">
+                    <label className="checkbox is-small">
                       <p className={textColor}>
                         <input
                           type="checkbox"
