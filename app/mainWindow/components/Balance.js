@@ -71,7 +71,7 @@ export default class Balance extends Component<Props, State> {
 
   switchCurrency = () => {
     const { displayCurrency } = this.state;
-    if (displayCurrency === 'TRTL') {
+    if (displayCurrency === 'XKR') {
       this.setState({
         displayCurrency: 'fiat'
       });
@@ -80,10 +80,10 @@ export default class Balance extends Component<Props, State> {
     }
     if (displayCurrency === 'fiat') {
       this.setState({
-        displayCurrency: 'TRTL'
+        displayCurrency: 'XKR'
       });
-      configManager.modifyConfig('displayCurrency', 'TRTL');
-      eventEmitter.emit('modifyCurrency', 'TRTL');
+      configManager.modifyConfig('displayCurrency', 'XKR');
+      eventEmitter.emit('modifyCurrency', 'XKR');
     }
     ReactTooltip.rebuild();
   };
@@ -103,7 +103,7 @@ export default class Balance extends Component<Props, State> {
 
     let balanceTooltip;
 
-    if (displayCurrency === 'TRTL') {
+    if (displayCurrency === 'XKR') {
       balanceTooltip =
         `Unlocked: ${atomicToHuman(unlockedBalance, true)} ${il8n.TRTL}<br>` +
         `Locked: ${atomicToHuman(lockedBalance, true)} ${il8n.TRTL}`;
@@ -145,7 +145,7 @@ export default class Balance extends Component<Props, State> {
       >
         <div className="tags has-addons">
           <span className={`tag ${color} ${size}`}>{il8n.balance_colon}</span>
-          {displayCurrency === 'TRTL' && (
+          {displayCurrency === 'XKR' && (
             <span
               className={
                 lockedBalance > 0
