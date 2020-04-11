@@ -8523,10 +8523,10 @@ kryptokrona-utils@^1.1.0:
   optionalDependencies:
     turtlecoin-crypto "^3.1.3"
 
-kryptokrona-wallet-backend-js@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/kryptokrona-wallet-backend-js/-/kryptokrona-wallet-backend-js-1.7.0.tgz#26fbc2a80d49a85ded420e5474f82509a825ae9e"
-  integrity sha512-KLEMjx/wr8I9qMfdRB/WUkRtbgBpm3CTl8We2+jsPti8L3MAP87XKDqeW41x6KALNnaRHJE9MOcirZ/DLg1a7w==
+kryptokrona-wallet-backend-js@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/kryptokrona-wallet-backend-js/-/kryptokrona-wallet-backend-js-1.9.0.tgz#c360f03ffab9b106dca47d94a4f6c3a16c49138e"
+  integrity sha512-k1vrT5KsX4HktSG4yJOW0HSwFue2PF/2EbxV66GkN1LSXphMbEMZlzu07cDi5B6QgT5wt6lXKwKO3fa8ZdT26g==
   dependencies:
     kryptokrona-utils "^1.1.0"
     lodash "^4.17.15"
@@ -8534,7 +8534,6 @@ kryptokrona-wallet-backend-js@^1.7.0:
     pbkdf2 "^3.0.17"
     request "^2.88.0"
     request-promise-native "^1.0.8"
-    turtlecoin-utils "1.0.20"
     typescript "^3.7.2"
 
 last-call-webpack-plugin@^3.0.0:
@@ -13643,19 +13642,6 @@ turtlecoin-crypto@^3.1.3:
     bindings "^1.5.0"
     nan "^2.14.0"
     prebuild-install "^5.3.3"
-
-turtlecoin-utils@1.0.20:
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/turtlecoin-utils/-/turtlecoin-utils-1.0.20.tgz#9a00251009ffaf4939d6e1bc69aec2e0a25a9fd6"
-  integrity sha512-PcTPaNIPNY8yOKvnsMeQ2TZnRmftwFryjC/AW7dWx/qJCCiIOM1p5klPdNmvqk2E9CShPhOT7w7ZjBwz+tLStg==
-  dependencies:
-    crc "^3.8.0"
-    get-random-values "^1.2.0"
-    numeral "^2.0.6"
-    secure-random-string "^1.1.0"
-    varint "^5.0.0"
-  optionalDependencies:
-    turtlecoin-crypto "^3.1.3"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
