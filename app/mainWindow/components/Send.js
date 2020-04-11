@@ -258,7 +258,7 @@ export default class Send extends Component<Props, State> {
                 ` (including a node fee of ${atomicToHuman(
                   nodeFee,
                   true
-                )} TRTL)`}
+                )} XKR)`}
             </p>{' '}
             {paymentID !== '' && (
               <p className={`subtitle ${textColor}`}>
@@ -358,7 +358,7 @@ export default class Send extends Component<Props, State> {
     const transactionData = {
       address: sendToAddress,
       amount:
-        displayCurrency === 'TRTL'
+        displayCurrency === 'XKR'
           ? Number(enteredAmount) * 100
           : (Number(enteredAmount) * 100) / fiatPrice,
       paymentID,

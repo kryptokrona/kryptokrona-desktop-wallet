@@ -266,7 +266,7 @@ export default class Home extends Component<Props, State> {
                         {tx[2] < 0 && (
                           <td>
                             <p className="has-text-danger has-text-right">
-                              {displayCurrency === 'TRTL' &&
+                              {displayCurrency === 'XKR' &&
                                 atomicToHuman(tx[2], true)}
                               {displayCurrency === 'fiat' &&
                                 symbolLocation === 'prefix' &&
@@ -293,7 +293,7 @@ export default class Home extends Component<Props, State> {
                         {tx[2] > 0 && (
                           <td>
                             <p className="has-text-right">
-                              {displayCurrency === 'TRTL' &&
+                              {displayCurrency === 'XKR' &&
                                 atomicToHuman(tx[2], true)}
                               {displayCurrency === 'fiat' &&
                                 symbolLocation === 'prefix' &&
@@ -314,7 +314,7 @@ export default class Home extends Component<Props, State> {
                         )}
                         <td>
                           <p className="has-text-right">
-                            {displayCurrency === 'TRTL' &&
+                            {displayCurrency === 'XKR' &&
                               atomicToHuman(tx[3], true)}
                             {displayCurrency === 'fiat' &&
                               symbolLocation === 'prefix' &&
