@@ -100,7 +100,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/turtlecoin/turtle-wallet-proton.git"
+    "url": "git+https://github.com/kryptokrona/kryptokrona-desktop-wallet.git"
   },
   "author": {
     "name": "ExtraHash",
