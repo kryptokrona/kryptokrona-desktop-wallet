@@ -1,5 +1,5 @@
 {
-  "walletFile": "XKRwallet",
+  "walletFile": "",
   "enableAutoOptimization": true,
   "scanCoinbaseTransactions": false,
   "autoSelectDaemon": true,
