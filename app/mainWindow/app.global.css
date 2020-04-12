@@ -138,7 +138,7 @@ button.is-dark {
 }
 
 .hide-scrollbar {
-  overflow: hidden !important;
+  /*overflow: hidden !important;*/
 }
 
 .expand-button:hover {
@@ -575,9 +575,10 @@ button.is-dark {
 }
 
 .wholescreen {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    width: calc(100% - 64px);
+    height: 100%;
+    right: 0;
 }
 
 .mid-div {
@@ -745,7 +746,7 @@ button.is-dark {
   background-color: hsl(0, 0%, 4%);
 }
 
-.headerbar {
+.headerbar, .headerbar-slideup {
   position: absolute;
   top: 0;
   padding-right: 30px;
@@ -830,8 +831,8 @@ button.is-dark {
 
 .maincontent-homescreen {
   position: absolute;
-  padding-left: 16px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 0px;
   padding-top: 8px;
   margin-top: 64px;
   width: 100%;
@@ -910,4 +911,133 @@ html {
   max-height: 13em;
   overflow: auto;
   user-select: none;
+}
+
+.navbar-menu {
+    background: #171416 !important;
+    display: block;
+    position: absolute;
+    left: -64px;
+    width: 65px;
+    background: black;
+    height: 100vh;
+    text-align: center;
+    z-index: 999999;
+}
+.has-background-black {
+  background: #272527 !important;
+}
+.navbar-item p {
+  display: none;
+}
+
+.navbar-item {
+  margin-bottom: 10px;
+}
+
+a.navbar-item:hover, a.navbar-item:active {
+    color: #6A6A6A !important;
+    background: none !important;
+}
+
+.navbar-item .fas, .navbar-item .fa {
+  font-size: 21px;
+}
+
+.navbar-item strong {
+  display: none;
+}
+
+.headerbar-slideup .tag:not(body).is-dark, .headerbar .tag:not(body).is-dark {
+    background-color: #A8C64E !important;
+
+  }
+
+  .balanceText {
+      padding-right: 65px !important;
+      padding-left: 65px !important;
+      font-size: 32px !important;
+      font-family: monospace;
+      font-weight: bold;
+      color: rgba(0,0,0,0.7) !important;
+      position: absolute;
+      top: 11px;
+      right: -37px;
+      width: calc(100vw - 85px);
+      height: 53px !important;
+  }
+
+.balanceText img {
+  opacity: 0.8;
+}
+
+
+.balanceLogo {
+    max-height: 47px;
+}
+
+.maincontent-homescreen td :not(.expande-tx-data) {
+  height: 100%;
+line-height: 100%;
+vertical-align: middle;
+}
+.maincontent-homescreen td:nth-child(1) button {
+
+font-size: 25px;
+}
+
+.maincontent-homescreen td:nth-child(2) {
+font-size: 10px;
+text-align: center;
+line-height: 100%;
+vertical-align: middle;
+}
+
+.maincontent-homescreen td:nth-child(3) {
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.maincontent-homescreen td:nth-child(4) {
+line-height: 100%;
+vertical-align: middle;
+font-weight: bold;
+}
+
+
+.maincontent-homescreen td:nth-child(5) {
+display: none;
+}
+
+
+.expanded-tx-data {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left !important;
+
+}
+
+.table td, .table th {
+  border: none !important;
+}
+
+
+.table-darkmode, .table-darkmode.is-striped tbody tr:not(.is-selected):nth-child(even) {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.table-darkmode {
+  background: rgba(255,255,255,0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.table-darkmode tbody tr:not(.no-hover):hover {
+    background: rgba(255,255,255,0.2) !important;
+}
+
+
+.no-hover:hover {
+  background: none !important;
 }

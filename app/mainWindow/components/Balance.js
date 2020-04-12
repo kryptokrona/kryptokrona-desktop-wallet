@@ -136,32 +136,26 @@ export default class Balance extends Component<Props, State> {
 
     return (
       <div
-        className="control statusicons"
-        onClick={this.switchCurrency}
-        onKeyPress={this.switchCurrency}
+        className="control statusicons topBalance"
         role="button"
         tabIndex={0}
         onMouseDown={event => event.preventDefault()}
       >
         <div className="tags has-addons">
-          <span className={`tag ${color} ${size}`}>{il8n.balance_colon}</span>
+
           {displayCurrency === 'XKR' && (
             <span
               className={
                 lockedBalance > 0
-                  ? `tag is-dark ${size}`
-                  : `tag is-dark ${size}`
+                  ? `tag is-dark ${size} balanceText`
+                  : `tag is-dark ${size} balanceText`
               }
               data-tip={balanceTooltip}
             >
-              {lockedBalance > 0 ? (
-                <i className="fa fa-lock" />
-              ) : (
-                <i className="fa fa-unlock" />
-              )}
+
+              <img className="balanceLogo" src="images/xkr.svg" />
               &nbsp;
               {atomicToHuman(unlockedBalance + lockedBalance, true)}
-              &nbsp;{il8n.TRTL}
             </span>
           )}
           {displayCurrency === 'fiat' && symbolLocation === 'prefix' && (

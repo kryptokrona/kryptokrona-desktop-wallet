@@ -93,8 +93,8 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "ExtraHash",
-      "repo": "proton",
+      "owner": "kryptokrona",
+      "repo": "kryptokrona-desktop-wallet",
       "private": false
     }
   },

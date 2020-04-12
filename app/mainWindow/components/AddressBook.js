@@ -10,6 +10,7 @@ import {
   validatePaymentID
 } from 'kryptokrona-wallet-backend-js/dist/lib/ValidateParameters';
 import NavBar from './NavBar';
+import BalanceTop from './BalanceTop'
 import BottomBar from './BottomBar';
 import Redirector from './Redirector';
 import { uiType } from '../utils/utils';
@@ -220,6 +221,7 @@ class AddressBook extends Component<Props, State> {
       <div>
         <Redirector />
         <div className={`wholescreen ${backgroundColor} hide-scrollbar`}>
+          <BalanceTop darkMode={darkMode} />
           <NavBar darkMode={darkMode} />
           <div
             className={`maincontent-homescreen ${backgroundColor} ${pageAnimationIn}`}

@@ -8,6 +8,7 @@ import ReactTooltip from 'react-tooltip';
 import { session, eventEmitter, il8n, loginCounter, config } from '../index';
 import NavBar from './NavBar';
 import BottomBar from './BottomBar';
+import BalanceTop from './BalanceTop';
 import Redirector from './Redirector';
 import {
   uiType,
@@ -216,6 +217,7 @@ export default class Home extends Component<Props, State> {
             multiline
             place="top"
           />
+          <BalanceTop darkMode={darkMode} />
           <NavBar darkMode={darkMode} />
           <div
             className={`maincontent-homescreen ${backgroundColor} ${pageAnimationIn}`}
@@ -223,19 +225,7 @@ export default class Home extends Component<Props, State> {
             <table
               className={`table is-striped is-hoverable is-fullwidth is-family-monospace ${tableMode}`}
             >
-              <thead>
-                <tr>
-                  <th />
-                  <th className={textColor}>{il8n.date}</th>
-                  <th className={textColor}>{il8n.hash}</th>
-                  <th className={`has-text-right ${textColor}`}>
-                    {il8n.amount}
-                  </th>
-                  <th className={`has-text-right ${textColor}`}>
-                    {il8n.balance}
-                  </th>
-                </tr>
-              </thead>
+
               <tbody>
                 {transactions.map(tx => {
                   const rowIsExpanded = expandedRows.includes(tx[1]);
@@ -360,7 +350,7 @@ export default class Home extends Component<Props, State> {
                                       <br />
                                     </p>
                                   </td>
-                                  <td>
+                                  <td className="expanded-tx-data">
                                     {tx[0] === 0
                                       ? 'Still In Memory Pool'
                                       : convertTimestamp(tx[0])}
@@ -395,7 +385,7 @@ export default class Home extends Component<Props, State> {
                                       value={transactionHash}
                                       onClick={this.openInExplorer}
                                     >
-                                      View on Block Explorer
+                                    <i class="fa fa-search" aria-hidden="true"></i>
                                     </button>
                                   </td>
                                 </tr>

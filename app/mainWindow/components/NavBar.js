@@ -9,6 +9,7 @@ import routes from '../constants/routes';
 import { session, eventEmitter, il8n, loginCounter } from '../index';
 import { uiType } from '../utils/utils';
 import Modal from './Modal';
+import Balance from './Balance';
 
 type Location = {
   hash: string,
@@ -91,30 +92,11 @@ class NavBar extends Component<Props, State> {
     }
 
     return (
+
       <div>
         <Modal darkMode={darkMode} />
-        <div
-          className={
-            navBarCount > 0
-              ? `headerbar ${fillColor}`
-              : `headerbar-slidedown ${fillColor}`
-          }
-        >
-          {loginCounter.isLoggedIn && (
-            <nav
-              className={`navbar ${elementBaseColor}`}
-              role="navigation"
-              aria-label="main navigation"
-            >
+
               <div className="navbar-menu">
-                <div className="navbar-brand">
-                  <div className="navbar-item">
-                    <img
-                      src="images/icon_color_64x64.png"
-                      alt="proton wallet logo in green"
-                    />
-                  </div>
-                </div>
                 <div className="navbar-start">
                   <Link to={routes.HOME} className="navbar-item">
                     <i className="fa fa-credit-card" />
@@ -157,29 +139,7 @@ class NavBar extends Component<Props, State> {
                   </Link>
                 </div>
                 <div className="navbar-end">
-                  <div className="navbar-item">
-                    <form onSubmit={this.handleSearch}>
-                      <div className="field has-addons">
-                        <div className="control is-expanded">
-                          <input
-                            className="input is-medium is-black"
-                            type="text"
-                            placeholder="Search for anything..."
-                            value={query}
-                            onChange={this.handleQueryChange}
-                          />
-                        </div>
-                        <div className="control">
-                          <button
-                            className={`button is-dark is-medium`}
-                            type="submit"
-                          >
-                            <i className="fas fa-search" />
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+
                   {session.walletPassword !== '' && (
                     <div className="navbar-item">
                       <Link className="buttons" to={routes.LOGIN}>
@@ -205,8 +165,7 @@ class NavBar extends Component<Props, State> {
                     </Link>
                   </div>
                 </div>
-              </div>
-            </nav>
+
           )}
           {!loginCounter.isLoggedIn && (
             <nav

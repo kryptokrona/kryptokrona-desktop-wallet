@@ -11,6 +11,7 @@ import {
 } from 'kryptokrona-wallet-backend-js';
 import { session, il8n, loginCounter, config } from '../index';
 import NavBar from './NavBar';
+import BalanceTop from './BalanceTop';
 import BottomBar from './BottomBar';
 import Redirector from './Redirector';
 import { uiType } from '../utils/utils';
@@ -144,6 +145,7 @@ export default class Receive extends Component<Props, State> {
             place="top"
             effect="solid"
           />
+          <BalanceTop darkMode={darkMode} />
           <NavBar darkMode={darkMode} />
           <div className={`maincontent ${backgroundColor} ${pageAnimationIn}`}>
             <div className="columns">

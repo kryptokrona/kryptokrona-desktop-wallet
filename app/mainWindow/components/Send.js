@@ -20,6 +20,7 @@ import {
   addressList
 } from '../index';
 import NavBar from './NavBar';
+import BalanceTop from './BalanceTop';
 import BottomBar from './BottomBar';
 import Redirector from './Redirector';
 import { uiType, atomicToHuman, search } from '../utils/utils';
@@ -536,6 +537,7 @@ export default class Send extends Component<Props, State> {
             multiline
             place="top"
           />
+          <BalanceTop darkMode={darkMode} />
           <NavBar darkMode={darkMode} />
           <div className={`maincontent ${backgroundColor} ${pageAnimationIn}`}>
             <form onSubmit={this.prepareTransaction}>

@@ -25,7 +25,7 @@ type State = {
   navBarCount: number
 };
 
-class BottomBar extends Component<Props, State> {
+class BalanceTop extends Component<Props, State> {
   props: Props;
 
   state: State;
@@ -53,11 +53,11 @@ class BottomBar extends Component<Props, State> {
           // eslint-disable-next-line no-nested-ternary
           darkMode
             ? navBarCount > 0
-              ? 'footerbar has-background-black noselect'
-              : 'footerbar-slideup has-background-black noselect'
+              ? 'headerbar has-background-black noselect'
+              : 'headerbar-slideup has-background-black noselect'
             : navBarCount > 0
-            ? 'footerbar has-background-light noselect'
-            : 'footerbar-slideup has-background-light noselect'
+            ? 'headerbar has-background-light noselect'
+            : 'headerbar-slideup has-background-light noselect'
         }
       >
         <ReactTooltip
@@ -68,8 +68,7 @@ class BottomBar extends Component<Props, State> {
         />
         {loginCounter.isLoggedIn && (
           <div className="field is-grouped is-grouped-multiline is-grouped-right">
-            <NodeFee size="is-medium" darkMode={darkMode} />
-            <SyncStatus size="is-medium" darkMode={darkMode} />
+            <Balance size="is-medium" darkMode={darkMode} />
           </div>
         )}
       </div>
@@ -77,4 +76,4 @@ class BottomBar extends Component<Props, State> {
   }
 }
 
-export default withRouter(BottomBar);
+export default withRouter(BalanceTop);
