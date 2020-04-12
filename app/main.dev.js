@@ -225,8 +225,8 @@ app.on('ready', async () => {
     show: false,
     width: 500,
     height: 725,
-    minWidth: 1250,
-    minHeight: 625,
+    minWidth: 500,
+    minHeight: 725,
     backgroundColor: '#121212',
     icon: path.join(__dirname, 'images/icon.png'),
     webPreferences: {
