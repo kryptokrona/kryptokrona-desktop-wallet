@@ -155,7 +155,12 @@ export default class Balance extends Component<Props, State> {
 
               <img className="balanceLogo" src="images/xkr.svg" />
               &nbsp;
-              {atomicToHuman(unlockedBalance + lockedBalance, true)}
+              <span className="unlocked">
+              {atomicToHuman(unlockedBalance, true)}
+              </span>
+              <span className="locked">+&nbsp;
+              {atomicToHuman(lockedBalance, true)}
+              </span>
             </span>
           )}
           {displayCurrency === 'fiat' && symbolLocation === 'prefix' && (

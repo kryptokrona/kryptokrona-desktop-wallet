@@ -133,12 +133,17 @@ button.is-dark {
   color: #e0e0e0;
 }
 
+.modal .box {
+  width: 83%;
+  margin-left: 75px;
+}
+
 .no-hover:hover {
   background-color: Transparent !important;
 }
 
 .hide-scrollbar {
-  /*overflow: hidden !important;*/
+  /* overflow: hidden !important; */
 }
 
 .expand-button:hover {
@@ -832,7 +837,7 @@ button.is-dark {
 .maincontent-homescreen {
   position: absolute;
   padding-left: 10px;
-  padding-right: 0px;
+  padding-right: 0;
   padding-top: 8px;
   margin-top: 64px;
   width: 100%;
@@ -965,11 +970,69 @@ a.navbar-item:hover, a.navbar-item:active {
       right: -37px;
       width: calc(100vw - 85px);
       height: 53px !important;
-  }
+      animation-duration: 0.01s;
+  /*  animation-name: textflicker;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
 
 .balanceText img {
   opacity: 0.8;
+  animation-duration: 0.01s;/*
+animation-name: imgflicker;
+animation-iteration-count: infinite;
+animation-direction: alternate;*/
+animation: flicker 0.000s infinite;
 }
+
+.balanceText span {
+  animation: flicker 0.00s infinite;
+}
+
+@keyframes flicker {
+        0% {opacity: 0.27861;}
+        5% {opacity: 0.34769;}
+        10% {opacity: 0.23604;}
+        15% {opacity: 0.90626;}
+        20% {opacity: 0.18128;}
+        25% {opacity: 0.83891;}
+        30% {opacity: 0.65583;}
+        35% {opacity: 0.67807;}
+        40% {opacity: 0.26559;}
+        45% {opacity: 0.84693;}
+        50% {opacity: 0.96019;}
+        55% {opacity: 0.08594;}
+        60% {opacity: 0.20313;}
+        65% {opacity: 0.71988;}
+        70% {opacity: 0.53455;}
+        75% {opacity: 0.37288;}
+        80% {opacity: 0.71428;}
+        85% {opacity: 0.70419;}
+        90% {opacity: 0.7003;}
+        95% {opacity: 0.36108;}
+        100% {opacity: 0.24387;}
+}
+@keyframes textflickerr {
+from {
+ text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+}
+to {
+ text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+}
+}
+
+@keyframes imgflickerr {
+from {
+-webkit-filter: drop-shadow( 1px 0px 0px #ea36af,  -2px 0 0 #75fa69);
+filter: drop-shadow( 1px 0px 0px #ea36af);
+}
+to {
+  -webkit-filter: drop-shadow( 2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
+  filter: drop-shadow( 2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
+}
+}
+
 
 
 .balanceLogo {
@@ -982,8 +1045,14 @@ line-height: 100%;
 vertical-align: middle;
 }
 .maincontent-homescreen td:nth-child(1) button {
-
 font-size: 25px;
+}
+
+.maincontent-homescreen td:nth-child(1) {
+  padding-left: 0px;
+  padding-right: 0px;
+  line-height: 100%;
+  vertical-align: middle;
 }
 
 .maincontent-homescreen td:nth-child(2) {
@@ -1040,4 +1109,47 @@ display: none;
 
 .no-hover:hover {
   background: none !important;
+}
+
+
+::-webkit-scrollbar
+   {
+     width: 4px;  /* for vertical scrollbars */
+     height: 4px; /* for horizontal scrollbars */
+   }
+
+   ::-webkit-scrollbar-track
+   {
+     background: rgba(0, 0, 0, 0.1);
+   }
+
+   ::-webkit-scrollbar-thumb
+   {
+     background: rgba(0, 0, 0, 0.2);
+   }
+
+.elem-to-center .box {
+  width: inherit;
+  margin-left: 0;
+}
+
+.add-contacts-table td {
+  text-align: center !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.add-contacts-table label {
+  text-align: left;
+}
+
+.add-contacts-table input {
+  margin-top: 5px;
+}
+
+.locked {
+  display: none;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
 }

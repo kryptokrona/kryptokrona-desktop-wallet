@@ -228,19 +228,10 @@ class AddressBook extends Component<Props, State> {
           >
             {showNewContactForm && (
               <table
-                className={`table is-striped is-hoverable is-fullwidth is-family-monospace ${tableMode}`}
+                className={`table add-contacts-table is-fullwidth is-family-monospace ${tableMode}`}
               >
-                <thead>
-                  <tr>
-                    <th className={textColor} />
-                    <th className={textColor}>Enter Name:</th>
-                    <th className={textColor}>Enter Address:</th>
-                    <th className={textColor}>Enter Payment ID (optional):</th>
-                    <th />
-                  </tr>
-                </thead>
                 <tbody>
-                  <tr>
+                  <tr className='no-hover'>
                     <td>
                       <span
                         // eslint-disable-next-line react/no-danger
@@ -249,14 +240,20 @@ class AddressBook extends Component<Props, State> {
                         }}
                       />
                     </td>
+                    </tr>
+                    <tr className='no-hover'>
                     <td>
+                      <label>Name</label>
                       <input
                         className="input is-large"
                         value={newName}
                         onChange={this.handleNewNameChange}
                       />
                     </td>
+                    </tr>
+                    <tr className='no-hover'>
                     <td>
+                      <label>Address</label>
                       <input
                         className={`input is-large ${
                           badAddress ? 'is-danger' : ''
@@ -265,7 +262,10 @@ class AddressBook extends Component<Props, State> {
                         onChange={this.handleNewAddressChange}
                       />
                     </td>
+                    </tr>
+                    <tr className='no-hover'>
                     <td>
+                      <label>Payment ID (optional)</label>
                       <input
                         className={`input is-large ${
                           badPaymentID ? 'is-danger' : ''
@@ -274,6 +274,8 @@ class AddressBook extends Component<Props, State> {
                         onChange={this.handleNewPaymentIDChange}
                       />
                     </td>
+                    </tr>
+                    <tr className='no-hover'>
                     <td>
                       <a
                         className={textColor}
@@ -339,7 +341,7 @@ class AddressBook extends Component<Props, State> {
                         <span
                           // eslint-disable-next-line react/no-danger
                           dangerouslySetInnerHTML={{
-                            __html: jdenticon.toSvg(address, 114)
+                            __html: jdenticon.toSvg(address, 64)
                           }}
                         />
                       </td>

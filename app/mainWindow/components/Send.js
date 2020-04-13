@@ -235,6 +235,28 @@ export default class Send extends Component<Props, State> {
       if (data.status === 'SUCCESS') {
         const { address, paymentID, amount, fee, nodeFee, hash } = data;
         session.setPreparedTransactionHash(hash);
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        console.log(session.getLockedBalance());
+        
         const modalMessage = (
           <div>
             <center>
@@ -423,7 +445,7 @@ export default class Send extends Component<Props, State> {
         : totalAmount - 10 - parseInt(nodeFee, 10);
     this.setState({
       enteredAmount:
-        displayCurrency === 'TRTL'
+        displayCurrency === 'XKR'
           ? atomicToHuman(enteredAmount, false).toString()
           : atomicToHuman(enteredAmount * fiatPrice, false).toString()
     });
