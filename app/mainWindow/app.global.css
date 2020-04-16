@@ -10,10 +10,31 @@
 @import '~bulma/css/bulma.min.css';
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import '~bulma-extensions/dist/css/bulma-extensions.min.css';
+/* major-mono-display-regular - latin */
 @font-face {
-  font-family: 'MyWebFont';
-  src: url('webfont.ttf'); /* IE9 Compat Modes */
+  font-family: 'Major Mono Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/major-mono-display-v4-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Major Mono Display Regular'), local('MajorMonoDisplay-Regular'),
+       url('fonts/major-mono-display-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/major-mono-display-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/major-mono-display-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/major-mono-display-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/major-mono-display-v4-latin-regular.svg#MajorMonoDisplay') format('svg'); /* Legacy iOS */
 }
+@font-face {
+  font-family: 'XKR';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/icomoon.eot'); /* IE9 Compat Modes */
+  src: local('Icomoon'), local('icomoon'),
+       url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/icomoon.woff') format('woff'), /* Modern Browsers */
+       url('fonts/icomoon.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/icomoon.svg#MajorMonoDisplay') format('svg'); /* Legacy iOS */
+}
+
 
 .transparent-button {
   background-color: Transparent;
@@ -172,7 +193,22 @@ button.is-dark {
 
 .contactButtons {
   position: relative;
-  top: 16px;
+  font-size: 25px;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.contact-address {
+  min-height: 100px !important;
+}
+
+.contact-avatar, .contact-name {
+  display: block;
+  text-align: center;
+}
+
+.contacts-td {
+  vertical-align: middle!important;
 }
 
 .settingsCarot {
@@ -958,7 +994,7 @@ a.navbar-item:hover, a.navbar-item:active {
 }
 
 .headerbar-slideup .tag:not(body).is-dark, .headerbar .tag:not(body).is-dark {
-    background-color: #A8C64E !important;
+    background-color: #FBBF2E !important;
 
   }
 
@@ -966,8 +1002,8 @@ a.navbar-item:hover, a.navbar-item:active {
       padding-right: 65px !important;
       padding-left: 65px !important;
       font-size: 32px !important;
-      font-family: 'MyWebFont';
-      font-weight: 1000;
+      font-family: 'Major Mono Display';
+      font-weight: bold;
       color: rgba(0,0,0,0.7) !important;
       position: absolute;
       top: 11px;
@@ -975,9 +1011,17 @@ a.navbar-item:hover, a.navbar-item:active {
       width: calc(100vw - 85px);
       height: 53px !important;
       animation-duration: 0.01s;
-  /*  animation-name: textflicker;
+    animation-name: textflickerr;
     animation-iteration-count: infinite;
-    animation-direction: alternate; */
+    animation-direction: alternate;
+}
+
+
+.balanceText:before {
+  font-family: 'XKR';
+  content: "\e900";
+  font-weight: lighter;
+  font-size: 48px;
 }
 
 
@@ -991,7 +1035,7 @@ animation: flicker 0.000s infinite;
 }
 
 .balanceText span {
-  animation: textflickerr 0.01s infinite;
+  animation: flicker 0.00s infinite;
   margin-top: -5px;
 }
 
@@ -1020,21 +1064,19 @@ animation: flicker 0.000s infinite;
 }
 @keyframes textflickerr {
 from {
- text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+ text-shadow: 0.5px 0 0 #ea36af, -0.5px 0 0 #75fa69;
 }
 to {
- text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+ text-shadow: 0.5px 0.5px 0.5px #ea36af, -0.5px -0.5px 0.5px #75fa69;
 }
 }
 
 @keyframes imgflickerr {
 from {
-  opacity: 0.96019;
 -webkit-filter: drop-shadow( 1px 0px 0px #ea36af,  -2px 0 0 #75fa69);
 filter: drop-shadow( 1px 0px 0px #ea36af);
 }
 to {
-  opacity: 0.86019;
   -webkit-filter: drop-shadow( 2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
   filter: drop-shadow( 2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
 }
@@ -1044,6 +1086,7 @@ to {
 
 .balanceLogo {
     max-height: 47px;
+    display: none;
 }
 
 .maincontent-homescreen td :not(.expande-tx-data) {
