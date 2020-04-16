@@ -314,10 +314,7 @@ class AddressBook extends Component<Props, State> {
             >
               <thead>
                 <tr>
-                  <th className={textColor}>Icon</th>
-                  <th className={textColor}>Name</th>
-                  <th className={textColor}>Address</th>
-                  <th className={textColor}>Payment ID</th>
+
                   <th className="has-text-centered">
                     <a
                       className={textColor}
@@ -339,45 +336,41 @@ class AddressBook extends Component<Props, State> {
                     <tr key={address}>
                       <td>
                         <span
+                          className="contact-avatar"
                           // eslint-disable-next-line react/no-danger
                           dangerouslySetInnerHTML={{
                             __html: jdenticon.toSvg(address, 64)
                           }}
                         />
+                        <br />
+                        <span
+                          className={`contact-name ${textColor} is-family-monospace`}
+                          >
+                          {name}
+                        </span>
                       </td>
                       <td>
+
                         <textarea
-                          className={`textarea transparent-textarea ${textColor} no-resize is-family-monospace`}
-                          defaultValue={name}
-                          readOnly
-                        />
-                      </td>
-                      <td>
-                        <textarea
-                          className={`textarea transparent-textarea ${textColor} no-resize is-family-monospace`}
+                          className={`contact-address textarea transparent-textarea ${textColor} no-resize is-family-monospace`}
                           defaultValue={address}
                           readOnly
                         />
                       </td>
-                      <td>
-                        <textarea
-                          className={`textarea transparent-textarea ${textColor} no-resize is-family-monospace`}
-                          defaultValue={paymentID}
-                          readOnly
-                        />
-                      </td>
-                      <td>
+
+
+                      <td className="contacts-td">
                         <div className="contactButtons">
                           <Link
                             className={textColor}
                             to={`${routes.SEND}/${address}/${paymentID}`}
                           >
                             <i
-                              className="fa fa-paper-plane is-size-3 has-text-centered"
+                              className="fa fa-paper-plane is-size-5 has-text-centered"
                               aria-hidden="true"
                             />
                           </Link>
-                          &nbsp;&nbsp;
+                          <br />
                           <a
                             className={
                               deletionRequests.includes(index)
@@ -386,7 +379,7 @@ class AddressBook extends Component<Props, State> {
                             }
                           >
                             <i
-                              className="fa fa-trash is-size-3 has-text-centered"
+                              className="fa fa-trash is-size-5 has-text-centered"
                               aria-hidden="true"
                               onClick={() => this.deleteContact(index)}
                             />

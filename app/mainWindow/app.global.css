@@ -168,7 +168,22 @@ button.is-dark {
 
 .contactButtons {
   position: relative;
-  top: 16px;
+  font-size: 25px;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.contact-address {
+  min-height: 100px !important;
+}
+
+.contact-avatar, .contact-name {
+  display: block;
+  text-align: center;
+}
+
+.contacts-td {
+  vertical-align: middle!important;
 }
 
 .settingsCarot {
