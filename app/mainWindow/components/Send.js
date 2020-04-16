@@ -235,28 +235,6 @@ export default class Send extends Component<Props, State> {
       if (data.status === 'SUCCESS') {
         const { address, paymentID, amount, fee, nodeFee, hash } = data;
         session.setPreparedTransactionHash(hash);
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        console.log(session.getLockedBalance());
-        
         const modalMessage = (
           <div>
             <center>

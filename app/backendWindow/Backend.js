@@ -157,6 +157,7 @@ export default class Backend {
         error: undefined
       };
       ipcRenderer.send('fromBackend', 'sendTransactionResponse', response);
+      this.getBalance();
       this.getTransactions(this.getLastTxAmountRequested() + 1);
     } else {
       console.log(`Failed to send transaction: ${result.error.toString()}`);
@@ -168,6 +169,7 @@ export default class Backend {
       };
       ipcRenderer.send('fromBackend', 'sendTransactionResponse', response);
     }
+
   }
 
   async prepareTransaction(transaction): void {

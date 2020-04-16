@@ -165,8 +165,6 @@ class NavBar extends Component<Props, State> {
                     </Link>
                   </div>
                 </div>
-
-          )}
           {!loginCounter.isLoggedIn && (
             <nav
               className={`navbar ${elementBaseColor}`}

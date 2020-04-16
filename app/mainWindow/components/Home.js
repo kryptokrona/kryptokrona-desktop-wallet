@@ -385,7 +385,7 @@ export default class Home extends Component<Props, State> {
                                       value={transactionHash}
                                       onClick={this.openInExplorer}
                                     >
-                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <i className="fa fa-search" aria-hidden="true"></i>
                                     </button>
                                   </td>
                                 </tr>
