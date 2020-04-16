@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 import crypto from 'crypto';
 import React, { Component } from 'react';
-import QRCode from 'qrcode.react';
+import { QRCode } from 'react-qrcode-logo';
 import ReactTooltip from 'react-tooltip';
 import {
   createIntegratedAddress,
@@ -267,15 +267,17 @@ export default class Receive extends Component<Props, State> {
                   <p className={`has-text-weight-bold ${textColor}`}>
                     {il8n.qr_code}
                   </p>
-                  <div className="box">
+                  <div className="">
                     <center>
                       <span>
                         <QRCode
                           value={sessionAddress}
                           renderAs="svg"
-                          color={darkMode ? '#F5F5F5' : '#0A0A0A'}
-                          bgColor="#7c7c7c"
+                          fgColor="#fff"
+                          bgColor="rgba(0,0,0,0)"
                           size={200}
+                          logoImage="images/xkr.svg"
+                          qrStyle="dots"
                         />
                       </span>
                     </center>
