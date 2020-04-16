@@ -275,8 +275,11 @@ export default class Receive extends Component<Props, State> {
                           renderAs="svg"
                           fgColor="#fff"
                           bgColor="rgba(0,0,0,0)"
-                          size={200}
-                          logoImage="images/xkr.svg"
+                          size={300}
+                          logoHeight={100}
+                          logoWidth={200}
+                          logoOpacity={0}
+                          logoImage="images/xkr_qr.svg"
                           qrStyle="dots"
                         />
                       </span>

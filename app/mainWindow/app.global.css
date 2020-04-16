@@ -10,6 +10,10 @@
 @import '~bulma/css/bulma.min.css';
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import '~bulma-extensions/dist/css/bulma-extensions.min.css';
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.ttf'); /* IE9 Compat Modes */
+}
 
 .transparent-button {
   background-color: Transparent;
@@ -168,22 +172,7 @@ button.is-dark {
 
 .contactButtons {
   position: relative;
-  font-size: 25px;
-  vertical-align: middle;
-  height: 100%;
-}
-
-.contact-address {
-  min-height: 100px !important;
-}
-
-.contact-avatar, .contact-name {
-  display: block;
-  text-align: center;
-}
-
-.contacts-td {
-  vertical-align: middle!important;
+  top: 16px;
 }
 
 .settingsCarot {
@@ -977,8 +966,8 @@ a.navbar-item:hover, a.navbar-item:active {
       padding-right: 65px !important;
       padding-left: 65px !important;
       font-size: 32px !important;
-      font-family: monospace;
-      font-weight: bold;
+      font-family: 'MyWebFont';
+      font-weight: 1000;
       color: rgba(0,0,0,0.7) !important;
       position: absolute;
       top: 11px;
@@ -1002,7 +991,8 @@ animation: flicker 0.000s infinite;
 }
 
 .balanceText span {
-  animation: flicker 0.00s infinite;
+  animation: textflickerr 0.01s infinite;
+  margin-top: -5px;
 }
 
 @keyframes flicker {
@@ -1039,10 +1029,12 @@ to {
 
 @keyframes imgflickerr {
 from {
+  opacity: 0.96019;
 -webkit-filter: drop-shadow( 1px 0px 0px #ea36af,  -2px 0 0 #75fa69);
 filter: drop-shadow( 1px 0px 0px #ea36af);
 }
 to {
+  opacity: 0.86019;
   -webkit-filter: drop-shadow( 2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
   filter: drop-shadow( 2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
 }
