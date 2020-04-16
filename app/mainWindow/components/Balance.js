@@ -147,8 +147,8 @@ export default class Balance extends Component<Props, State> {
             <span
               className={
                 lockedBalance > 0
-                  ? `tag is-dark ${size} balanceText`
-                  : `tag is-dark ${size} balanceText`
+                  ? `tag is-dark ${size} balanceText scanlines`
+                  : `tag is-dark ${size} balanceText scanlines`
               }
               data-tip={balanceTooltip}
             >
