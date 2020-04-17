@@ -216,6 +216,11 @@ contextMenu({
   ]
 });
 
+let frameActivated = true;
+if (os.platform() !== 'darwin') {
+  frameActivated = false;
+ }
+
 app.on('ready', async () => {
   await installExtensions();
 
@@ -227,7 +232,7 @@ app.on('ready', async () => {
     height: 725,
     minWidth: 500,
     minHeight: 725,
-    frame: false,
+    frame: frameActivated,
     backgroundColor: '#121212',
     icon: path.join(__dirname, 'images/icon.png'),
     webPreferences: {
