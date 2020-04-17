@@ -11,7 +11,7 @@ import NavBar from './NavBar';
 import BottomBar from './BottomBar';
 import Redirector from './Redirector';
 import { uiType } from '../utils/utils';
-import { backupToFile, eventEmitter, reInitWallet, config } from '../index';
+import { backupToFile, eventEmitter, reInitWallet, config, session } from '../index';
 
 type State = {
   darkMode: boolean,
@@ -136,7 +136,7 @@ export default class NewWallet extends Component<Props, State> {
       // import the seed so we can confirm it works
       const [confirmWallet, err] = WalletBackend.importWalletFromSeed(
         new Daemon('pool.kryptokrona.se', 11898),
-        100000,
+        session.getNetworkBlockHeight(),
         confirmSeed
       );
 
@@ -175,7 +175,7 @@ export default class NewWallet extends Component<Props, State> {
           if (savePath === undefined) {
             return;
           }
-          const saved = newWallet.saveWalletToFile(savePath, password);
+          const saved = confirmWallet.saveWalletToFile(savePath, password);
           if (saved) {
             reInitWallet(savePath);
           } else {
