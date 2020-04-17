@@ -112,7 +112,7 @@ export default class Home extends Component<Props, State> {
     const hash = event.target.value;
 
     remote.shell.openExternal(
-      `http://explorer.kryptokrona.se/?hash=${encodeURIComponent(hash)}`
+      `http://explorer.kryptokrona.se/?hash=${encodeURIComponent(hash)}#blockchain_transaction`
     );
   };
 
@@ -230,7 +230,7 @@ export default class Home extends Component<Props, State> {
                 {transactions.map(tx => {
                   const rowIsExpanded = expandedRows.includes(tx[1]);
                   const transactionHash = tx[1];
-                  const toggleSymbol = rowIsExpanded ? '-' : '+';
+                  const toggleSymbol = rowIsExpanded ? '.' : '.';
                   return (
                     <Fragment key={transactionHash}>
                       <tr>

@@ -100,6 +100,9 @@ export default class Login extends Component<Props, State> {
                   : `box loginbox inner-div ${fillColor}`
               }
             >
+            <div className='scanlines loginscanline'>
+            <div className='loginlogo' />
+            </div>
               <form onSubmit={this.handleSubmit}>
                 {!loginInProgress && (
                   <div>

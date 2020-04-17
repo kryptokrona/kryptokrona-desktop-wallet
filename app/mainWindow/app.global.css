@@ -42,6 +42,8 @@
   border: none;
   cursor: pointer;
   overflow: hidden;
+  font-family: 'Major Mono Display' !important;
+  margin-top: -18px;
 }
 
 button.is-dark {
@@ -179,6 +181,7 @@ button.is-dark {
   border-color: #222;
   border-radius: 4px;
   color: #e0e0e0;
+  box-shadow: none !important;
 }
 
 .modal .box {
@@ -642,6 +645,11 @@ button.is-dark {
   box-sizing: border-box;
 }
 
+.table.is-fullwidth {
+    width: 98.5% !important;
+    font-size: 14px;
+}
+
 .wholescreen {
     position: absolute;
     width: calc(100% - 64px);
@@ -1020,6 +1028,16 @@ a.navbar-item:hover, a.navbar-item:active {
     background-color: #FBBF2E !important;
   }
 
+  .loginlogo {
+    height: 160px;
+    background-color: #FBBF2E !important;
+    box-shadow: inset 5px 5px 15px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    font-family: 'XKR';
+    text-align: center;
+    overflow: hidden;
+  }
+
 .scanlines {
   position: relative;
   overflow: hidden;
@@ -1028,6 +1046,10 @@ a.navbar-item:hover, a.navbar-item:active {
 }
 
 body {
+  -webkit-app-region: drag
+}
+
+.fullwindow {
   -webkit-app-region: drag
 }
 
@@ -1084,7 +1106,14 @@ background-size: 100% 4px;
   background-position: 0 50%;
 }
 }
-
+  .loginscanline {
+    margin-bottom: 15px;
+    border-radius: 15px;
+  }
+  .welcomescanline {
+    max-width: 260px;
+left: calc(50% - 130px);
+  }
   .balanceText {
     text-align: center;
       font-size: 24px !important;
@@ -1100,6 +1129,18 @@ background-size: 100% 4px;
     animation-name: textflickerr;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+.loginlogo:before {
+  font-family: 'XKR';
+  content: "\e900";
+  font-weight: lighter;
+  font-size: 125px;
+  position: relative;
+  top: -15px;
+  color: rgba(0,0,0,0.7);
+  text-align: center;
+  width: 100%;
 }
 
 
