@@ -133,7 +133,6 @@ export default class Modal extends Component<Props, State> {
                   type="submit"
                   tabIndex={0}
                   onMouseDown={event => event.preventDefault()}
-                  ref={input => input && input.focus()}
                 >
                   {confirmLabel}
                 </button>
