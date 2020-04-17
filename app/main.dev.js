@@ -217,7 +217,7 @@ contextMenu({
 });
 
 let frameActivated = true;
-if (os.platform() !== 'darwin') {
+if (os.platform() == 'darwin') {
   frameActivated = false;
  }
 
