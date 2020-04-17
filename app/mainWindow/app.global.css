@@ -1000,6 +1000,7 @@ a.navbar-item:hover, a.navbar-item:active {
 .scanlines {
   position: relative;
   overflow: hidden;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2);
 }
 
 
@@ -1057,8 +1058,7 @@ background-size: 100% 4px;
 }
 
   .balanceText {
-      padding-right: 65px !important;
-      padding-left: 65px !important;
+    text-align: center;
       font-size: 24px !important;
       font-family: 'Major Mono Display';
       font-weight: bold;
@@ -1098,7 +1098,6 @@ animation: flicker 0.000s infinite;
 
   margin-top: -20px;
   white-space: nowrap;
-    overflow: hidden;
     width: 100%;
 }
 
