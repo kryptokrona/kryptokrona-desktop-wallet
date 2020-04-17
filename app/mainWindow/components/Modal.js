@@ -53,6 +53,7 @@ export default class Modal extends Component<Props, State> {
   };
 
   handleEsc = (event: any) => {
+    console.log(event.key);
     if (event.key === 'Escape') {
       this.closeModal();
     }
@@ -129,11 +130,11 @@ export default class Modal extends Component<Props, State> {
                 <button
                   className="button is-dark is-large"
                   onClick={() => this.confirmModal()}
-                  onKeyPress={() => this.confirmModal()}
-                  type="submit"
+                  onKeyUp={() => this.confirmModal()}
+                  onKeyPress={() => this.closeModal()}
+                  type=""
                   tabIndex={0}
                   onMouseDown={event => event.preventDefault()}
-                  ref={input => input && input.focus()}
                 >
                   {confirmLabel}
                 </button>

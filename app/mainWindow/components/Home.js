@@ -223,7 +223,7 @@ export default class Home extends Component<Props, State> {
             className={`maincontent-homescreen ${backgroundColor} ${pageAnimationIn}`}
           >
             <table
-              className={`table tx-table is-striped is-hoverable is-fullwidth is-family-monospace ${tableMode}`}
+              className={`table tx-table is-hoverable is-fullwidth is-family-monospace ${tableMode}`}
             >
 
               <tbody>

@@ -310,7 +310,7 @@ class AddressBook extends Component<Props, State> {
               </table>
             )}
             <table
-              className={`table is-striped is-hoverable is-fullwidth is-family-monospace ${tableMode}`}
+              className={`table is-hoverable is-fullwidth is-family-monospace ${tableMode}`}
             >
               <thead>
                 <tr>

@@ -612,7 +612,7 @@ export default class Send extends Component<Props, State> {
                   {il8n.payment_id}
                   <div className="control">
                     <input
-                      className="input is-medium"
+                      className="input is-small"
                       type="text"
                       placeholder={il8n.payment_id_input_placeholder}
                       value={paymentID}
@@ -634,7 +634,7 @@ export default class Send extends Component<Props, State> {
               </div>
               <div className="buttons">
                 {!transactionInProgress && (
-                  <button type="submit" className="button is-dark is-medium">
+                  <button type="submit" className="button is-dark is-small">
                     <span className="icon is-small">
                       <i className="fa fa-paper-plane" />
                     </span>
@@ -644,7 +644,7 @@ export default class Send extends Component<Props, State> {
                 {transactionInProgress && (
                   <button
                     type="submit"
-                    className="button is-dark is-medium is-loading is-disabled"
+                    className="button is-dark is-small is-loading is-disabled"
                     disabled
                   >
                     <span className="icon is-small">
@@ -656,7 +656,7 @@ export default class Send extends Component<Props, State> {
 
                 <button
                   type="reset"
-                  className={`button is-medium is-dark ${elementBaseColor}`}
+                  className={`button is-small is-dark ${elementBaseColor}`}
                   onClick={this.resetForm}
                 >
                   <span className="icon is-small">
@@ -667,7 +667,7 @@ export default class Send extends Component<Props, State> {
                 {isDev && (
                   <div>
                     <a
-                      className="button is-dark is-medium"
+                      className="button is-dark is-small"
                       onClick={this.createTestTransaction}
                       onKeyPress={this.createTestTransaction}
                       role="button"

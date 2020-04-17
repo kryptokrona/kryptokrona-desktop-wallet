@@ -144,12 +144,35 @@ button.is-dark {
 
 .input,
 .select select,
-.textarea {
-  background-color: rgb(15, 15, 15);
+.textarea,
+.css-1hwfws3,
+.css-1udz2ne-control {
+  background-color: #1D1B1D !important;
+  background: #1D1B1D !important;
   border-color: #222;
   border-radius: 4px;
-  color: #e0e0e0;
+  color: rgba(255,255,255,0.8) !important;
+  font-family: monospace;
+  font-size: 14px !important;
+  padding: 10px;
+  height: auto;
 }
+
+.css-am967n-control {
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  box-shadow: none !important;
+  background: #1D1B1D !important;
+}
+
+.css-ek5b1u-singleValue {
+  color: rgba(255,255,255,0.8) !important;
+}
+
+.css-1udz2ne-control {
+  border: 1px solid rgba(255,255,255,0.25) !important;
+}
+
+.input::placeholder, .css-1m2l6vs-placeholder { color: rgba(255,255,255,0.4) !important;  }
 
 .box {
   background-color: #7c7c7c;
@@ -1000,7 +1023,12 @@ a.navbar-item:hover, a.navbar-item:active {
 .scanlines {
   position: relative;
   overflow: hidden;
-  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2);
+  box-shadow: inset 5px 5px 15px rgba(0,0,0,0.2);
+  -webkit-app-region: drag;
+}
+
+body {
+  -webkit-app-region: drag
 }
 
 
@@ -1159,6 +1187,7 @@ vertical-align: middle;
 }
 .maincontent-homescreen td:nth-child(1) button {
 font-size: 25px;
+opacity: 0.5;
 }
 
 .maincontent-homescreen td:nth-child(1) {
@@ -1216,7 +1245,7 @@ display: none;
 }
 
 .table-darkmode tbody tr:not(.no-hover):hover {
-    background: rgba(255,255,255,0.2) !important;
+    background: #3F3E3F !important;
 }
 
 
@@ -1260,8 +1289,21 @@ display: none;
   margin-top: 5px;
 }
 
+label {
+  text-align: left !important;
+  font-size: 13px !important;
+}
+
+.input:active, .input:focus, .is-active.input, .is-active.textarea, .is-focused.input, .is-focused.textarea, .select select.is-active, .select select.is-focused, .select select:active, .select select:focus, .textarea:active, .textarea:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.input:hover, .is-hovered.input, .is-hovered.textarea, .select select.is-hovered, .select select:hover, .textarea:hover {
+    border-color: rgba(255,255,255,0.1);
+}
+
 .locked {
-  display: none;
     font-size: 10px;
     position: absolute;
     bottom: 0;
