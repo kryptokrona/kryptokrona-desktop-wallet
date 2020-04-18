@@ -1,7 +1,7 @@
 {
   "name": "kryptokrona-desktop-wallet",
   "productName": "Kryptokrona Wallet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kryptokrona wallet based on React, React Router, Webpack, and React Hot Loader",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
@@ -239,6 +239,7 @@
     "electron-debug": "^2.2.0",
     "electron-is-dev": "^1.1.0",
     "electron-log": "^3.0.9",
+    "electron-updater": "^4.2.5",
     "file-loader": "^4.3.0",
     "history": "^4.10.1",
     "jdenticon": "^2.2.0",

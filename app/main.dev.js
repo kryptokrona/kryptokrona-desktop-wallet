@@ -21,6 +21,7 @@ import MenuBuilder from './menu';
 import iConfig from './mainWindow/constants/config';
 import packageInfo from '../package.json';
 import MessageRelayer from './MessageRelayer';
+import {autoUpdater} from 'electron-updater';
 
 const windowEvents = new EventEmitter();
 
@@ -221,8 +222,19 @@ if (os.platform() == 'darwin') {
   frameActivated = false;
  }
 
+
+ autoUpdater.on('update-downloaded', () => {
+
+   autoUpdater.quitAndInstall()
+
+ });
+
 app.on('ready', async () => {
   await installExtensions();
+
+  autoUpdater.checkForUpdates();
+
+
 
   mainWindow = new BrowserWindow({
     title: `Kryptokrona Wallet v${version}`,
