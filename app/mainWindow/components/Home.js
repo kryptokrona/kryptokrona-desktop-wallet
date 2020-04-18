@@ -402,10 +402,6 @@ export default class Home extends Component<Props, State> {
             {transactions.length === 0 && (
               <div className="elem-to-center">
                 <div className={`box ${fillColor}`}>
-                  <p className={`${textColor} title has-text-centered`}>
-                    &nbsp;&nbsp;Welcome to Kryptokrona Wallet!
-                  </p>
-                  <br />
                   <p className={`${textColor} subtitle has-text-centered`}>
                     You don&apos;t have any transactions yet. They will display
                     here once you do.
