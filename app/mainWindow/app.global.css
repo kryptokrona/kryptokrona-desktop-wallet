@@ -1356,3 +1356,7 @@ label {
    margin-left: auto;
    margin-right: auto;
  }
+
+#react-select-2-input {
+   color: white !important;
+ }
