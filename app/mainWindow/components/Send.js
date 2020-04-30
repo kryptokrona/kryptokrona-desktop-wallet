@@ -26,6 +26,10 @@ import Redirector from './Redirector';
 import { uiType, atomicToHuman, search } from '../utils/utils';
 import donateInfo from '../constants/donateInfo.json';
 
+import { openAlias } from 'openalias';
+
+
+
 type Props = {
   uriAddress?: string,
   uriPaymentID?: string
@@ -443,6 +447,23 @@ export default class Send extends Component<Props, State> {
 
   handleAddressChange = (event: any) => {
     if (event) {
+
+      openAlias(event.value).then(wallets => {
+
+        console.log(wallets[0].address);
+        if (wallets) {
+
+          event.value = wallets[0].address;
+
+        }
+
+
+      });
+
+
+
+        console.log(event.value);
+
       // eslint-disable-next-line no-underscore-dangle
       if (event.__isNew__ || event.__isDonate__) {
         this.setState({
