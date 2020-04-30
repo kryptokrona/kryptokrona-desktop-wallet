@@ -10,6 +10,7 @@
 @import '~bulma/css/bulma.min.css';
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import '~bulma-extensions/dist/css/bulma-extensions.min.css';
+
 /* major-mono-display-regular - latin */
 @font-face {
   font-family: 'Major Mono Display';
@@ -234,7 +235,7 @@ button.is-dark {
 }
 
 .contacts-td {
-  vertical-align: middle!important;
+  vertical-align: middle !important;
 }
 
 .settingsCarot {
@@ -789,7 +790,7 @@ button.is-dark {
 
 .syncreminder {
   position: relative;
-  bottom: -32px;
+  bottom: -24px;
 }
 
 .loginbox-fail {
@@ -1054,14 +1055,14 @@ body {
 }
 
 
-.scanlines:before, .scanlines:after {
+.scanlines::before, .scanlines::after {
 display: block;
 pointer-events: none;
 content: '';
 position: absolute;
 
 }
-.scanlines:before {
+.scanlines::before {
 width: 100%;
 height: 2px;
 z-index: 2147483649;
@@ -1070,7 +1071,7 @@ opacity: 0.75;
 -webkit-animation: scanline 6s linear infinite;
         animation: scanline 6s linear infinite;
 }
-.scanlines:after {
+.scanlines::after {
 top: 0;
 right: 0;
 bottom: 0;
@@ -1131,7 +1132,7 @@ left: calc(50% - 130px);
     animation-direction: alternate;
 }
 
-.loginlogo:before {
+.loginlogo::before {
   font-family: 'XKR';
   content: "\e900";
   font-weight: lighter;
@@ -1144,7 +1145,7 @@ left: calc(50% - 130px);
 }
 
 
-.unlocked:before {
+.unlocked::before {
   font-family: 'XKR';
   content: "\e900";
   font-weight: lighter;
@@ -1159,12 +1160,11 @@ left: calc(50% - 130px);
   animation-duration: 0.01s;/*
 animation-name: imgflicker;
 animation-iteration-count: infinite;
-animation-direction: alternate;*/
+animation-direction: alternate; */
 animation: flicker 0.000s infinite;
 }
 
 .balanceText span {
-
   margin-top: -20px;
   white-space: nowrap;
     width: 100%;
@@ -1205,8 +1205,8 @@ to {
 
 @keyframes imgflickerr {
 from {
--webkit-filter: drop-shadow( 1px 0px 0px #ea36af,  -2px 0 0 #75fa69);
-filter: drop-shadow( 1px 0px 0px #ea36af);
+-webkit-filter: drop-shadow( 1px 0 0 #ea36af,  -2px 0 0 #75fa69);
+filter: drop-shadow( 1px 0 0 #ea36af);
 }
 to {
   -webkit-filter: drop-shadow( 2px 0.5px 2px #ea36af, 2px 0.5px 2px #75fa69);
@@ -1232,8 +1232,8 @@ opacity: 0.5;
 }
 
 .maincontent-homescreen td:nth-child(1) {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
   line-height: 100%;
   vertical-align: middle;
 }
@@ -1357,6 +1357,6 @@ label {
    margin-right: auto;
  }
 
-#react-select-2-input {
+.css-b8ldur-Input {
    color: white !important;
  }
