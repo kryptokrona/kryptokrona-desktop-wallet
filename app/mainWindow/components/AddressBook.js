@@ -16,6 +16,40 @@ import Redirector from './Redirector';
 import { uiType } from '../utils/utils';
 import { addressList, directories, loginCounter, config } from '../index';
 import routes from '../constants/routes';
+var Identicon = require('identicon.js');
+const intToRGB = require('int-to-rgb');
+
+const hashCode = (str) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return parseInt(Math.abs(hash/10000));
+}
+
+const get_avatar = (hash, size) => {
+
+  if (hash.length < 15) {
+    hash = 'SEKReT2pkQ71zEddQ81VdqDVU88MCQPgtRGsMgrDemVB9oK4xZYmsgX2vXctPkERrzRWnDZNPEFER4HMd5QPFdAuQ7Dg9hy2MCF';
+  }
+
+  // Get custom color scheme based on address
+  let rgb = intToRGB(hashCode(hash));
+
+  // Options for avatar
+  var options = {
+        foreground: [rgb.red, rgb.green, rgb.blue, 255],               // rgba black
+        background: [parseInt(rgb.red/10), parseInt(rgb.green/10), parseInt(rgb.blue/10), 255],         // rgba white
+        margin: 0.2,                              // 20% margin
+        size: size,                                // 420px square
+        format: 'svg'                             // use SVG instead of PNG
+      };
+
+  // create a base64 encoded SVG
+  return 'data:image/svg+xml;base64,' + new Identicon(hash, options).toString();
+
+
+}
 
 type State = {
   darkMode: boolean,
@@ -233,12 +267,8 @@ class AddressBook extends Component<Props, State> {
                 <tbody>
                   <tr className='no-hover'>
                     <td>
-                      <span
-                        // eslint-disable-next-line react/no-danger
-                        dangerouslySetInnerHTML={{
-                          __html: jdenticon.toSvg(newAddress, 114)
-                        }}
-                      />
+                      <img className='avatar-new-contact' src={get_avatar(newAddress, 114)}>
+                      </img>
                     </td>
                     </tr>
                     <tr className='no-hover'>
@@ -335,13 +365,10 @@ class AddressBook extends Component<Props, State> {
                   return (
                     <tr key={address}>
                       <td>
-                        <span
-                          className="contact-avatar"
-                          // eslint-disable-next-line react/no-danger
-                          dangerouslySetInnerHTML={{
-                            __html: jdenticon.toSvg(address, 64)
-                          }}
-                        />
+                        <img
+                        className="contact-avatar"
+                        src={get_avatar(address, 60)}>
+                        </img>
                         <br />
                         <span
                           className={`contact-name ${textColor} is-family-monospace`}

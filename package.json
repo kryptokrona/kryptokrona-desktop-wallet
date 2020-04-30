@@ -242,6 +242,8 @@
     "electron-updater": "^4.2.5",
     "file-loader": "^4.3.0",
     "history": "^4.10.1",
+    "identicon.js": "^2.3.3",
+    "int-to-rgb": "^1.0.0",
     "jdenticon": "^2.2.0",
     "kryptokrona-utils": "^1.1.0",
     "kryptokrona-wallet-backend-js": "^1.9.0",

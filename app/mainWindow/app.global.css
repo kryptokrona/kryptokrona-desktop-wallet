@@ -1349,3 +1349,10 @@ label {
     position: absolute;
     bottom: 0;
 }
+.avatar-new-contact, .contact-avatar {
+  border-radius: 50%;
+}
+ .contact-avatar {
+   margin-left: auto;
+   margin-right: auto;
+ }
