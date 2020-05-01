@@ -180,7 +180,7 @@ export default class NewWallet extends Component<Props, State> {
         const message = (
           <div>
             <center>
-              <p className="title has-text-danger">Seed Verification Error!</p>
+              <p className="title has-text-info">Seed Verification Error!</p>
             </center>
             <br />
             <p className={`subtitle ${textColor}`}>{err.customMessage}</p>
@@ -216,7 +216,7 @@ export default class NewWallet extends Component<Props, State> {
             const message = (
               <div>
                 <center>
-                  <p className="subtitle has-text-danger">Wallet Save Error!</p>
+                  <p className="subtitle has-text-info">Wallet Save Error!</p>
                 </center>
                 <br />
                 <p className={`subtitle ${textColor}`}>
@@ -232,7 +232,7 @@ export default class NewWallet extends Component<Props, State> {
           const message = (
             <div>
               <center>
-                <p className="title has-text-danger">Wallet Creation Error!</p>
+                <p className="title has-text-info">Wallet Creation Error!</p>
               </center>
               <br />
               <p className={`subtitle ${textColor}`}>
@@ -310,7 +310,7 @@ export default class NewWallet extends Component<Props, State> {
                   activePage === 'generate' ? 'is-active' : ''
                 } ${
                   this.evaluatePageNumber(activePage) > 1 ? 'is-completed' : ''
-                } is-success`}
+                } is-info`}
               >
                 <div className="step-marker">
                   {this.evaluatePageNumber(activePage) > 1 ? (
@@ -328,7 +328,7 @@ export default class NewWallet extends Component<Props, State> {
                   activePage === 'secure' ? 'is-active' : ''
                 } ${
                   this.evaluatePageNumber(activePage) > 2 ? 'is-completed' : ''
-                } is-success`}
+                } is-info`}
               >
                 <div className="step-marker">
                   {' '}
@@ -347,7 +347,7 @@ export default class NewWallet extends Component<Props, State> {
                   activePage === 'backup' ? 'is-active' : ''
                 } ${
                   this.evaluatePageNumber(activePage) > 3 ? 'is-completed' : ''
-                } is-success`}
+                } is-info`}
               >
                 <div className="step-marker">
                   {' '}
@@ -364,7 +364,7 @@ export default class NewWallet extends Component<Props, State> {
               <div
                 className={`step-item ${
                   activePage === 'verify' ? 'is-active' : ''
-                } is-success`}
+                } is-info`}
               >
                 <div className="step-marker">4</div>
                 <div className="step-details">
@@ -384,7 +384,7 @@ export default class NewWallet extends Component<Props, State> {
                     <p className={`${textColor} label`}>
                       Your New Address:
                       <textarea
-                        className="textarea is-large no-resize is-family-monospace"
+                        className="textarea is-medium no-resize is-family-monospace"
                         rows="4"
                         readOnly
                         value={newWallet.getPrimaryAddress()}
@@ -397,7 +397,7 @@ export default class NewWallet extends Component<Props, State> {
                       <center>
                         <div className="box">
                           {/* <span
-                            // eslint-disable-next-line react/no-danger
+                            // eslint-disable-next-line react/no-info
                             dangerouslySetInnerHTML={{
                               __html: jdenticon.toSvg(
                                 newWallet.getPrimaryAddress(),
@@ -424,7 +424,7 @@ export default class NewWallet extends Component<Props, State> {
                     Enter a Password:
                     <div className="control">
                       <input
-                        className="input is-large"
+                        className="input is-medium"
                         type={showPassword ? 'input' : 'password'}
                         placeholder="Enter a password"
                         value={password}
@@ -442,7 +442,7 @@ export default class NewWallet extends Component<Props, State> {
                   <label className={`label ${textColor}`} htmlFor="scanheight">
                     Confirm Password:{' '}
                     {password !== confirmPassword ? (
-                      <span className="has-text-danger">
+                      <span className="has-text-info">
                         &nbsp;&nbsp;Passwords do not match!
                       </span>
                     ) : (
@@ -450,7 +450,7 @@ export default class NewWallet extends Component<Props, State> {
                     )}
                     <div className="control">
                       <input
-                        className="input is-large"
+                        className="input is-medium"
                         type={showPassword ? 'input' : 'password'}
                         placeholder="Confirm password"
                         value={confirmPassword}
@@ -467,13 +467,13 @@ export default class NewWallet extends Component<Props, State> {
                 {showPassword === false && (
                   <span className={textColor}>
                     <a
-                      className="button is-danger"
+                      className="button is-dark"
                       onClick={this.toggleShowPassword}
                       onKeyPress={this.toggleShowPassword}
                       role="button"
                       tabIndex={0}
                     >
-                      <span className="icon is-large">
+                      <span className="icon is-medium">
                         <i className="fas fa-times" />
                       </span>
                     </a>
@@ -489,7 +489,7 @@ export default class NewWallet extends Component<Props, State> {
                       role="button"
                       tabIndex={0}
                     >
-                      <span className="icon is-large">
+                      <span className="icon is-medium">
                         <i className="fa fa-check" />
                       </span>
                     </a>
@@ -503,14 +503,14 @@ export default class NewWallet extends Component<Props, State> {
               <div>
                 <p className={`subtitle ${textColor}`}>
                   Please back up the following mnemonic seed safely.{' '}
-                  <span className="has-text-danger has-text-weight-bold ">
+                  <span className="has-text-info has-text-weight-bold ">
                     If you lose it your funds will be lost forever.
                   </span>
                 </p>
                 <p className={`label ${textColor}`}>
                   Mnemonic Seed:
                   <textarea
-                    className="textarea no-resize is-large"
+                    className="textarea no-resize is-medium"
                     value={newWallet.getMnemonicSeed()[0]}
                     rows="4"
                     readOnly
@@ -558,7 +558,7 @@ export default class NewWallet extends Component<Props, State> {
                 <p className={`label ${textColor}`}>
                   Confirm Seed:
                   <textarea
-                    className="textarea no-resize is-large"
+                    className="textarea no-resize is-medium"
                     value={confirmSeed}
                     onChange={this.handleConfirmSeedChange}
                     rows="4"
@@ -576,7 +576,7 @@ export default class NewWallet extends Component<Props, State> {
             <center>
               <div className="buttons bottombuttons">
                 <span
-                  className="button is-dark is-large"
+                  className="button is-dark is-medium"
                   onClick={this.prevPage}
                   onKeyPress={this.prevPage}
                   role="button"
@@ -587,7 +587,7 @@ export default class NewWallet extends Component<Props, State> {
                 </span>
                 &nbsp;&nbsp;
                 <span
-                  className="button is-dark is-large"
+                  className="button is-dark is-medium"
                   onClick={this.nextPage}
                   onKeyPress={this.nextPage}
                   role="button"

@@ -54,7 +54,7 @@ export default class CloseToTrayToggle extends Component<Props, State> {
         {closeToTray === false && (
           <span className={textColor}>
             <a
-              className="button is-danger"
+              className="button is-info"
               onClick={this.closeToTrayOn}
               onKeyPress={this.closeToTrayOn}
               role="button"
