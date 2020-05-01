@@ -12,6 +12,40 @@ import BottomBar from './BottomBar';
 import Redirector from './Redirector';
 import { uiType } from '../utils/utils';
 import { backupToFile, eventEmitter, reInitWallet, config, session } from '../index';
+var Identicon = require('identicon.js');
+const intToRGB = require('int-to-rgb');
+
+const hashCode = (str) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return parseInt(Math.abs(hash/10000));
+}
+
+const get_avatar = (hash, size) => {
+
+  if (hash.length < 15) {
+    hash = 'SEKReT2pkQ71zEddQ81VdqDVU88MCQPgtRGsMgrDemVB9oK4xZYmsgX2vXctPkERrzRWnDZNPEFER4HMd5QPFdAuQ7Dg9hy2MCF';
+  }
+
+  // Get custom color scheme based on address
+  let rgb = intToRGB(hashCode(hash));
+
+  // Options for avatar
+  var options = {
+        foreground: [rgb.red, rgb.green, rgb.blue, 255],               // rgba black
+        background: [parseInt(rgb.red/10), parseInt(rgb.green/10), parseInt(rgb.blue/10), 255],         // rgba white
+        margin: 0.2,                              // 20% margin
+        size: size,                                // 420px square
+        format: 'svg'                             // use SVG instead of PNG
+      };
+
+  // create a base64 encoded SVG
+  return 'data:image/svg+xml;base64,' + new Identicon(hash, options).toString();
+
+
+}
 
 type State = {
   darkMode: boolean,
@@ -362,7 +396,7 @@ export default class NewWallet extends Component<Props, State> {
                       Identicon:
                       <center>
                         <div className="box">
-                          <span
+                          {/* <span
                             // eslint-disable-next-line react/no-danger
                             dangerouslySetInnerHTML={{
                               __html: jdenticon.toSvg(
@@ -370,7 +404,8 @@ export default class NewWallet extends Component<Props, State> {
                                 130
                               )
                             }}
-                          />
+                          /> */}
+                          <img className='avatar-new-contact' src={get_avatar(newWallet.getPrimaryAddress, 114)}></img>
                         </div>
                       </center>
                     </span>
