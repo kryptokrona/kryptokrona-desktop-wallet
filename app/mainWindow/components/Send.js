@@ -451,11 +451,10 @@ export default class Send extends Component<Props, State> {
       try {
       openAlias(event.value).then(wallets => {
 
-          console.log(wallets);
-
         if (wallets) {
 
-          let open_alias_address = wallets[0].address.substring(0,100);
+          let open_alias_address = wallets[0].address.substring(0,99);
+          console.log(open_alias_address);
           oaname = wallets[0].name;
           this.setState({
             sendToAddress: open_alias_address,
