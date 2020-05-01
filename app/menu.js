@@ -9,7 +9,9 @@ import { messageRelayer } from './main.dev';
 
 export const il8n = new LocalizedStrings({
   // eslint-disable-next-line global-require
-  en: require('./mainWindow/il8n/en-menu.json')
+  en: require('./mainWindow/il8n/en-menu.json'),
+  // eslint-disable-next-line global-require
+  se: require('./mainWindow/il8n/se-menu.json')
 });
 
 const { version: currentVersion } = npmPackage;
@@ -55,7 +57,7 @@ export default class MenuBuilder {
           label: `${il8n.about} ${productName}`,
           click: () => {
             shell.openExternal(
-              'http://github.com/turtlecoin/turtle-wallet-proton#readme'
+              'http://github.com/kryptokrona/kryptokrona-desktop-wallet#readme'
             );
           }
         },
@@ -241,14 +243,14 @@ export default class MenuBuilder {
         {
           label: il8n.support,
           click() {
-            shell.openExternal('https://discord.gg/P7urHQs');
+            shell.openExternal('https://chat.kryptokrona.se');
           }
         },
         {
           label: il8n.report_bug,
           click() {
             shell.openExternal(
-              'https://github.com/turtlecoin/turtle-wallet-proton/issues'
+              'https://github.com/kryptokrona/kryptokrona-desktop-wallet/issues'
             );
           }
         },
@@ -256,7 +258,7 @@ export default class MenuBuilder {
           label: il8n.feature_request,
           click() {
             shell.openExternal(
-              'https://github.com/turtlecoin/turtle-wallet-proton/issues'
+              'https://github.com/kryptokrona/kryptokrona-desktop-wallet/issues'
             );
           }
         }
@@ -461,14 +463,14 @@ export default class MenuBuilder {
           {
             label: il8n.support,
             click: () => {
-              shell.openExternal('https://discord.gg/P7urHQs');
+              shell.openExternal('https://chat.kryptokrona.se');
             }
           },
           {
             label: il8n.about,
             click: () => {
               shell.openExternal(
-                'http://github.com/turtlecoin/turtle-wallet-proton#readme'
+                'http://github.com/kryptokrona/kryptokrona-desktop-wallet#readme'
               );
             }
           },
@@ -476,7 +478,7 @@ export default class MenuBuilder {
             label: il8n.report_bug,
             click: () => {
               shell.openExternal(
-                'https://github.com/turtlecoin/turtle-wallet-proton/issues'
+                'https://github.com/kryptokrona/kryptokrona-desktop-wallet/issues'
               );
             }
           },
@@ -484,7 +486,7 @@ export default class MenuBuilder {
             label: il8n.feature_request,
             click: () => {
               shell.openExternal(
-                'https://github.com/turtlecoin/turtle-wallet-proton/issues'
+                'https://github.com/kryptokrona/kryptokrona-desktop-wallet/issues'
               );
             }
           }

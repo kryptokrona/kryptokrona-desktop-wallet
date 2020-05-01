@@ -46,7 +46,9 @@ export const il8n = new LocalizedStrings({
   // eslint-disable-next-line global-require
   en: require('./il8n/en.json'),
   // eslint-disable-next-line global-require
-  fr: require('./il8n/fr.json')
+  fr: require('./il8n/fr.json'),
+  // eslint-disable-next-line global-require
+  se: require('./il8n/se.json')
 });
 
 export let config = iConfig;
@@ -62,7 +64,7 @@ export let loginCounter = new LoginCounter();
 
 remote.app.setAppUserModelId('wallet.proton.extra');
 
-log.debug(`Proton wallet started...`);
+log.debug(`Kryptokrona wallet started...`);
 
 const [programDirectory] = directories;
 
@@ -444,17 +446,17 @@ eventEmitter.on('handleOpen', handleOpen);
 
 function handleAbout() {
   remote.shell.openExternal(
-    'http://github.com/turtlecoin/turtle-wallet-proton#readme'
+    'http://github.com/kryptokrona/kryptokrona-desktop-wallet#readme'
   );
 }
 
 function handleHelp() {
-  remote.shell.openExternal('https://discord.gg/P7urHQs');
+  remote.shell.openExternal('https://chat.kryptokrona.se');
 }
 
 function handleIssues() {
   remote.shell.openExternal(
-    'https://github.com/turtlecoin/turtle-wallet-proton/issues'
+    'https://github.com/kryptokrona/kryptokrona-desktop-wallet/issues'
   );
 }
 
