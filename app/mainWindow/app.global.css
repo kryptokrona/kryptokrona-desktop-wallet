@@ -1360,3 +1360,14 @@ label {
 .css-b8ldur-Input {
    color: white !important;
  }
+
+ /* navbar fix, overrides bulma */
+
+ .navbar.is-black {
+  background-color: transparent;
+  color: #fff;
+}
+
+.navbar {
+  background-color: transparent;
+}
