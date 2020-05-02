@@ -405,7 +405,7 @@ export default class NewWallet extends Component<Props, State> {
                               )
                             }}
                           /> */}
-                          <img className='avatar-new-contact' src={get_avatar(newWallet.getPrimaryAddress, 114)}></img>
+                          <img className='avatar-new-contact' src={get_avatar(newWallet.getPrimaryAddress(), 114)}></img>
                         </div>
                       </center>
                     </span>
