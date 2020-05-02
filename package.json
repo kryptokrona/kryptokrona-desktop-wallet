@@ -34,7 +34,9 @@
       "git add"
     ],
     "*.{css,scss}": [
-      
+      "stylelint --ignore-path .eslintignore --syntax scss --fix",
+      "prettier --ignore-path .eslintignore --single-quote --write",
+      "git add"
     ],
     "*.{html,md,yml}": [
       "prettier --ignore-path .eslintignore --single-quote --write",
