@@ -117,7 +117,7 @@ export default class Login extends Component<Props, State> {
                             ref={input => input && input.focus()}
                             className={
                               wrongPassword
-                                ? 'input is-medium is-danger'
+                                ? 'input is-medium is-info'
                                 : 'input is-medium'
                             }
                             type="password"
@@ -144,6 +144,7 @@ export default class Login extends Component<Props, State> {
                           />
                         )}
                       </div>
+                      <br></br>
                       <div className="column">
                         <div className="buttons is-right">
                           <button

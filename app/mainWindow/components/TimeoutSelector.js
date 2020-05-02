@@ -141,7 +141,7 @@ export default class TimeoutSelector extends Component<Props, State> {
         {!timeoutEnabled && (
           <span className={textColor}>
             <a
-              className="button is-danger"
+              className="button is-info"
               onClick={this.enableTimeout}
               onKeyPress={this.enableTimeout}
               role="button"

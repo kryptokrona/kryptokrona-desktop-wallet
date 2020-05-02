@@ -437,7 +437,7 @@ export default class ImportKey extends Component<Props, State> {
                 {showPassword === false && (
                   <span className={textColor}>
                     <a
-                      className="button is-danger"
+                      className="button is-info"
                       onClick={this.toggleShowPassword}
                       onKeyPress={this.toggleShowPassword}
                       role="button"

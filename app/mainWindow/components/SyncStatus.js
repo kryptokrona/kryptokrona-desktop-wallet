@@ -97,7 +97,7 @@ export default class SyncStatus extends Component<Props, State> {
           )}
           {networkBlockHeight === 0 && (
             <span
-              className={`tag is-danger ${size} sync-status`}
+              className={`tag ${size} sync-status`}
               data-tip={syncTooltip}
             >
               <ReactLoading

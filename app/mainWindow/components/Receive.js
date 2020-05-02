@@ -110,7 +110,7 @@ export default class Receive extends Component<Props, State> {
       });
     } else {
       this.setState({
-        paymentIDHighlight: 'is-danger'
+        paymentIDHighlight: 'is-info'
       });
     }
   };

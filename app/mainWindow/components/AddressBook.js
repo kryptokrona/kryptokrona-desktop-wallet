@@ -286,7 +286,7 @@ class AddressBook extends Component<Props, State> {
                       <label>Address</label>
                       <input
                         className={`input is-large ${
-                          badAddress ? 'is-danger' : ''
+                          badAddress ? 'is-link' : ''
                         }`}
                         value={newAddress}
                         onChange={this.handleNewAddressChange}
@@ -298,7 +298,7 @@ class AddressBook extends Component<Props, State> {
                       <label>Payment ID (optional)</label>
                       <input
                         className={`input is-large ${
-                          badPaymentID ? 'is-danger' : ''
+                          badPaymentID ? 'is-link' : ''
                         }`}
                         value={newPaymentID}
                         onChange={this.handleNewPaymentIDChange}
@@ -330,7 +330,7 @@ class AddressBook extends Component<Props, State> {
                       >
                         &nbsp;&nbsp;
                         <i
-                          className="fas fa-times is-size-2 has-text-centered has-text-danger"
+                          className="fas fa-times is-size-2 has-text-centered has-text-link"
                           aria-hidden="true"
                         />
                       </a>
@@ -401,7 +401,7 @@ class AddressBook extends Component<Props, State> {
                           <a
                             className={
                               deletionRequests.includes(index)
-                                ? 'has-text-danger'
+                                ? 'has-text-link'
                                 : textColor
                             }
                           >
