@@ -606,12 +606,17 @@ export function backupToFile() {
     ]
   };
 
-  const savePath = remote.dialog.showSaveDialog(null, options);
-  if (savePath === undefined) {
-    return;
-  }
+  remote.dialog.showSaveDialog(null, options).then(result => {
+    const savePath = result.filePath;
 
-  ipcRenderer.send('fromFrontend', 'backupToFile', savePath);
+    if (savePath === undefined) {
+      return;
+    }
+
+    ipcRenderer.send('fromFrontend', 'backupToFile', savePath);
+
+  });
+
 }
 
 function handleBackup() {
@@ -656,11 +661,17 @@ function handleOpen() {
       }
     ]
   };
-  const getPaths = remote.dialog.showOpenDialog(null, options);
+remote.dialog.showOpenDialog(null, options).then(result => {
+
+  let getPaths = result.filePaths;
+
   if (getPaths === undefined) {
     return;
   }
   reInitWallet(getPaths[0]);
+
+});
+
 }
 
 export function reInitWallet(walletPath: string) {

@@ -169,29 +169,36 @@ export default class Import extends Component<Props, State> {
           }
         ]
       };
-      const savePath = remote.dialog.showSaveDialog(null, options);
-      if (savePath === undefined) {
+       remote.dialog.showSaveDialog(null, options).then(result => {
+
+       let savePath = result.filePath;
+
+        if (savePath === undefined) {
+          return;
+        }
+        const saved = importedWallet.saveWalletToFile(savePath, password);
+        if (saved) {
+          reInitWallet(savePath);
+        } else {
+          const message = (
+            <div>
+              <center>
+                <p className="subtitle has-text-danger">Wallet Save Error!</p>
+              </center>
+              <br />
+              <p className={`subtitle ${textColor}`}>
+                The wallet was not saved successfully. Check your directory
+                permissions and try again.
+              </p>
+            </div>
+          );
+          eventEmitter.emit('openModal', message, 'OK', null, null);
+        }
         return;
-      }
-      const saved = importedWallet.saveWalletToFile(savePath, password);
-      if (saved) {
-        reInitWallet(savePath);
-      } else {
-        const message = (
-          <div>
-            <center>
-              <p className="subtitle has-text-danger">Wallet Save Error!</p>
-            </center>
-            <br />
-            <p className={`subtitle ${textColor}`}>
-              The wallet was not saved successfully. Check your directory
-              permissions and try again.
-            </p>
-          </div>
-        );
-        eventEmitter.emit('openModal', message, 'OK', null, null);
-      }
-      return;
+
+
+      });
+
     }
 
     currentPageNumber++;
