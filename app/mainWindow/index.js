@@ -606,12 +606,17 @@ export function backupToFile() {
     ]
   };
 
-  const savePath = remote.dialog.showSaveDialog(null, options);
-  if (savePath === undefined) {
-    return;
-  }
+  remote.dialog.showSaveDialog(null, options).then(result => {
+    const savePath = result.filePath;
 
-  ipcRenderer.send('fromFrontend', 'backupToFile', savePath);
+    if (savePath === undefined) {
+      return;
+    }
+
+    ipcRenderer.send('fromFrontend', 'backupToFile', savePath);
+
+  });
+
 }
 
 function handleBackup() {
