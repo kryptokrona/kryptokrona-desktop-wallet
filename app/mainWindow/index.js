@@ -656,11 +656,17 @@ function handleOpen() {
       }
     ]
   };
-  const getPaths = remote.dialog.showOpenDialog(null, options);
+remote.dialog.showOpenDialog(null, options).then(result => {
+
+  let getPaths = result.filePaths;
+
   if (getPaths === undefined) {
     return;
   }
   reInitWallet(getPaths[0]);
+
+});
+
 }
 
 export function reInitWallet(walletPath: string) {

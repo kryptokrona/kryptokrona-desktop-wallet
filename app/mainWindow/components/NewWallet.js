@@ -205,28 +205,40 @@ export default class NewWallet extends Component<Props, State> {
               }
             ]
           };
-          const savePath = remote.dialog.showSaveDialog(null, options);
-          if (savePath === undefined) {
-            return;
-          }
-          const saved = confirmWallet.saveWalletToFile(savePath, password);
-          if (saved) {
-            reInitWallet(savePath);
-          } else {
-            const message = (
-              <div>
-                <center>
-                  <p className="subtitle has-text-info">Wallet Save Error!</p>
-                </center>
-                <br />
-                <p className={`subtitle ${textColor}`}>
-                  The wallet was not saved successfully. Check your directory
-                  permissions and try again.
-                </p>
-              </div>
-            );
-            eventEmitter.emit('openModal', message, 'OK', null, null);
-          }
+          const shavePath = remote.dialog.showSaveDialog(null, options).then(result => {
+
+            let savePath = result.filePath;
+
+            console.log(JSON.stringify(shavePath));
+
+            console.log(savePath);
+
+
+            if (savePath === undefined) {
+              return;
+            }
+            const saved = confirmWallet.saveWalletToFile(savePath, password);
+            if (saved) {
+              reInitWallet(savePath);
+            } else {
+              const message = (
+                <div>
+                  <center>
+                    <p className="subtitle has-text-info">Wallet Save Error!</p>
+                  </center>
+                  <br />
+                  <p className={`subtitle ${textColor}`}>
+                    The wallet was not saved successfully. Check your directory
+                    permissions and try again.
+                  </p>
+                </div>
+              );
+              eventEmitter.emit('openModal', message, 'OK', null, null);
+            }
+
+
+          });
+
         } else {
           log.error('Wallet creation error.');
           const message = (
