@@ -1371,3 +1371,31 @@ label {
 .navbar {
   background-color: transparent;
 }
+
+/* @media (prefers-color-scheme: dark) {
+  .button.is-dark{
+    background: pink;
+  }} */
+
+  @media (prefers-color-scheme: light) {
+    .button.is-dark{
+      background: rgb(70, 70, 70);
+    }
+    .has-background-black{
+      background: rgb(215, 215, 215) !important;
+      color: black !important;
+    }
+
+    .has-text-white{
+      color: black !important;
+    }
+
+    .css-1hwfws3, .css-1udz2ne-control, .input, .select select, .textarea {
+      background: rgb(215, 215, 215) !important;
+      color: black !important;
+    }
+    
+    .mid-div{
+      background: rgb(215, 215, 215);
+    }
+  }
