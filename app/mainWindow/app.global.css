@@ -1456,6 +1456,20 @@ a.navbar-item:active, a.navbar-item:hover {
 canvas{
   background-color: rgb(116, 116, 116);
 }
+
+.css-tlfecz-indicatorContainer {
+  color: rgb(204, 204, 204);
+  display: flex;
+  box-sizing: border-box;
+  padding: 8px;
+  transition: color 150ms ease 0s;
+}
+
+.css-am967n-control {
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  box-shadow: none !important;
+  background: rgb(171, 171, 171) !important;
+}
    
 
     .has-text-white {
