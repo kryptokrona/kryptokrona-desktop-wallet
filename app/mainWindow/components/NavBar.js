@@ -137,10 +137,21 @@ class NavBar extends Component<Props, State> {
                       <p>&nbsp;&nbsp;Address Book</p>
                     )}
                   </Link>
+
+                  <Link className="navbar-item" to={routes.SETTINGS}>
+                  <i className="fa fa-cog" />
+                  {pathname === '/settings' && (
+                    <strong>&nbsp;&nbsp;Address Book</strong>
+                  )}
+                  {pathname !== '/settings' && (
+                    <p>&nbsp;&nbsp;Address Book</p>
+                  )}
+                </Link>
                 </div>
                 <div className="navbar-end">
 
                   {session.walletPassword !== '' && (
+                    <div className="navbarLogout">
                     <div className="navbar-item">
                       <Link className="buttons" to={routes.LOGIN}>
                         <span
@@ -154,16 +165,9 @@ class NavBar extends Component<Props, State> {
                         </span>
                       </Link>
                     </div>
+                    </div>
                   )}
-                  <div className="navbar-item">
-                    <Link className="buttons" to={routes.SETTINGS}>
-                      <span
-                        className={`button icon is-large is-dark`}
-                      >
-                        <i className="fa fa-cog" />
-                      </span>
-                    </Link>
-                  </div>
+
                 </div>
           {!loginCounter.isLoggedIn && (
             <nav
