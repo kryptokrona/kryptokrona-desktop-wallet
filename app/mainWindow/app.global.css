@@ -48,6 +48,11 @@
   /* Legacy iOS */
 }
 
+.navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
+  background-color: transparent!important;
+  color: white!important;
+}
+
 
 .transparent-button {
   background-color: Transparent;
