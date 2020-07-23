@@ -220,8 +220,8 @@ button.is-dark {
 .textarea,
 .css-1hwfws3,
 .css-1udz2ne-control {
-  background-color: #1D1B1D !important;
-  background: #1D1B1D !important;
+  background-color: rgb(230, 226, 226) !important;
+  background: rgb(230, 226, 226) !important;
   border-color: #222;
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.8) !important;
@@ -301,6 +301,7 @@ button.is-dark {
 
 .contact-address {
   min-height: 100px !important;
+
 }
 
 .contact-avatar,
@@ -1065,7 +1066,7 @@ html {
 }
 
 .navbar-menu {
-  background: #171416 !important;
+  background: rgb(230, 226, 226) !important;
   display: block;
   position: absolute;
   left: -64px;
@@ -1077,7 +1078,7 @@ html {
 }
 
 .has-background-black {
-  background: #272527 !important;
+  background: #f1f2f2 !important;
 }
 
 .navbar-item p {
@@ -1090,7 +1091,7 @@ html {
 
 a.navbar-item:hover,
 a.navbar-item:active {
-  color: #6A6A6A !important;
+  color: #0a0a0a!important;
   background: none !important;
 }
 
@@ -1574,7 +1575,7 @@ label {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: rgb(171, 171, 171) !important;
+    background-color: rgb(230, 226, 226) !important;
     border: transparent !important;
     border-radius: 4px;
     border-style: solid;
@@ -1600,7 +1601,7 @@ label {
   }
 
   .css-1pahdxg-control {
-    background-color: rgb(171, 171, 171) !important;
+    background-color: rgb(230, 226, 226) !important;
     border: transparent !important;
     box-shadow: none !important;
   }
@@ -1638,7 +1639,7 @@ label {
 
 
   .has-background-black {
-    background: rgb(255, 255, 255) !important;
+    background:  #f1f2f2 !important;
     color: black !important;
   }
 
@@ -1651,7 +1652,7 @@ label {
   .input,
   .select select,
   .textarea {
-    background: rgb(171, 171, 171) !important;
+    background: rgb(230, 226, 226) !important;
     /* border: 1px solid black !important; */
     border: transparent;
     color: black !important;
@@ -1666,15 +1667,15 @@ label {
   }
 
   .mid-div {
-    background: rgb(255, 255, 255) !important;
+    background: #f1f2f2 !important;
   }
 
   .darklink {
-    color: rgb(26, 26, 26) !important;
+    color: #7a7a7a !important;;
   }
 
   .tag:not(body).is-dark {
-    background-color: rgb(171, 171, 171) !important;
+    background-color: rgb(230, 226, 226) !important;
     color: #393939;
 
   }
@@ -1686,7 +1687,7 @@ label {
   }
 
   canvas {
-    background-color: rgb(171, 171, 171);
+    background-color: #0a0a0a;
   }
 
   .css-tlfecz-indicatorContainer {
@@ -1700,16 +1701,16 @@ label {
   .css-am967n-control {
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     box-shadow: none !important;
-    background: rgb(171, 171, 171) !important;
+    background: rgb(230, 226, 226) !important;
   }
 
 
   .has-text-white {
-    color: rgb(26, 26, 26) !important;
+    color: #4a4a4a !important;
   }
 
   .navbar-menu {
-    background: rgb(201, 201, 201) !important;
+    background: rgb(230, 226, 226) !important;
     display: block;
     position: absolute;
     left: -64px;
