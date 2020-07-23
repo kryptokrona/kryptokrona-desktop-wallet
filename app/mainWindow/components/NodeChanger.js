@@ -99,7 +99,7 @@ export default class NodeChanger extends Component<Props, State> {
   };
 
   findNode = () => {
-    remote.shell.openExternal('http://explorer.kryptokrona.se');
+    remote.shell.openExternal('https://explorer.kryptokrona.se/#nodes');
   };
 
   handleNewNode = () => {
