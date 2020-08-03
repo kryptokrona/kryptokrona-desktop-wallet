@@ -14,6 +14,7 @@ const arch = os.arch();
 
 export default class AutoUpdater {
   getLatestVersion() {
+    return;
     if (process.env.NODE_ENV !== 'development') {
       log.debug('Checking for updates...');
       const options = {
