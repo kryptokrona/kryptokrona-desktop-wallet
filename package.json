@@ -1,7 +1,7 @@
 {
   "name": "kryptokrona-desktop-wallet",
   "productName": "Kryptokrona Wallet",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Kryptokrona wallet based on React, React Router, Webpack, and React Hot Loader",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
@@ -32,7 +32,7 @@
       "git add"
     ],
     "*.{css,scss}": [
-     
+
     ],
     "*.{html,md,yml}": [
       "prettier --ignore-path .eslintignore --single-quote --write",

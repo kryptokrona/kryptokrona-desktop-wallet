@@ -220,8 +220,8 @@ button.is-dark {
 .textarea,
 .css-1hwfws3,
 .css-1udz2ne-control {
-  background-color: rgb(230, 226, 226) !important;
-  background: rgb(230, 226, 226) !important;
+  background-color: #1D1B1D !important;
+  background: #1D1B1D !important;
   border-color: #222;
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.8) !important;
@@ -301,7 +301,6 @@ button.is-dark {
 
 .contact-address {
   min-height: 100px !important;
-
 }
 
 .contact-avatar,
@@ -1066,7 +1065,7 @@ html {
 }
 
 .navbar-menu {
-  background: rgb(230, 226, 226) !important;
+  background: #171416 !important;
   display: block;
   position: absolute;
   left: -64px;
@@ -1078,7 +1077,7 @@ html {
 }
 
 .has-background-black {
-  background: #f1f2f2 !important;
+  background: #272527 !important;
 }
 
 .navbar-item p {
@@ -1091,7 +1090,7 @@ html {
 
 a.navbar-item:hover,
 a.navbar-item:active {
-  color: #0a0a0a!important;
+  color: #6A6A6A !important;
   background: none !important;
 }
 
@@ -1562,12 +1561,13 @@ label {
 
 @media (prefers-color-scheme: light) {
   .button.is-dark {
-    background: rgb(171, 171, 171);
+    background: rgb(255, 255, 255);
+    color: #53565c;
   }
 
   .input::placeholder,
   .css-1m2l6vs-placeholder {
-    color: rgba(70, 70, 70, 0.822) !important;
+    color: #53565c !important;
   }
 
   .css-yk16xz-control {
@@ -1575,7 +1575,7 @@ label {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: rgb(230, 226, 226) !important;
+    background-color: rgb(171, 171, 171) !important;
     border: transparent !important;
     border-radius: 4px;
     border-style: solid;
@@ -1601,9 +1601,13 @@ label {
   }
 
   .css-1pahdxg-control {
-    background-color: rgb(230, 226, 226) !important;
+    background-color: rgb(171, 171, 171) !important;
     border: transparent !important;
     box-shadow: none !important;
+  }
+
+  .css-b8ldur-Input {
+    color: #53565c !important;
   }
 
   .button.is-dark.is-hovered,
@@ -1623,28 +1627,28 @@ label {
   }
 
   .table-darkmode {
-    color: #282828 !important;
+    color: #53565c !important;
   }
 
   .table-darkmode tbody tr:not(.no-hover):hover {
-    background: #7d7d7dc2 !important;
-    color: rgb(218, 218, 218);
+    background: white !important;
+    color: #53565c;
   }
 
   a.navbar-item:active,
   a.navbar-item:hover {
-    color: #282828 !important;
+    color: #209cee !important;
     background: none !important;
   }
 
 
   .has-background-black {
-    background:  #f1f2f2 !important;
-    color: black !important;
+    background: #f5f6f7 !important;
+    color: #53565c  !important;
   }
 
   .has-text-white {
-    color: black !important;
+    color: #53565c !important;
   }
 
   .css-1hwfws3,
@@ -1652,42 +1656,44 @@ label {
   .input,
   .select select,
   .textarea {
-    background: rgb(230, 226, 226) !important;
+    background: white !important;
     /* border: 1px solid black !important; */
     border: transparent;
     color: black !important;
   }
 
   .menu-link-dark:hover {
-    background: hsla(0, 0%, 44%, 0.411) !important;
+    background: white !important;
+    border-radius: 5px;
   }
 
   .has-background-black-ter {
-    background-color: #24242485 !important;
+    background-color: white !important;
+    border-radius: 5px;
   }
 
   .mid-div {
-    background: #f1f2f2 !important;
+    background: #f5f6f7 !important;
   }
 
   .darklink {
-    color: #7a7a7a !important;;
+    color: #209cee !important;
   }
 
   .tag:not(body).is-dark {
-    background-color: rgb(230, 226, 226) !important;
-    color: #393939;
+    background-color: white !important;
+    color: #53565c;
 
   }
 
   .button.is-black {
-    background-color: rgb(171, 171, 171);
+    background-color: white;
     border-color: transparent;
-    color: #fff;
+    color: #53565c;
   }
 
   canvas {
-    background-color: #0a0a0a;
+    background-color: rgb(171, 171, 171);
   }
 
   .css-tlfecz-indicatorContainer {
@@ -1701,16 +1707,17 @@ label {
   .css-am967n-control {
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     box-shadow: none !important;
-    background: rgb(230, 226, 226) !important;
+    background: white !important;
+    color: black !important;
   }
 
 
   .has-text-white {
-    color: #4a4a4a !important;
+    color: #53565c !important;
   }
 
   .navbar-menu {
-    background: rgb(230, 226, 226) !important;
+    background: #e1e2e3 !important;
     display: block;
     position: absolute;
     left: -64px;
