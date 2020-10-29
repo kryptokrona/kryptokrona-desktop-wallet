@@ -309,12 +309,12 @@ export default class Send extends Component<Props, State> {
 
     const sufficientFunds = sendAll
       ? true
-      : (session.getUnlockedBalance() + session.getLockedBalance()) / 100 >=
+      : (session.getUnlockedBalance() + session.getLockedBalance()) / 100000 >=
         Number(enteredAmount);
 
     const sufficientUnlockedFunds = sendAll
       ? true
-      : session.getUnlockedBalance() > Number(enteredAmount) / 100;
+      : session.getUnlockedBalance() > Number(enteredAmount) / 100000;
 
     if (!sendAll && (sendToAddress === '' || enteredAmount === '')) {
       return;
@@ -364,8 +364,8 @@ export default class Send extends Component<Props, State> {
       address: sendToAddress,
       amount:
         displayCurrency === 'XKR'
-          ? Number(enteredAmount) * 100
-          : (Number(enteredAmount) * 100) / fiatPrice,
+          ? Number(enteredAmount) * 100000
+          : (Number(enteredAmount) * 100000) / fiatPrice,
       paymentID,
       sendAll
     };
@@ -384,7 +384,7 @@ export default class Send extends Component<Props, State> {
 
     await this.setState({
       selectedContact: { label: sendToAddress, value: sendToAddress },
-      enteredAmount: String(amount / 100),
+      enteredAmount: String(amount / 100000),
       sendToAddress,
       paymentID,
       sendAll: false
