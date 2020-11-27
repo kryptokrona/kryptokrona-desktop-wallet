@@ -164,42 +164,6 @@ export default class Balance extends Component<Props, State> {
               </span>
             </span>
           )}
-          {displayCurrency === 'fiat' && symbolLocation === 'prefix' && (
-            <span
-              className={
-                lockedBalance > 0
-                  ? `tag is-dark ${size}`
-                  : `tag is-dark ${size}`
-              }
-              data-tip={balanceTooltip}
-            >
-              {lockedBalance > 0 ? (
-                <i className="fa fa-lock" />
-              ) : (
-                <i className="fa fa-unlock" />
-              )}
-              &nbsp;
-              {fiatPrice !== 0 ? (
-                // eslint-disable-next-line prefer-template
-                fiatSymbol +
-                formatLikeCurrency(
-                  Number(
-                    (
-                      fiatPrice *
-                      atomicToHuman(unlockedBalance + lockedBalance, false)
-                    ).toFixed(fiatDecimals)
-                  )
-                )
-              ) : (
-                <ReactLoading
-                  type="bubbles"
-                  color="#F5F5F5"
-                  height={30}
-                  width={30}
-                />
-              )}
-            </span>
-          )}
           {displayCurrency === 'fiat' && symbolLocation === 'suffix' && (
             <span
               className={
@@ -243,14 +207,14 @@ export default class Balance extends Component<Props, State> {
             >
               &nbsp;
               <span className="unlocked">
-              {fiatSymbol + formatLikeCurrency(
+              {fiatSymbol +formatLikeCurrency(
                 Number(
                   (
                     fiatPrice *
                     atomicToHuman(unlockedBalance, false)
                   ).toFixed(fiatDecimals)
                 )
-              ) + " " + fiatSymbol}
+              )}
               </span>
               <span className="locked">+&nbsp;
               {fiatSymbol + formatLikeCurrency(
