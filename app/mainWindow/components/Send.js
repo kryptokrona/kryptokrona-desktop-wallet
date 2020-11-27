@@ -365,7 +365,7 @@ export default class Send extends Component<Props, State> {
       amount:
         displayCurrency === 'XKR'
           ? Number(enteredAmount) * 100000
-          : (Number(enteredAmount) * 100000) / fiatPrice,
+          : parseInt((Number(enteredAmount) * 100000) / fiatPrice),
       paymentID,
       sendAll
     };

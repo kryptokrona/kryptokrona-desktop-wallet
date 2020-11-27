@@ -32,11 +32,11 @@ export default class Balance extends Component<Props, State> {
     this.state = {
       unlockedBalance: session.getUnlockedBalance(),
       lockedBalance: session.getLockedBalance(),
-      // fiatPrice: session.fiatPrice,
+      fiatPrice: session.fiatPrice,
       displayCurrency: config.displayCurrency,
-      // fiatSymbol: config.fiatSymbol,
-      // symbolLocation: config.symbolLocation,
-      // fiatDecimals: config.fiatDecimalsyarn
+      fiatSymbol: config.fiatSymbol,
+      symbolLocation: config.symbolLocation,
+      fiatDecimals: config.fiatDecimalsyarn
     };
     this.updateFiatPrice = this.updateFiatPrice.bind(this);
     this.switchCurrency = this.switchCurrency.bind(this);
@@ -139,6 +139,9 @@ export default class Balance extends Component<Props, State> {
         className="control statusicons topBalance"
         role="button"
         tabIndex={0}
+        className="control statusicons"
+       onClick={this.switchCurrency}
+       onKeyPress={this.switchCurrency}
         onMouseDown={event => event.preventDefault()}
       >
         <div className="tags has-addons">
@@ -152,8 +155,6 @@ export default class Balance extends Component<Props, State> {
               }
               data-tip={balanceTooltip}
             >
-
-              <img className="balanceLogo" src="images/xkr.svg" />
               &nbsp;
               <span className="unlocked">
               {atomicToHuman(unlockedBalance, true)}
@@ -203,35 +204,64 @@ export default class Balance extends Component<Props, State> {
             <span
               className={
                 lockedBalance > 0
-                  ? `tag is-dark ${size}`
-                  : `tag is-dark ${size}`
+                  ? `tag is-dark ${size} balanceText scanlines`
+                  : `tag is-dark ${size} balanceText scanlines`
               }
               data-tip={balanceTooltip}
             >
-              {lockedBalance > 0 ? (
-                <i className="fa fa-lock" />
-              ) : (
-                <i className="fa fa-unlock" />
-              )}
               &nbsp;
-              {fiatPrice !== 0 ? (
-                // eslint-disable-next-line prefer-template
-                formatLikeCurrency(
-                  Number(
-                    (
-                      fiatPrice *
-                      atomicToHuman(unlockedBalance + lockedBalance, false)
-                    ).toFixed(fiatDecimals)
-                  )
-                ) + fiatSymbol
-              ) : (
-                <ReactLoading
-                  type="bubbles"
-                  color="#F5F5F5"
-                  height={30}
-                  width={30}
-                />
+              <span className="unlocked">
+              {formatLikeCurrency(
+                Number(
+                  (
+                    fiatPrice *
+                    atomicToHuman(unlockedBalance, false)
+                  ).toFixed(fiatDecimals)
+                )
+              ) + " " + fiatSymbol}
+              </span>
+              <span className="locked">+&nbsp;
+              {formatLikeCurrency(
+                Number(
+                  (
+                    fiatPrice *
+                    atomicToHuman(lockedBalance, false)
+                  ).toFixed(fiatDecimals)
+                )
+              ) + " " + fiatSymbol}
+              </span>
+            </span>
+          )}
+          {displayCurrency === 'fiat' && symbolLocation === 'prefix' && (
+            <span
+              className={
+                lockedBalance > 0
+                  ? `tag is-dark ${size} balanceText scanlines`
+                  : `tag is-dark ${size} balanceText scanlines`
+              }
+              data-tip={balanceTooltip}
+            >
+              &nbsp;
+              <span className="unlocked">
+              {fiatSymbol + formatLikeCurrency(
+                Number(
+                  (
+                    fiatPrice *
+                    atomicToHuman(unlockedBalance, false)
+                  ).toFixed(fiatDecimals)
+                )
+              ) + " " + fiatSymbol}
+              </span>
+              <span className="locked">+&nbsp;
+              {fiatSymbol + formatLikeCurrency(
+                Number(
+                  (
+                    fiatPrice *
+                    atomicToHuman(lockedBalance, false)
+                  ).toFixed(fiatDecimals)
+                )
               )}
+              </span>
             </span>
           )}
         </div>
