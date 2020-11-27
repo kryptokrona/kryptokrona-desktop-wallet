@@ -1114,7 +1114,7 @@ a.navbar-item:active {
       -webkit-animation: AnimationName 60s ease infinite !important;
       -moz-animation: AnimationName 60s ease infinite !important;
       animation: AnimationName 60s ease infinite !important;
-  
+
 }
 
 .tag:not(body).is-dark {
@@ -1585,6 +1585,11 @@ label {
   color: #fff;
 }
 
+.css-1uccc91-singleValue {
+
+  color: white !important;
+}
+
 .navbar {
   background-color: transparent;
 }
@@ -1634,6 +1639,12 @@ label {
     transition: all 100ms;
     box-sizing: border-box;
   }
+
+  .css-1uccc91-singleValue {
+
+    color: #53565c !important;
+  }
+
 
   .css-1pahdxg-control {
     background-color: white !important;

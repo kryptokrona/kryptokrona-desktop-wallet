@@ -16,7 +16,6 @@ import LogLevelSelector from './LogLevelSelector';
 import NodeChanger from './NodeChanger';
 import { uiType } from '../utils/utils';
 import Rescanner from './Rescanner';
-import DarkModeToggle from './DarkModeToggle';
 import CloseToTrayToggle from './CloseToTrayToggle';
 import ScanCoinbaseToggle from './ScanCoinbaseToggle';
 import NotificationsToggle from './NotificationsToggle';
@@ -247,7 +246,22 @@ export default class Settings extends Component<Props, State> {
                         <p className={textColor}>Wallet</p>
                       </a>
                     </li>
-
+                    <li
+                                          className={
+                                            activeTab === 'display' ? `${menuActiveColor}` : ''
+                                          }
+                                        >
+                                          <a
+                                            onClick={() => this.setActiveTab('display')}
+                                            onKeyPress={() => this.setActiveTab('display')}
+                                            role="button"
+                                            tabIndex={0}
+                                            onMouseDown={event => event.preventDefault()}
+                                            className={darkMode ? 'menu-link-dark' : ''}
+                                          >
+                                            <p className={textColor}>Display</p>
+                                          </a>
+                                        </li>
 
 
                     <li
@@ -320,8 +334,6 @@ export default class Settings extends Component<Props, State> {
                 {activeTab === 'display' && (
                   <div className={inAnimation}>
                     <FiatSelector darkMode={darkMode} />
-                    <br />
-                    <DarkModeToggle darkMode={darkMode} />
                   </div>
                 )}
 
@@ -380,8 +392,6 @@ export default class Settings extends Component<Props, State> {
                   {previousTab === 'display' && masterSwitch && (
                     <div className={outAnimation}>
                       <FiatSelector darkMode={darkMode} />
-                      <br />
-                      <DarkModeToggle darkMode={darkMode} />
                     </div>
                   )}
                   {previousTab === 'security' && masterSwitch && (
