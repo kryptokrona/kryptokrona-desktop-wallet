@@ -240,6 +240,7 @@ app.on('ready', async () => {
     title: `Kryptokrona Wallet v${version}`,
     useContentSize: true,
     show: false,
+    resizable: false,
     width: 500,
     height: 725,
     minWidth: 500,
