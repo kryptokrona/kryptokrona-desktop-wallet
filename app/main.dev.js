@@ -317,14 +317,19 @@ app.on('ready', async () => {
 
   mainWindow.on('close', event => {
     event.preventDefault();
+
     if (!isQuitting && mainWindow) {
       log.debug('Closing to system tray or dock.');
       mainWindow.hide();
     } else {
+      try {
       isQuitting = true;
-      quitTimeout = setTimeout(app.exit, 1000 * 10);
-      messageRelayer.sendToBackend('stopRequest');
+      quitTimeout = setTimeout(app.exit, 1000 * 1);
     }
+   catch (err) {
+    console.log(err);
+  }
+}
   });
 
   mainWindow.on('closed', () => {

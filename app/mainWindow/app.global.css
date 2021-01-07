@@ -728,9 +728,10 @@ button.is-dark {
 
 .wholescreen {
   position: absolute;
-  width: calc(100% - 64px);
+  width: 100%;
   height: 100%;
   right: 0;
+  overflow-x: hidden;
 }
 
 .mid-div {
@@ -901,9 +902,8 @@ button.is-dark {
 .headerbar-slideup {
   position: absolute;
   top: 0;
-  padding-right: 30px;
-  padding-left: 17px;
-  width: 100%;
+  left: 35px;
+  width: calc(100% - 64px);
   height: 64px;
 }
 
@@ -975,7 +975,8 @@ button.is-dark {
   padding-right: 22px;
   padding-top: 15px;
   margin-top: 64px;
-  width: 100%;
+  left: 64px;
+  width: calc(100% - 64px);
   height: calc(100% - 128px);
   overflow-y: scroll;
   box-sizing: border-box;
@@ -987,8 +988,9 @@ button.is-dark {
   padding-right: 0;
   padding-top: 8px;
   margin-top: 64px;
-  width: 100%;
+  width: calc(100% - 64px);
   height: calc(100% - 128px);
+  left: 64px;
   overflow-y: scroll;
   box-sizing: border-box;
 }
@@ -1068,7 +1070,7 @@ html {
   background: #171416 !important;
   display: block;
   position: absolute;
-  left: -64px;
+  left: 0px;
   width: 65px;
   background: black;
   height: 100vh;
