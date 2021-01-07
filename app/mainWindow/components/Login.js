@@ -162,7 +162,7 @@ export default class Login extends Component<Props, State> {
                   <center>
                     <ReactLoading
                       type="spin"
-                      color={darkMode ? '#F5F5F5' : '#0A0A0A'}
+                      color={darkMode ? '#55555' : '#0A0A0A'}
                       height={48}
                       width={48}
                     />
