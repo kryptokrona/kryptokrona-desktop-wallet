@@ -42,6 +42,9 @@ const hashCode = (str) => {
 
 function get_avatar(hash) {
 
+  if (hash.length < 15) {
+    hash = 'SEKReYanL2qEQF2HA8tu9wTpKBqoCA8TNb2mNRL5ZDyeFpxsoGNgBto3s3KJtt5PPrRH36tF7DBEJdjUn5v8eaESN2T5DPgRLVY';
+  }
   // Get custom color scheme based on address
   let rgb = intToRGB(hashCode(hash));
 
