@@ -41,7 +41,7 @@ const hashCode = (str) => {
 
 
 function get_avatar(hash) {
-
+  // Displays a fixed identicon until user adds new contact address in the input field
   if (hash.length < 15) {
     hash = 'SEKReYanL2qEQF2HA8tu9wTpKBqoCA8TNb2mNRL5ZDyeFpxsoGNgBto3s3KJtt5PPrRH36tF7DBEJdjUn5v8eaESN2T5DPgRLVY';
   }
@@ -53,7 +53,7 @@ function get_avatar(hash) {
         foreground: [rgb.red, rgb.green, rgb.blue, 255],               // rgba black
         background: [parseInt(rgb.red/10), parseInt(rgb.green/10), parseInt(rgb.blue/10), 0],         // rgba white
         margin: 0.2,                              // 20% margin
-        size: 90,                                // 420px square
+        size: 80,                                // 420px square
         format: 'svg'                           // use SVG instead of PNG
       };
 
