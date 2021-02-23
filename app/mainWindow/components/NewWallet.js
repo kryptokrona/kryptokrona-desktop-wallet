@@ -15,19 +15,29 @@ import { backupToFile, eventEmitter, reInitWallet, config, session } from '../in
 var Identicon = require('identicon.js');
 const intToRGB = require('int-to-rgb');
 
-const hashCode = (str) => {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+
+
+String.prototype.hashCode = function() {
+    var hash = 0;
+    if (this.length == 0) {
+        return hash;
     }
-    return parseInt(Math.abs(hash/10000));
+    for (var i = 0; i < this.length; i++) {
+        var char = this.charCodeAt(i);
+        hash = ((hash<<5)-hash)+char;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
 }
 
-const get_avatar = (hash, size) => {
+const hashCode = (str) => {
+		let hash = Math.abs(str.hashCode())*0.007812499538;
+    return Math.floor(hash);
 
-  if (hash.length < 15) {
-    hash = 'SEKReT2pkQ71zEddQ81VdqDVU88MCQPgtRGsMgrDemVB9oK4xZYmsgX2vXctPkERrzRWnDZNPEFER4HMd5QPFdAuQ7Dg9hy2MCF';
-  }
+}
+
+
+function get_avatar(hash) {
 
   // Get custom color scheme based on address
   let rgb = intToRGB(hashCode(hash));
@@ -35,15 +45,14 @@ const get_avatar = (hash, size) => {
   // Options for avatar
   var options = {
         foreground: [rgb.red, rgb.green, rgb.blue, 255],               // rgba black
-        background: [parseInt(rgb.red/10), parseInt(rgb.green/10), parseInt(rgb.blue/10), 255],         // rgba white
+        background: [parseInt(rgb.red/10), parseInt(rgb.green/10), parseInt(rgb.blue/10), 0],         // rgba white
         margin: 0.2,                              // 20% margin
-        size: size,                                // 420px square
-        format: 'svg'                             // use SVG instead of PNG
+        size: 90,                                // 420px square
+        format: 'svg'                           // use SVG instead of PNG
       };
 
   // create a base64 encoded SVG
   return 'data:image/svg+xml;base64,' + new Identicon(hash, options).toString();
-
 
 }
 

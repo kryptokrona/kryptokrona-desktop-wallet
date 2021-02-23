@@ -101,7 +101,7 @@ export default class Login extends Component<Props, State> {
               }
             >
             <div className='scanlines loginscanline'>
-            <div className='loginlogo' />
+            <div className='loginlogo rgb gradient' />
             </div>
               <form onSubmit={this.handleSubmit}>
                 {!loginInProgress && (

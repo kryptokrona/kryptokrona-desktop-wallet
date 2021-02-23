@@ -252,7 +252,7 @@ button.is-dark {
 
 
 .box {
-  background-color: #7c7c7c;
+  background-color: #1D1B1D;
   border-color: #222;
   border-radius: 4px;
   color: #e0e0e0;
@@ -1107,16 +1107,10 @@ a.navbar-item:active {
 
 .headerbar-slideup .tag:not(body).is-dark,
 .headerbar .tag:not(body).is-dark {
-  background: linear-gradient(270deg, #000000, #1b1836);
-  background-size: 400% 400%;
-
-   background: linear-gradient(270deg, #ff0000, #ffd800, #58c51b, #0eb6d2, #dd06f3) !important;
-      background-size: 1000% 1000% !important;
-
-      -webkit-animation: AnimationName 60s ease infinite !important;
-      -moz-animation: AnimationName 60s ease infinite !important;
-      animation: AnimationName 60s ease infinite !important;
-
+  background: #5f86f2;
+  -webkit-animation: rgb 30s ease infinite;
+  -moz-animation: rgb 30s ease infinite;
+  animation: rgb 30s ease infinite;
 }
 
 .tag:not(body).is-dark {
@@ -1133,16 +1127,61 @@ a.navbar-item:active {
   font-family: 'XKR';
   text-align: center;
   overflow: hidden;
-  background: linear-gradient(270deg, #000000, #1b1836);
-  background-size: 400% 400%;
+}
 
-   background: linear-gradient(270deg, #ff0000, #ffd800, #58c51b, #0eb6d2, #dd06f3) !important;
-      background-size: 1000% 1000% !important;
+.rgb {
 
-      -webkit-animation: AnimationName 60s ease infinite !important;
-      -moz-animation: AnimationName 60s ease infinite !important;
-      animation: AnimationName 60s ease infinite !important;
+  background: #5f86f2;
+  -webkit-animation: rgb 30s ease infinite;
+  -moz-animation: rgb 30s ease infinite;
+  animation: rgb 30s ease infinite;
+}
+
+@keyframes rgb {
+  0%, 100% {
+    background: #5f86f2;
   }
+  12.5% {
+    background: #a65ff2;
+  }
+  25% {
+    background: #f25fd0;
+  }
+  37.5% {
+    background: #f25f61;
+  }
+  50% {
+    background: #f2cb5f;
+  }
+  62.5% {
+    background: #abf25f;
+  }
+  75% {
+    background: #5ff281;
+  }
+  87.5% {
+    background: 5ff2f0;
+  }
+}
+
+
+/*
+  .rgb   {
+      animation: rgb 30s infinite;
+      animation-timing-function: ease-in-out;
+    }
+
+    @keyframes rgb {
+      0%, 100% {
+        filter: hue-rotate(0deg);
+      }
+      50% {
+        filter: hue-rotate(-190deg);
+      }
+
+    } */
+
+
 
   @-webkit-keyframes AnimationName {
       0%{background-position:0% 50%}
@@ -1257,10 +1296,9 @@ body {
   right: -37px;
   width: calc(100vw - 85px);
   height: 53px !important;
-  animation-duration: 0.01s;
-  animation-name: textflickerr;
+  /* animation-duration: 2s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation-direction: alternate; */
 }
 
 .loginlogo::before {
