@@ -53,6 +53,11 @@
   color: white!important;
 }
 
+.column is-one-third button{
+
+  font-family: "Montserrat";
+}
+
 
 .transparent-button {
   background-color: Transparent;
@@ -67,8 +72,10 @@
 button.is-dark {
   background: black;
   border: 1px solid white;
-  color: white;
-  font-size: 18px;
+  color: #f1f2f3;
+  font-size: 17px;
+  margin-top: 2px;
+  font-family: "Montserrat" !important;
 }
 
 .address-input-overlay {
@@ -299,6 +306,16 @@ button.is-dark {
   height: 100%;
 }
 
+.fa-user-plus {
+
+  font-size: 22px;
+}
+
+.fa-lock {
+
+  margin-top: -170px;
+}
+
 .contact-address {
   min-height: 100px !important;
 }
@@ -316,6 +333,16 @@ button.is-dark {
 .settingsCarot {
   position: relative;
   top: 12px;
+}
+
+.button-settings-page span {
+
+  font-size: 22px;
+}
+
+.slide-in-bottom p, .slide-in-top p, .slide-in-right p, .slide-in-left p {
+
+  font-family: "Montserrat";
 }
 
 .slide-in-left {
@@ -692,6 +719,11 @@ button.is-dark {
 .settings-menu {
   position: relative;
   top: 4px;
+  font-family: "Montserrat";
+}
+.menu-label:not(:last-child) {
+
+  font-family: "Montserrat";
 }
 
 .menu-link-light:hover {
@@ -1099,6 +1131,15 @@ a.navbar-item:active {
 .navbar-item .fas,
 .navbar-item .fa {
   font-size: 21px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #f5f5f5;
+
+}
+
+.navbar-item i:hover {
+  background: white !important;
+  color: black;
 }
 
 .navbar-item strong {
@@ -1456,10 +1497,11 @@ animation-direction: alternate; */
   display: none;
 }
 
-.maincontent-homescreen td :not(.expande-tx-data) {
+.maincontent-homescreen td :not(.expanded-tx-data):not(.fa-save):not(.fa-times)::not(.fa-search) {
   height: 100%;
   line-height: 100%;
   vertical-align: middle;
+  font-family: "Montserrat";
 }
 
 .maincontent-homescreen td:nth-child(1) button {
@@ -1471,7 +1513,6 @@ animation-direction: alternate; */
   padding-left: 0;
   padding-right: 0;
   line-height: 100%;
-  vertical-align: middle;
 }
 
 .maincontent-homescreen td:nth-child(2) {
@@ -1570,7 +1611,8 @@ animation-direction: alternate; */
 
 label {
   text-align: left !important;
-  font-size: 13px !important;
+  font-size: 14px !important;
+  font-family: "Montserrat";
 }
 
 .input:active,
@@ -1685,7 +1727,10 @@ label {
     color: #53565c !important;
   }
 
+.navbar-item .fas, .navbar-item .fa {
 
+  color: #53565c  !important;
+}
   .css-1pahdxg-control {
     background-color: white !important;
     border: transparent !important;
@@ -1698,9 +1743,9 @@ label {
 
   .button.is-dark.is-hovered,
   .button.is-dark:hover {
-    background-color: #3f3f3f;
+    background-color: #f1f2f3;
     border-color: transparent;
-    color: #f5f5f5;
+    color: black;
   }
 
   .navbar-item,
@@ -1723,7 +1768,6 @@ label {
 
   a.navbar-item:active,
   a.navbar-item:hover {
-    color: #209cee !important;
     background: none !important;
   }
 
@@ -1809,5 +1853,11 @@ label {
   .navbar-menu {
     background: #e1e2e3 !important;
 
+
+  }
+
+  .fa-user-plus:hover {
+
+    color: black;
   }
 }
