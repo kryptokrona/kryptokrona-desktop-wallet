@@ -244,6 +244,7 @@ button.is-dark {
 
 .button.is-dark {
   font-family: "Montserrat" !important;
+      font-size: 17px;
 }
 
 button {

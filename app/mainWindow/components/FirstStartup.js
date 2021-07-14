@@ -82,7 +82,7 @@ export default class FirstStartup extends Component<Props, State> {
         <Modal darkMode={darkMode} />
         <div className={`fullwindow outer-div ${backgroundColor}`}>
           <div className="mid-div">
-            <div className='scanlines loginscanline welcomescanline'>
+            <div className='scanlines loginscanline welcomescanline rgb'>
             <div className='loginlogo' />
             </div>
             <div className={`box loginbox passwordchangebox ${fillColor}`}>

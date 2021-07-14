@@ -153,7 +153,7 @@ export default class Modal extends Component<Props, State> {
               )}
               {denyLabel && (
                 <button
-                  className="button is-info is-large"
+                  className="button is-info"
                   onClick={this.closeModal}
                   onKeyPress={this.closeModal}
                   type="button"
