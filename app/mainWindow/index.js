@@ -391,6 +391,7 @@ eventEmitter.on('getUpdate', () => {
   remote.app.exit();
 });
 
+
 ipcRenderer.on('handleLock', () => {
   if (session && loginCounter.isLoggedIn && session.walletPassword !== '') {
     eventEmitter.emit('logOut');
@@ -504,12 +505,30 @@ const uncaughtErrorComponent = ({ componentStack, error }) => (
   </div>
 );
 
+let quit = () => {
+  ipcRenderer.send('backendStopped');
+}
+
+let submenu = () => {
+  ipcRenderer.send('open-submenu');
+}
+
 render(
   <AppContainer>
     <ErrorBoundary
       onError={uncaughtErrorHandler}
       FallbackComponent={uncaughtErrorComponent}
     >
+
+    <div
+    className={`close`}
+    onClick={quit}
+    />
+    <div
+    className={`submenu`}
+    onClick={submenu}
+    />
+
       <div
         onClick={activityDetected}
         onKeyPress={activityDetected}
@@ -523,6 +542,7 @@ render(
   document.getElementById('root')
 );
 
+
 if (module.hot) {
   module.hot.accept('./containers/Root', () => {
     // eslint-disable-next-line global-require
@@ -534,6 +554,7 @@ if (module.hot) {
           onKeyPress={activityDetected}
           role="button"
           tabIndex={0}
+
         >
           <NextRoot store={store} history={history} />{' '}
         </div>
@@ -656,7 +677,7 @@ function handleOpen() {
     defaultPath: remote.app.getPath('documents'),
     filters: [
       {
-        name: 'TurtleCoin Wallet File (v0)',
+        name: 'Kryptokrona Wallet File (v0)',
         extensions: ['wallet']
       }
     ]

@@ -135,6 +135,8 @@ if (process.env.NODE_ENV === 'production') {
 
 require('electron-debug')();
 
+let submenu;
+
 const installExtensions = async () => {
   // eslint-disable-next-line global-require
   const installer = require('electron-devtools-installer');
@@ -245,8 +247,8 @@ app.on('ready', async () => {
     height: 725,
     minWidth: 500,
     minHeight: 725,
-    frame: frameActivated,
-    backgroundColor: '#121212',
+    frame: false,
+    transparent: true,
     icon: path.join(__dirname, 'images/icon.png'),
     webPreferences: {
       nativeWindowOpen: true,
@@ -361,7 +363,7 @@ app.on('ready', async () => {
   });
 
   const menuBuilder = new MenuBuilder(mainWindow);
-  menuBuilder.buildMenu();
+  submenu = menuBuilder.buildMenu();
 });
 
 function showMainWindow() {
@@ -369,6 +371,11 @@ function showMainWindow() {
     mainWindow.show();
   }
 }
+
+ipcMain.on('open-submenu', () => {
+  submenu.popup();
+});
+
 
 windowEvents.on('bothWindowsReady', () => {
   messageRelayer = new MessageRelayer(mainWindow, backendWindow);
@@ -387,6 +394,7 @@ ipcMain.on('backendStopped', () => {
   clearTimeout(quitTimeout);
   app.exit();
 });
+
 
 function toggleCloseToTray(state: boolean) {
   isQuitting = !state;

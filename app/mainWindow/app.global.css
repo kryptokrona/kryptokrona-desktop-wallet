@@ -78,6 +78,42 @@ button.is-dark {
   font-family: "Montserrat" !important;
 }
 
+.button.is-dark {
+  font-family: "Montserrat" !important;
+}
+
+button {
+  -webkit-app-region: no-drag;
+}
+
+.close, .submenu {
+  -webkit-app-region: no-drag;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: #FF4743;
+  display: block;
+  z-index: 9999999999999999;
+  top: 2px;
+  position: absolute;
+  left: 4px;
+  border: none;
+  transform: scale(0.5);
+  cursor: pointer;
+
+}
+
+.submenu {
+background: #f9f9f9 !important;
+left: 22px !important;
+-webkit-app-region: no-drag;
+}
+
+.navbar-start {
+  margin-top: 17px;
+    -webkit-app-region: no-drag;
+}
+
 .address-input-overlay {
   position: absolute;
   width: 100%;
@@ -312,8 +348,7 @@ button.is-dark {
 }
 
 .fa-lock {
-
-  margin-top: -170px;
+  margin-top: -180px;
 }
 
 .contact-address {
@@ -686,6 +721,10 @@ button.is-dark {
   color: hsl(271, 100%, 71%);
 }
 
+.has-text-right {
+  font-family: "Montserrat";
+}
+
 .bash-prompt {
   background-color: rgba(0, 0, 0, 0);
   color: white;
@@ -751,6 +790,7 @@ button.is-dark {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+    -webkit-app-region: no-drag;
 }
 
 .table.is-fullwidth {
@@ -764,6 +804,11 @@ button.is-dark {
   height: 100%;
   right: 0;
   overflow: hidden;
+  -webkit-app-region: no-drag;
+}
+
+.subtitle {
+  font-family: "Montserrat";
 }
 
 .mid-div {
@@ -788,7 +833,10 @@ button.is-dark {
 
 * {
   box-sizing: border-box;
+  border-radius: 10px;
+  -webkit-app-region: no-drag;
 }
+
 
 .elem-to-center {
   position: absolute;
@@ -987,10 +1035,12 @@ button.is-dark {
 
 .statusicons {
   left: -18px;
+  -webkit-app-region: drag;
 }
 
 .sync-status {
   width: 115px;
+  -webkit-app-region: drag;
 }
 
 .is-family-monospace {
@@ -1012,6 +1062,7 @@ button.is-dark {
   height: calc(100% - 128px);
   overflow-y: scroll;
   box-sizing: border-box;
+  -webkit-app-region: no-drag;
 }
 
 .maincontent-homescreen {
@@ -1025,6 +1076,7 @@ button.is-dark {
   left: 64px;
   overflow-y: scroll;
   box-sizing: border-box;
+  -webkit-app-region: drag;
 }
 
 .maincontent-homescreen-fadein {
@@ -1080,7 +1132,9 @@ button.is-dark {
 html {
   overflow: hidden;
   overflow-x: visible;
+  background: transparent;
 }
+
 
 ::-webkit-scrollbar {
   display: block;
@@ -1108,6 +1162,10 @@ html {
   height: 100vh;
   text-align: center;
   z-index: 999999;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .has-background-black {
@@ -1120,6 +1178,8 @@ html {
 
 .navbar-item {
   margin-bottom: 10px;
+  margin-top: 5px;
+
 }
 
 a.navbar-item:hover,
@@ -1128,19 +1188,21 @@ a.navbar-item:active {
   background: none !important;
 }
 
-.navbar-item .fas,
-.navbar-item .fa {
+
+.navbar-item i {
   font-size: 21px;
   padding: 10px;
   border-radius: 10px;
-  color: #f5f5f5;
-
+  color: #d0cccc !important;
+  -webkit-app-region: no-drag;
+  color: #53565c;
 }
+
 
 .navbar-item i:hover {
-  background: white !important;
-  color: black;
+  color: #f1f2f3  !important;
 }
+
 
 .navbar-item strong {
   display: none;
@@ -1168,6 +1230,7 @@ a.navbar-item:active {
   font-family: 'XKR';
   text-align: center;
   overflow: hidden;
+  -webkit-app-region: drag;
 }
 
 .rgb {
@@ -1252,11 +1315,6 @@ body {
   -webkit-app-region: drag
 }
 
-.fullwindow {
-  -webkit-app-region: drag
-}
-
-
 .scanlines::before,
 .scanlines::after {
   display: block;
@@ -1337,6 +1395,7 @@ body {
   right: -37px;
   width: calc(100vw - 85px);
   height: 53px !important;
+  -webkit-app-region: drag;
   /* animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate; */
@@ -1551,6 +1610,7 @@ animation-direction: alternate; */
 .table td,
 .table th {
   border: none !important;
+  border-radius: 4px !important;
 }
 
 
@@ -1687,6 +1747,14 @@ label {
     color: #53565c;
   }
 
+html {
+  background: transparent !important;
+}
+
+  .submenu {
+  background: #272527 !important;
+
+  }
   .input::placeholder,
   .css-1m2l6vs-placeholder {
     color: #53565c !important;
@@ -1727,9 +1795,13 @@ label {
     color: #53565c !important;
   }
 
-.navbar-item .fas, .navbar-item .fa {
+.navbar-item i {
+  color: #53565c !important;
+}
 
-  color: #53565c  !important;
+
+.navbar-item i:hover {
+  color: #282828  !important;
 }
   .css-1pahdxg-control {
     background-color: white !important;
@@ -1852,8 +1924,6 @@ label {
 
   .navbar-menu {
     background: #e1e2e3 !important;
-
-
   }
 
   .fa-user-plus:hover {
