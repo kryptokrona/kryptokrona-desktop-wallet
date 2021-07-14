@@ -1,7 +1,7 @@
 {
   "name": "kryptokrona-desktop-wallet",
   "productName": "Kryptokrona Wallet",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Kryptokrona wallet based on React, React Router, Webpack, and React Hot Loader",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
@@ -151,7 +151,7 @@
     "@babel/plugin-syntax-import-meta": "^7.8.3",
     "@babel/plugin-transform-react-constant-elements": "^7.8.3",
     "@babel/plugin-transform-react-inline-elements": "^7.8.3",
-    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
     "@babel/preset-flow": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
     "@babel/register": "^7.8.6",
