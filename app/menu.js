@@ -144,44 +144,6 @@ export default class MenuBuilder {
         }
       ]
     };
-    const subMenuViewDev = {
-      label: il8n.view,
-      submenu: [
-        {
-          label: il8n.reload,
-          accelerator: 'Command+R',
-          click: () => {
-            this.mainWindow.webContents.reload();
-          }
-        },
-        {
-          label: il8n.toggle_fullscreen,
-          accelerator: 'Ctrl+Command+F',
-          click: () => {
-            this.mainWindow.setFullScreen(!this.mainWindow.isFullScreen());
-          }
-        },
-        {
-          label: il8n.toggle_devtools,
-          accelerator: 'Alt+Command+I',
-          click: () => {
-            this.mainWindow.toggleDevTools();
-          }
-        }
-      ]
-    };
-    const subMenuViewProd = {
-      label: il8n.view,
-      submenu: [
-        {
-          label: 'Toggle Full Screen',
-          accelerator: 'Ctrl+Command+F',
-          click: () => {
-            this.mainWindow.setFullScreen(!this.mainWindow.isFullScreen());
-          }
-        }
-      ]
-    };
     const subMenuWallet = {
       label: il8n.wallet,
       submenu: [
@@ -273,16 +235,11 @@ export default class MenuBuilder {
       ]
     };
 
-    const subMenuView =
-      process.env.NODE_ENV === 'development' ? subMenuViewDev : subMenuViewProd;
-
     return [
       subMenuAbout,
       subMenuFile,
       subMenuEdit,
       subMenuWallet,
-      subMenuView,
-      subMenuWindow,
       subMenuTools,
       subMenuHelp,
       subMenuDonate
@@ -401,47 +358,6 @@ export default class MenuBuilder {
             }
           }
         ]
-      },
-      {
-        label: il8n.view,
-        submenu:
-          process.env.NODE_ENV === 'development'
-            ? [
-                {
-                  label: il8n.reload,
-                  accelerator: 'Ctrl+R',
-                  click: () => {
-                    this.mainWindow.webContents.reload();
-                  }
-                },
-                {
-                  label: il8n.toggle_fullscreen,
-                  accelerator: 'F11',
-                  click: () => {
-                    this.mainWindow.setFullScreen(
-                      !this.mainWindow.isFullScreen()
-                    );
-                  }
-                },
-                {
-                  label: il8n.toggle_devtools,
-                  accelerator: 'Alt+Ctrl+I',
-                  click: () => {
-                    this.mainWindow.toggleDevTools();
-                  }
-                }
-              ]
-            : [
-                {
-                  label: il8n.toggle_fullscreen,
-                  accelerator: 'F11',
-                  click: () => {
-                    this.mainWindow.setFullScreen(
-                      !this.mainWindow.isFullScreen()
-                    );
-                  }
-                }
-              ]
       },
       {
         label: il8n.tools,
