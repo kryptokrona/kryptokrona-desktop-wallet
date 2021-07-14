@@ -1164,8 +1164,8 @@ html {
   z-index: 999999;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
 }
 
 .has-background-black {
