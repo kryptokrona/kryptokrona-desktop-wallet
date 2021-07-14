@@ -109,8 +109,11 @@ export default class Home extends Component<Props, State> {
   };
 
   openInExplorer = (event: any) => {
-    const hash = event.target.value;
-
+    let hash = event.target.value;
+    if (hash == undefined) {
+      hash = event.target.parentNode.value
+    }
+    console.log('hash', hash);
     remote.shell.openExternal(
       `https://explorer.kryptokrona.se/transaction.html?hash=${encodeURIComponent(hash)}`
     );

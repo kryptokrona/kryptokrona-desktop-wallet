@@ -187,7 +187,7 @@ contextMenu({
       visible: params.selectionText.trim().length === 64,
       click: () => {
         shell.openExternal(
-          `https://explorer.kryptokrona.se/?search=${encodeURIComponent(
+          `https://explorer.kryptokrona.se/transaction.html?hash=${encodeURIComponent(
             params.selectionText
           )}`
         );
