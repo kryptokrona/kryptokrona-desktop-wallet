@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/3246908/125691331-a40a038f-c12e-4c37-9e96-de5b371bb103.png">
+<img src="https://user-images.githubusercontent.com/3246908/125691331-a40a038f-c12e-4c37-9e96-de5b371bb103.png" height="800px">
 <p>
   This is a desktop wallet for Kryptokrona that uses <a href="http://electron.atom.io/">Electron</a>, <a href="https://facebook.github.io/react/">React</a>, <a href="https://github.com/kryptokrona/kryptokrona-wallet-backend-js">Kryptokrona-Wallet-Backend-JS</a>, <a href="https://github.com/reactjs/redux">Redux</a>, <a href="https://github.com/reactjs/react-router">React Router</a>, <a href="http://webpack.github.io/docs/">Webpack</a> and <a href="https://github.com/gaearon/react-hot-loader">React Hot Loader</a>.
 </p>
