@@ -433,9 +433,6 @@ class AddressBook extends Component<Props, State> {
             {displayWelcomeMessage && (
               <div className="elem-to-center">
                 <div className={`box ${fillColor}`}>
-                  <p className={`${textColor} title has-text-centered`}>
-                    &nbsp;&nbsp;Welcome to your Address Book!
-                  </p>
                   <br />
                   <p className={`${textColor} subtitle has-text-centered`}>
                     You don&apos;t have any contacts saved yet. They will
