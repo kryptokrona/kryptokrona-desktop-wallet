@@ -211,7 +211,6 @@
        url('fonts/montserrat-v15-latin-900italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
 .navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
   background-color: transparent!important;
   color: white!important;
@@ -271,12 +270,12 @@ button {
 .submenu {
 background: #f9f9f9 !important;
 left: 22px !important;
--webkit-app-region: no-drag;
+-webkit-app-region: drag;
 }
 
 .navbar-start {
   margin-top: 17px;
-    -webkit-app-region: no-drag;
+  -webkit-app-region: drag;
 }
 
 .address-input-overlay {
@@ -999,7 +998,6 @@ left: 22px !important;
 * {
   box-sizing: border-box;
   border-radius: 10px;
-  -webkit-app-region: no-drag;
 }
 
 
@@ -1241,7 +1239,7 @@ left: 22px !important;
   left: 64px;
   overflow-y: scroll;
   box-sizing: border-box;
-  -webkit-app-region: drag;
+  -webkit-app-region: no-drag;
 }
 
 .maincontent-homescreen-fadein {
@@ -1331,6 +1329,7 @@ html {
   border-bottom-right-radius: 0px;
   border-top-left-radius: 9px;
   border-bottom-left-radius: 9px;
+  -webkit-app-region: drag;
 }
 
 .has-background-black {
@@ -1344,6 +1343,7 @@ html {
 .navbar-item {
   margin-bottom: 10px;
   margin-top: 5px;
+  -webkit-app-region: drag;
 
 }
 
@@ -1395,7 +1395,6 @@ a.navbar-item:active {
   font-family: 'XKR';
   text-align: center;
   overflow: hidden;
-  -webkit-app-region: drag;
 }
 
 .rgb {
@@ -1473,11 +1472,9 @@ a.navbar-item:active {
   position: relative;
   overflow: hidden;
   box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.2);
-  -webkit-app-region: drag;
 }
 
 body {
-  -webkit-app-region: drag
 }
 
 .scanlines::before,
@@ -1576,6 +1573,7 @@ body {
   color: rgba(0, 0, 0, 0.7);
   text-align: center;
   width: 100%;
+  -webkit-app-region: drag;
 }
 
 
@@ -2089,6 +2087,7 @@ html {
 
   .navbar-menu {
     background: #e1e2e3 !important;
+    -webkit-app-region: drag;
   }
 
   .fa-user-plus:hover {
