@@ -112,7 +112,8 @@ export default class WalletSession {
   }
 
   getFiatPrice = async (fiat: string) => {
-    const apiURL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${fiat}&ids=kryptokrona&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=7d`;
+    // OLD URL "https://api.coingecko.com/api/v3/coins/markets?vs_currency=${fiat}&ids=kryptokrona&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=7d"
+    const apiURL = `https://www.exbitron.com/api/v2/peatio/coinmarketcap/trades/XKR_USDT`;
 
     const requestOptions = {
       method: 'GET',
@@ -123,9 +124,10 @@ export default class WalletSession {
     };
     try {
       const result = await request(requestOptions);
-      this.fiatPrice = result[0].current_price;
-      eventEmitter.emit('gotFiatPrice', result[0].current_price);
-      return result[0].current_price;
+      console.log(result[0].price)
+      this.fiatPrice = result[0].price;
+      eventEmitter.emit('gotFiatPrice', result[0].price);
+      return result[0].price;
     } catch (err) {
       log.debug(`Request failed, CoinGecko API call error: \n`, err);
       return undefined;
