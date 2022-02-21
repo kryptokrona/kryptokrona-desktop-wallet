@@ -211,6 +211,50 @@
        url('fonts/montserrat-v15-latin-900italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('fonts/RobotoMono-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/RobotoMono-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('fonts/RobotoMono-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/RobotoMono-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+  url('fonts/RobotoMono-Light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/RobotoMono-Light.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+  url('fonts/RobotoMono-SemiBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/RobotoMono-SemiBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+  url('fonts/RobotoMono-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/RobotoMono-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 .navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
   background-color: transparent!important;
@@ -218,7 +262,6 @@
 }
 
 .column is-one-third button{
-
   font-family: "Montserrat";
 }
 
@@ -242,6 +285,11 @@ button.is-dark {
   font-family: "Montserrat" !important;
 }
 
+.menu-list {
+  font-family: "Montserrat" !important;
+  font-weight: 400;
+}
+
 .button.is-dark {
   font-family: "Montserrat" !important;
       font-size: 17px;
@@ -249,6 +297,7 @@ button.is-dark {
 
 button {
   -webkit-app-region: no-drag;
+  font-weight: 600;
 }
 
 .close, .submenu {
@@ -271,12 +320,12 @@ button {
 .submenu {
 background: #f9f9f9 !important;
 left: 22px !important;
--webkit-app-region: no-drag;
+-webkit-app-region: drag;
 }
 
 .navbar-start {
   margin-top: 17px;
-    -webkit-app-region: no-drag;
+  -webkit-app-region: drag;
 }
 
 .address-input-overlay {
@@ -428,8 +477,7 @@ left: 22px !important;
 .textarea,
 .css-1hwfws3,
 .css-1udz2ne-control {
-  background-color: #1D1B1D !important;
-  background: #1D1B1D !important;
+  background: #1d1d1d !important;
   border-color: #222;
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.8) !important;
@@ -437,6 +485,7 @@ left: 22px !important;
   font-size: 14px !important;
   padding: 10px;
   height: auto;
+  font-family: "Roboto Mono" !important;
 }
 
 .css-am967n-control {
@@ -540,10 +589,6 @@ left: 22px !important;
   font-size: 22px;
 }
 
-.slide-in-bottom p, .slide-in-top p, .slide-in-right p, .slide-in-left p {
-
-  font-family: "Montserrat";
-}
 
 .slide-in-left {
   animation: slide-in-left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -887,7 +932,7 @@ left: 22px !important;
 }
 
 .has-text-right {
-  font-family: "Montserrat";
+  font-family: "Roboto Mono" !important;
 }
 
 .bash-prompt {
@@ -999,7 +1044,6 @@ left: 22px !important;
 * {
   box-sizing: border-box;
   border-radius: 10px;
-  -webkit-app-region: no-drag;
 }
 
 
@@ -1200,16 +1244,20 @@ left: 22px !important;
 
 .statusicons {
   left: -18px;
+  font-family: "Montserrat";
+  font-weight: 600;
   -webkit-app-region: drag;
 }
 
 .sync-status {
   width: 115px;
+  font-family: "Roboto Mono" !important;
+  font-weight: normal;
   -webkit-app-region: drag;
 }
 
 .is-family-monospace {
-  font-family: 'Source Code Pro' !important;
+  font-family: 'Roboto Mono' !important;
 }
 
 .fades-in {
@@ -1241,7 +1289,7 @@ left: 22px !important;
   left: 64px;
   overflow-y: scroll;
   box-sizing: border-box;
-  -webkit-app-region: drag;
+  -webkit-app-region: no-drag;
 }
 
 .maincontent-homescreen-fadein {
@@ -1318,7 +1366,7 @@ html {
 }
 
 .navbar-menu {
-  background: #171416 !important;
+  background: #1d1d1d !important;
   display: block;
   position: absolute;
   left: 0px;
@@ -1331,10 +1379,11 @@ html {
   border-bottom-right-radius: 0px;
   border-top-left-radius: 9px;
   border-bottom-left-radius: 9px;
+  -webkit-app-region: drag;
 }
 
 .has-background-black {
-  background: #272527 !important;
+  background: #252525 !important;
 }
 
 .navbar-item p {
@@ -1344,6 +1393,7 @@ html {
 .navbar-item {
   margin-bottom: 10px;
   margin-top: 5px;
+  -webkit-app-region: drag;
 
 }
 
@@ -1352,7 +1402,6 @@ a.navbar-item:active {
   color: #6A6A6A !important;
   background: none !important;
 }
-
 
 .navbar-item i {
   font-size: 21px;
@@ -1395,7 +1444,6 @@ a.navbar-item:active {
   font-family: 'XKR';
   text-align: center;
   overflow: hidden;
-  -webkit-app-region: drag;
 }
 
 .rgb {
@@ -1473,11 +1521,9 @@ a.navbar-item:active {
   position: relative;
   overflow: hidden;
   box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.2);
-  -webkit-app-region: drag;
 }
 
 body {
-  -webkit-app-region: drag
 }
 
 .scanlines::before,
@@ -1576,6 +1622,7 @@ body {
   color: rgba(0, 0, 0, 0.7);
   text-align: center;
   width: 100%;
+  -webkit-app-region: drag;
 }
 
 
@@ -1725,7 +1772,7 @@ animation-direction: alternate; */
   height: 100%;
   line-height: 100%;
   vertical-align: middle;
-  font-family: "Montserrat";
+  font-family: "Roboto Mono" !important;
 }
 
 .maincontent-homescreen td:nth-child(1) button {
@@ -1769,6 +1816,7 @@ animation-direction: alternate; */
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: left !important;
+  font-family: "Roboto Mono";
 
 }
 
@@ -1776,6 +1824,8 @@ animation-direction: alternate; */
 .table th {
   border: none !important;
   border-radius: 4px !important;
+  font-family: "Roboto Mono" !important;
+  font-weight: 300;
 }
 
 
@@ -1797,6 +1847,7 @@ animation-direction: alternate; */
 
 .no-hover:hover {
   background: none !important;
+  font-family: "Montserrat";
 }
 
 
@@ -2075,6 +2126,7 @@ html {
 
   }
 
+
   .css-am967n-control {
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     box-shadow: none !important;
@@ -2089,6 +2141,7 @@ html {
 
   .navbar-menu {
     background: #e1e2e3 !important;
+    -webkit-app-region: drag;
   }
 
   .fa-user-plus:hover {
