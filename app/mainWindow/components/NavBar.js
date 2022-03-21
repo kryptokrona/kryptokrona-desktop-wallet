@@ -149,7 +149,7 @@ class NavBar extends Component<Props, State> {
                 </Link>
                 </div>
                 <div className="navbar-end">
-
+                  <div className="navbar-drag" />
                   {session.walletPassword !== '' && (
                     <div className="navbarLogout">
                     <div className="navbar-item">

@@ -1379,6 +1379,14 @@ html {
   border-bottom-right-radius: 0px;
   border-top-left-radius: 9px;
   border-bottom-left-radius: 9px;
+}
+
+.navbar-drag {
+  position: absolute;
+  bottom: 62px;
+  left: 0;
+  height: 317px;
+  width: 65px;
   -webkit-app-region: drag;
 }
 
