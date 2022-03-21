@@ -31,9 +31,7 @@
       "prettier --ignore-path .eslintignore --parser json --write",
       "git add"
     ],
-    "*.{css,scss}": [
-
-    ],
+    "*.{css,scss}": [],
     "*.{html,md,yml}": [
       "prettier --ignore-path .eslintignore --single-quote --write",
       "git add"
@@ -256,6 +254,7 @@
     "react-router-dom": "^5.1.2",
     "react-select": "^3.0.8",
     "react-tooltip": "^3.11.6",
+    "recharts": "^2.1.9",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "request": "^2.88.2",

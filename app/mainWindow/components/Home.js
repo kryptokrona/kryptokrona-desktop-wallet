@@ -10,12 +10,17 @@ import NavBar from './NavBar';
 import BottomBar from './BottomBar';
 import BalanceTop from './BalanceTop';
 import Redirector from './Redirector';
+import moment from 'moment';
 import {
   uiType,
   formatLikeCurrency,
   atomicToHuman,
   convertTimestamp
 } from '../utils/utils';
+import { AreaChart, Area, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
+
+
 
 let displayedTransactionCount: number = 50;
 
@@ -188,6 +193,7 @@ export default class Home extends Component<Props, State> {
   };
 
   render() {
+
     const {
       darkMode,
       transactions,
@@ -209,6 +215,48 @@ export default class Home extends Component<Props, State> {
       elementBaseColor,
       fillColor
     } = uiType(darkMode);
+
+
+    const data = [];
+    let i = 30;
+    let past_time = Math.round(new Date(Date.now() - 24 * 3600 * 1000).getTime() / 1000);
+    let last_balance = 0;
+
+    for (let tx in transactions) {
+
+      console.log('tx', transactions[tx][0]);
+      console.log('timestamp', past_time);
+      console.log(transactions[tx][0] > past_time);
+
+      // if (tx == 0) {
+      // First time run, this is our starting date
+      //
+      //   data.push({
+      //     timestamp: txs[tx][0],
+      //     crypto: atomicToHuman(txs[tx][3]),
+      //     fiat: fiatPrice * atomicToHuman(txs[tx][3], false)
+      //   })
+      //
+      //   past_time = txs[tx][0] - 60 * 24;
+      //
+      //   console.log('Latest tx is from ', moment(past_time).format('DD/MM hh:mm'));
+      //
+      // } else if (txs[tx][0] < past_time) {
+      //   // Not first run, and
+
+      data.push({
+        timestamp: transactions[tx][0],
+        XKR: atomicToHuman(transactions[tx][3]),
+        fiat: fiatPrice * atomicToHuman(transactions[tx][3], false)
+      })
+    //
+    //   past_time = txs[tx][0] - 60 * 24;
+    //   console.log('Latest tx is from ', moment(past_time).format('DD/MM hh:mm'));
+    //   console.log('lol');
+    // }
+
+    }
+
     return (
       <div>
         <Redirector />
@@ -224,6 +272,29 @@ export default class Home extends Component<Props, State> {
           <div
             className={`maincontent-homescreen ${backgroundColor} ${pageAnimationIn}`}
           >
+          {transactions.length > 3 && (
+          <ResponsiveContainer width="100%" height="25%">
+
+          <AreaChart width={730} height={250} data={data.slice().reverse()}
+                margin={{ top: 10, right: 60, left: 0, bottom: 0 }}>
+                <defs>
+                  <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
+                    <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
+                  </linearGradient>
+                  <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
+                    <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
+                  </linearGradient>
+                </defs>
+                <XAxis axisLine={false} dataKey="timestamp" tickFormatter={timeStr => moment(timeStr*1000).format('DD/MM')} />
+                <YAxis tick={false} axisLine={false} />
+                <Tooltip labelFormatter={timeStr => moment(timeStr*1000).format('DD/MM hh:mm')} />
+                <Area type="monotone" dataKey="XKR" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+              </AreaChart>
+
+            </ResponsiveContainer>
+          )}
             <table
               className={`table tx-table is-hoverable is-fullwidth is-family-monospace ${tableMode}`}
             >
