@@ -218,6 +218,8 @@ export default class Home extends Component<Props, State> {
 
 
     const data = [];
+    console.log(session.syncStatus[1] - session.syncStatus[0]);
+    if (session.syncStatus[1] - session.syncStatus[0] < 3) {
     let i = 30;
     let past_time = Math.round(new Date(Date.now() - 24 * 3600 * 1000).getTime() / 1000);
     let last_balance = 0;
@@ -249,6 +251,7 @@ export default class Home extends Component<Props, State> {
         XKR: atomicToHuman(transactions[tx][3]),
         fiat: fiatPrice * atomicToHuman(transactions[tx][3], false)
       })
+      }
     //
     //   past_time = txs[tx][0] - 60 * 24;
     //   console.log('Latest tx is from ', moment(past_time).format('DD/MM hh:mm'));
@@ -272,7 +275,7 @@ export default class Home extends Component<Props, State> {
           <div
             className={`maincontent-homescreen ${backgroundColor} ${pageAnimationIn}`}
           >
-          {transactions.length > 3 && (
+          {transactions.length > 3 && session.syncStatus[1] - session.syncStatus[0] < 3 && (
           <ResponsiveContainer width="100%" height="25%">
 
           <AreaChart width={730} height={250} data={data.slice().reverse()}
